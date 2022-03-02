@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
     return view('front.index');
 })->name('front.mainpage');
@@ -28,3 +30,6 @@ Route::get('/iletisim', function () {
 Route::get('/ver', function () {
     return view('ver');
 });
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
