@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('front.index');
-});
+})->name('front.mainpage');
+
+Route::get('/hakkimizda', function () {
+    return view('front.about');
+})->name('front.about');
 
 Route::get('/ver', function () {
     return view('ver');

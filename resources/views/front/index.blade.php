@@ -1,6 +1,5 @@
 @extends('front.layouts.master')
-@section('title') Deneme @endsection
-@section('headerTitle') Deneme @endsection
+@section('title') Elite Shoppy @endsection
 @section('content')
     <!-- banner -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -75,7 +74,7 @@
             <div class="banner_bottom_agile_info_inner_w3ls">
                 <div class="col-md-6 wthree_banner_bottom_grid_three_left1 grid">
                     <figure class="effect-roxy">
-                        <img src="images/bottom1.jpg" alt=" " class="img-responsive" />
+                        <img src="{{asset('front/images/template-images')}}/bottom1.jpg" alt=" " class="img-responsive" />
                         <figcaption>
                             <h3><span>F</span>all Ahead</h3>
                             <p>New Arrivals</p>
@@ -84,7 +83,7 @@
                 </div>
                 <div class="col-md-6 wthree_banner_bottom_grid_three_left1 grid">
                     <figure class="effect-roxy">
-                        <img src="images/bottom2.jpg" alt=" " class="img-responsive" />
+                        <img src="{{asset('front/images/template-images')}}/bottom2.jpg" alt=" " class="img-responsive" />
                         <figcaption>
                             <h3><span>F</span>all Ahead</h3>
                             <p>New Arrivals</p>
@@ -98,7 +97,7 @@
     <!-- schedule-bottom -->
     <div class="schedule-bottom">
         <div class="col-md-6 agileinfo_schedule_bottom_left">
-            <img src="images/mid.jpg" alt=" " class="img-responsive" />
+            <img src="{{asset('front/images/template-images')}}/mid.jpg" alt=" " class="img-responsive" />
         </div>
         <div class="col-md-6 agileits_schedule_bottom_right">
             <div class="w3ls_schedule_bottom_right_grid">
@@ -135,7 +134,7 @@
                 <a href="womens.html">
                     <div class="bb-left-agileits-w3layouts-inner grid">
                         <figure class="effect-roxy">
-                            <img src="images/bb1.jpg" alt=" " class="img-responsive" />
+                            <img src="{{asset('front/images/template-images')}}/bb1.jpg" alt=" " class="img-responsive" />
                             <figcaption>
                                 <h3><span>S</span>ale </h3>
                                 <p>Upto 55%</p>
@@ -148,7 +147,7 @@
                 <a href="mens.html">
                     <div class="bb-middle-agileits-w3layouts grid">
                         <figure class="effect-roxy">
-                            <img src="images/bottom3.jpg" alt=" " class="img-responsive" />
+                            <img src="{{asset('front/images/template-images')}}/bottom3.jpg" alt=" " class="img-responsive" />
                             <figcaption>
                                 <h3><span>S</span>ale </h3>
                                 <p>Upto 55%</p>
@@ -159,7 +158,7 @@
                 <a href="mens.html">
                     <div class="bb-middle-agileits-w3layouts forth grid">
                         <figure class="effect-roxy">
-                            <img src="images/bottom4.jpg" alt=" " class="img-responsive">
+                            <img src="{{asset('front/images/template-images')}}/bottom4.jpg" alt=" " class="img-responsive">
                             <figcaption>
                                 <h3><span>S</span>ale </h3>
                                 <p>Upto 65%</p>
@@ -174,11 +173,11 @@
     <!--/grids-->
     <div class="agile_last_double_sectionw3ls">
         <div class="col-md-6 multi-gd-img multi-gd-text ">
-            <a href="womens.html"><img src="images/bot_1.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
+            <a href="womens.html"><img src="{{asset('front/images/template-images')}}/bot_1.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
 
         </div>
         <div class="col-md-6 multi-gd-img multi-gd-text ">
-            <a href="womens.html"><img src="images/bot_2.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
+            <a href="womens.html"><img src="{{asset('front/images/template-images')}}/bot_2.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
         </div>
         <div class="clearfix"></div>
     </div>
@@ -200,8 +199,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/m1.jpg" alt="" class="pro-image-front">
-                                    <img src="images/m1.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/m1.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/m1.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -239,8 +238,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/m2.jpg" alt="" class="pro-image-front">
-                                    <img src="images/m2.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/m2.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/m2.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -278,8 +277,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/m3.jpg" alt="" class="pro-image-front">
-                                    <img src="images/m3.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/m3.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/m3.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -317,8 +316,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/m4.jpg" alt="" class="pro-image-front">
-                                    <img src="images/m4.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/m4.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/m4.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -356,8 +355,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/m5.jpg" alt="" class="pro-image-front">
-                                    <img src="images/m5.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/m5.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/m5.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -395,8 +394,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/m7.jpg" alt="" class="pro-image-front">
-                                    <img src="images/m7.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/m7.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/m7.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -434,8 +433,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/m6.jpg" alt="" class="pro-image-front">
-                                    <img src="images/m6.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/m6.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/m6.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -473,8 +472,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/m8.jpg" alt="" class="pro-image-front">
-                                    <img src="images/m8.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/m8.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/m8.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -517,8 +516,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/w1.jpg" alt="" class="pro-image-front">
-                                    <img src="images/w1.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/w1.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/w1.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -556,8 +555,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/w2.jpg" alt="" class="pro-image-front">
-                                    <img src="images/w2.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/w2.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/w2.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -595,8 +594,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/w3.jpg" alt="" class="pro-image-front">
-                                    <img src="images/w3.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/w3.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/w3.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -634,8 +633,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/w4.jpg" alt="" class="pro-image-front">
-                                    <img src="images/w4.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/w4.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/w4.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -673,8 +672,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/w5.jpg" alt="" class="pro-image-front">
-                                    <img src="images/w5.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/w5.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/w5.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -712,8 +711,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/w6.jpg" alt="" class="pro-image-front">
-                                    <img src="images/w6.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/w6.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/w6.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -751,8 +750,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/w7.jpg" alt="" class="pro-image-front">
-                                    <img src="images/w7.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/w7.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/w7.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -790,8 +789,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/w8.jpg" alt="" class="pro-image-front">
-                                    <img src="images/w8.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/w8.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/w8.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -834,8 +833,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/b1.jpg" alt="" class="pro-image-front">
-                                    <img src="images/b1.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/b1.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/b1.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -873,8 +872,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/b2.jpg" alt="" class="pro-image-front">
-                                    <img src="images/b2.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/b2.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/b2.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -912,8 +911,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/b3.jpg" alt="" class="pro-image-front">
-                                    <img src="images/b3.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/b3.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/b3.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -951,8 +950,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/b4.jpg" alt="" class="pro-image-front">
-                                    <img src="images/b4.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/b4.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/b4.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -990,8 +989,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/b5.jpg" alt="" class="pro-image-front">
-                                    <img src="images/b5.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/b5.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/b5.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -1029,8 +1028,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/b6.jpg" alt="" class="pro-image-front">
-                                    <img src="images/b6.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/b6.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/b6.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -1068,8 +1067,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/b7.jpg" alt="" class="pro-image-front">
-                                    <img src="images/b7.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/b7.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/b7.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -1107,8 +1106,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/b8.jpg" alt="" class="pro-image-front">
-                                    <img src="images/b8.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/b8.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/b8.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -1150,8 +1149,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/s1.jpg" alt="" class="pro-image-front">
-                                    <img src="images/s1.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/s1.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/s1.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -1189,8 +1188,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/s2.jpg" alt="" class="pro-image-front">
-                                    <img src="images/s2.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/s2.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/s2.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -1228,8 +1227,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/s3.jpg" alt="" class="pro-image-front">
-                                    <img src="images/s3.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/s3.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/s3.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -1267,8 +1266,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/s4.jpg" alt="" class="pro-image-front">
-                                    <img src="images/s4.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/s4.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/s4.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -1306,8 +1305,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/s5.jpg" alt="" class="pro-image-front">
-                                    <img src="images/s5.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/s5.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/s5.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -1345,8 +1344,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/s6.jpg" alt="" class="pro-image-front">
-                                    <img src="images/s6.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/s6.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/s6.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -1384,8 +1383,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/s7.jpg" alt="" class="pro-image-front">
-                                    <img src="images/s7.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/s7.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/s7.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -1423,8 +1422,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="images/s8.jpg" alt="" class="pro-image-front">
-                                    <img src="images/s8.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images/template-images')}}/s8.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images/template-images')}}/s8.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -1503,7 +1502,7 @@
                     </div>
                     <div class="w3layouts_mail_grid_left2">
                         <h3>MONEY BACK GUARANTEE</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                        <p>Lorem ipsum dolor sit amet, conjecture</p>
                     </div>
                 </div>
                 <div class="col-md-3 w3layouts_mail_grid_left">
@@ -1521,4 +1520,45 @@
         </div>
     </div>
     <!--grids-->
+@endsection
+
+@section('customPageCss')
+    <style rel="stylesheet">
+        /*-- banner --*/
+        .carousel .item{
+            background:-webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner1.jpg) no-repeat;
+            background:-moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner1.jpg) no-repeat;
+            background:-ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner1.jpg) no-repeat;
+            background:linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner1.jpg) no-repeat;
+            background-size:cover;
+        }
+        .carousel .item.item2{
+            background:-webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner2.jpg) no-repeat;
+            background:-moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner2.jpg) no-repeat;
+            background:-ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner2.jpg) no-repeat;
+            background:linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner2.jpg) no-repeat;
+            background-size:cover;
+        }
+        .carousel .item.item3{
+            background:-webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner3.jpg) no-repeat;
+            background:-moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner3.jpg) no-repeat;
+            background:-ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner3.jpg) no-repeat;
+            background:linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner3.jpg) no-repeat;
+            background-size:cover;
+        }
+        .carousel .item.item4{
+            background:-webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner4.jpg) no-repeat;
+            background:-moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}{{asset('front/images/template-images')}}/banner4.jpg) no-repeat;
+            background:-ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner4.jpg) no-repeat;
+            background:linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner4.jpg) no-repeat;
+            background-size:cover;
+        }
+        .carousel .item.item5{
+            background:-webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner5.jpg) no-repeat;
+            background:-moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner5.jpg) no-repeat;
+            background:-ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner5.jpg) no-repeat;
+            background:linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner5.jpg) no-repeat;
+            background-size:cover;
+        }
+    </style>
 @endsection

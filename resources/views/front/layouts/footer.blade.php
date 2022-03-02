@@ -74,15 +74,15 @@
                 <div class="col-md-3 sign-gd flickr-post">
                     <h4>Flickr <span>Posts</span></h4>
                     <ul>
-                        <li><a href="single.html"><img src="{{asset('front/images/template-images/')}}t1.jpg" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images/template-images/')}}t2.jpg" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images/template-images/')}}t3.jpg" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images/template-images/')}}t4.jpg" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images/template-images/')}}t1.jpg" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images/template-images/')}}t2.jpg" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images/template-images/')}}t3.jpg" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images/template-images/')}}t2.jpg" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images/template-images/')}}t4.jpg" alt=" " class="img-responsive" /></a></li>
+                        <li><a href="single.html"><img src="{{asset('front/images/template-images')}}/t1.jpg" alt=" " class="img-responsive" /></a></li>
+                        <li><a href="single.html"><img src="{{asset('front/images/template-images')}}/t2.jpg" alt=" " class="img-responsive" /></a></li>
+                        <li><a href="single.html"><img src="{{asset('front/images/template-images')}}/t3.jpg" alt=" " class="img-responsive" /></a></li>
+                        <li><a href="single.html"><img src="{{asset('front/images/template-images')}}/t4.jpg" alt=" " class="img-responsive" /></a></li>
+                        <li><a href="single.html"><img src="{{asset('front/images/template-images')}}/t1.jpg" alt=" " class="img-responsive" /></a></li>
+                        <li><a href="single.html"><img src="{{asset('front/images/template-images')}}/t2.jpg" alt=" " class="img-responsive" /></a></li>
+                        <li><a href="single.html"><img src="{{asset('front/images/template-images')}}/t3.jpg" alt=" " class="img-responsive" /></a></li>
+                        <li><a href="single.html"><img src="{{asset('front/images/template-images')}}/t2.jpg" alt=" " class="img-responsive" /></a></li>
+                        <li><a href="single.html"><img src="{{asset('front/images/template-images')}}/t4.jpg" alt=" " class="img-responsive" /></a></li>
                     </ul>
                 </div>
                 <div class="clearfix"></div>
@@ -190,5 +190,6 @@
 
 <!-- for bootstrap working -->
 <script type="text/javascript" src="{{asset('front/js/bootstrap.js')}}"></script>
+@yield('customPageJs')
 </body>
 </html>

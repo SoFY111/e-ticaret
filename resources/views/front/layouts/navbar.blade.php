@@ -67,14 +67,14 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav menu__list">
-                            <li class="active menu__item menu__item--current"><a class="menu__link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
-                            <li class=" menu__item"><a class="menu__link" href="about.html">About</a></li>
+                            <li class="active menu__item menu__item--current"><a class="menu__link" href="{{route('front.mainpage')}}">Ana Sayfa <span class="sr-only">(current)</span></a></li>
+                            <li class=" menu__item"><a class="menu__link" href="{{route('front.about')}}">Hakkımızda</a></li>
                             <li class="dropdown menu__item">
                                 <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Men's wear <span class="caret"></span></a>
                                 <ul class="dropdown-menu multi-column columns-3">
                                     <div class="agile_inner_drop_nav_info">
                                         <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                            <a href="mens.html"><img src="images/top2.jpg" alt=" "/></a>
+                                            <a href="mens.html"><img src="{{asset('front/images/template-images')}}/top2.jpg" alt=" "/></a>
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
@@ -129,7 +129,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-sm-6 multi-gd-img multi-gd-text ">
-                                            <a href="womens.html"><img src="images/top1.jpg" alt=" "/></a>
+                                            <a href="womens.html"><img src="{{asset('front/images/template-images')}}/top1.jpg" alt=" "/></a>
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
@@ -150,7 +150,7 @@
         </div>
         <div class="top_nav_right">
             <div class="wthreecartaits wthreecartaits2 cart cart box_1">
-                <form action="#" method="post" class="last">
+                <form action="#" method="post" class="last" style="margin-bottom: 0px;">
                     <input type="hidden" name="cmd" value="_cart">
                     <input type="hidden" name="display" value="1">
                     <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
@@ -205,7 +205,7 @@
 
                 </div>
                 <div class="col-md-4 modal_body_right modal_body_right1">
-                    <img src="images/log_pic.jpg" alt=" "/>
+                    <img src="{{asset('front/images/template-images')}}/log_pic.jpg" alt=" "/>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -267,7 +267,7 @@
 
                 </div>
                 <div class="col-md-4 modal_body_right modal_body_right1">
-                    <img src="images/log_pic.jpg" alt=" "/>
+                    <img src="{{asset('front/images/template-images')}}/log_pic.jpg" alt=" "/>
                 </div>
                 <div class="clearfix"></div>
             </div>
