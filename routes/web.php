@@ -21,6 +21,10 @@ Route::get('/hakkimizda', function () {
     return view('front.about');
 })->name('front.about');
 
+Route::get('/iletisim', function () {
+    return view('front.contact');
+})->name('front.contact');
+
 Route::get('/ver', function () {
     return view('ver');
 });

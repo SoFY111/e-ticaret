@@ -2,10 +2,10 @@
 <div class="header" id="home">
     <div class="container">
         <ul>
-            <li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Sign In </a></li>
-            <li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Sign Up </a></li>
-            <li><i class="fa fa-phone" aria-hidden="true"></i> Call : 01234567898</li>
-            <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">info@example.com</a></li>
+            <li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Giriş Yap </a></li>
+            <li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Kayıt Ol </a></li>
+            <li><i class="fa fa-phone" aria-hidden="true"></i> +90 262 303 1000</li>
+            <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">info@egooyun.com</a></li>
         </ul>
     </div>
 </div>
@@ -27,7 +27,7 @@
         <!-- header-bot -->
         <div class="col-md-4 agileits-social top_content">
             <ul class="social-nav model-3d-0 footer-social w3_agile_social">
-                <li class="share">Share On : </li>
+                <li class="share">Paylaş : </li>
                 <li><a href="#" class="facebook">
                         <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
                         <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
@@ -135,14 +135,7 @@
                                     </div>
                                 </ul>
                             </li>
-                            <li class="menu__item dropdown">
-                                <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
-                                <ul class="dropdown-menu agile_short_dropdown">
-                                    <li><a href="icons.html">Web Icons</a></li>
-                                    <li><a href="typography.html">Typography</a></li>
-                                </ul>
-                            </li>
-                            <li class=" menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+                            <li class=" menu__item"><a class="menu__link" href="{{route('front.contact')}}">İletişim</a></li>
                         </ul>
                     </div>
                 </div>
@@ -172,7 +165,7 @@
             </div>
             <div class="modal-body modal-body-sub_agile">
                 <div class="col-md-8 modal_body_left modal_body_left1">
-                    <h3 class="agileinfo_sign">Sign In <span>Now</span></h3>
+                    <h3 class="agileinfo_sign"><span>Hemen</span> Giriş Yap</h3>
                     <form action="#" method="post">
                         <div class="styled-input agile-styled-input-top">
                             <input type="text" name="Name" required="">
@@ -184,7 +177,7 @@
                             <label>Email</label>
                             <span></span>
                         </div>
-                        <input type="submit" value="Sign In">
+                        <input type="submit" value="Giriş Yap">
                     </form>
                     <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
                         <li><a href="#" class="facebook">
@@ -201,7 +194,7 @@
                                 <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
                     </ul>
                     <div class="clearfix"></div>
-                    <p><a href="#" data-toggle="modal" data-target="#myModal2" > Don't have an account?</a></p>
+                    <p><a href="#" data-toggle="modal" data-target="#myModal2" > Hesabın yok mu? Hemen Aç!</a></p>
 
                 </div>
                 <div class="col-md-4 modal_body_right modal_body_right1">
@@ -224,7 +217,7 @@
             </div>
             <div class="modal-body modal-body-sub_agile">
                 <div class="col-md-8 modal_body_left modal_body_left1">
-                    <h3 class="agileinfo_sign">Sign Up <span>Now</span></h3>
+                    <h3 class="agileinfo_sign"><span>Hemen</span> Kayıt Ol</h3>
                     <form action="#" method="post">
                         <div class="styled-input agile-styled-input-top">
                             <input type="text" name="Name" required="">
@@ -246,7 +239,7 @@
                             <label>Confirm Password</label>
                             <span></span>
                         </div>
-                        <input type="submit" value="Sign Up">
+                        <input type="submit" value="Kayıt Ol">
                     </form>
                     <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
                         <li><a href="#" class="facebook">
@@ -263,13 +256,13 @@
                                 <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
                     </ul>
                     <div class="clearfix"></div>
-                    <p><a href="#">By clicking register, I agree to your terms</a></p>
-
                 </div>
                 <div class="col-md-4 modal_body_right modal_body_right1">
                     <img src="{{asset('front/images/template-images')}}/log_pic.jpg" alt=" "/>
                 </div>
                 <div class="clearfix"></div>
+                <p><a href="#">Üye olarak, Şartları ve KVKK'yı kabul etmiş oluyorsunuz.</a></p>
+
             </div>
         </div>
         <!-- //Modal content-->
