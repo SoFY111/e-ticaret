@@ -55,7 +55,73 @@
                             <li class="active menu__item menu__item--current"><a class="menu__link" href="{{route('front.mainpage')}}">Ana Sayfa <span class="sr-only">(current)</span></a></li>
                             <li class=" menu__item"><a class="menu__link" href="{{route('front.about')}}">Hakkımızda</a></li>
                             <li class="dropdown menu__item">
-                                <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Men's wear <span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bilgisayar <span class="caret"></span></a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <div class="agile_inner_drop_nav_info">
+                                        <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
+                                            <a href="mens.html"><img src="{{asset('front/images/template-images')}}/top2.jpg" alt=" "/></a>
+                                        </div>
+                                        <div class="col-sm-3 multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="mens.html">Clothing</a></li>
+                                                <li><a href="mens.html">Wallets</a></li>
+                                                <li><a href="mens.html">Footwear</a></li>
+                                                <li><a href="mens.html">Watches</a></li>
+                                                <li><a href="mens.html">Accessories</a></li>
+                                                <li><a href="mens.html">Bags</a></li>
+                                                <li><a href="mens.html">Caps & Hats</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3 multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="mens.html">Jewellery</a></li>
+                                                <li><a href="mens.html">Sunglasses</a></li>
+                                                <li><a href="mens.html">Perfumes</a></li>
+                                                <li><a href="mens.html">Beauty</a></li>
+                                                <li><a href="mens.html">Shirts</a></li>
+                                                <li><a href="mens.html">Sunglasses</a></li>
+                                                <li><a href="mens.html">Swimwear</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="dropdown menu__item">
+                                <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Playstation <span class="caret"></span></a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <div class="agile_inner_drop_nav_info">
+                                        <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
+                                            <a href="mens.html"><img src="{{asset('front/images/template-images')}}/top2.jpg" alt=" "/></a>
+                                        </div>
+                                        <div class="col-sm-3 multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="mens.html">Clothing</a></li>
+                                                <li><a href="mens.html">Wallets</a></li>
+                                                <li><a href="mens.html">Footwear</a></li>
+                                                <li><a href="mens.html">Watches</a></li>
+                                                <li><a href="mens.html">Accessories</a></li>
+                                                <li><a href="mens.html">Bags</a></li>
+                                                <li><a href="mens.html">Caps & Hats</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3 multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="mens.html">Jewellery</a></li>
+                                                <li><a href="mens.html">Sunglasses</a></li>
+                                                <li><a href="mens.html">Perfumes</a></li>
+                                                <li><a href="mens.html">Beauty</a></li>
+                                                <li><a href="mens.html">Shirts</a></li>
+                                                <li><a href="mens.html">Sunglasses</a></li>
+                                                <li><a href="mens.html">Swimwear</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="dropdown menu__item">
+                                <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Xbox <span class="caret"></span></a>
                                 <ul class="dropdown-menu multi-column columns-3">
                                     <div class="agile_inner_drop_nav_info">
                                         <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
@@ -151,16 +217,30 @@
             <div class="modal-body modal-body-sub_agile">
                 <div class="col-md-8 modal_body_left modal_body_left1">
                     <h3 class="agileinfo_sign"><span>Hemen</span> Giriş Yap</h3>
-                    <form action="#" method="post">
-                        <div class="styled-input agile-styled-input-top">
-                            <input type="text" name="Name" required="">
-                            <label>Name</label>
+                    <form method="post" id="loginForm" action="{{route('login')}}">
+                        <div class="alert alert-danger" id="loginFormErrorDiv" style="margin-bottom: 0px !important; display: none; padding: 15px 15px 15px 25px !important;">
+                            <ul id="loginFormErrorUL">
+                            </ul>
+                        </div>
+                        @csrf
+                        <div class="styled-input">
+                            <input type="email" id="email" name="email" required="" class="@error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            <label for="email">Email</label>
                             <span></span>
                         </div>
-                        <div class="styled-input">
-                            <input type="email" name="Email" required="">
-                            <label>Email</label>
+
+
+                        <div class="styled-input agile-styled-input-top">
+                            <input type="password" name="password" id="password"  class="@error('password') is-invalid @enderror" required autocomplete="current-password">
+                            <label for="password">Şifre</label>
                             <span></span>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                            <label class="form-check-label" for="remember">
+                                Beni Hatırla
+                            </label>
                         </div>
                         <input type="submit" value="Giriş Yap">
                     </form>

@@ -190,6 +190,7 @@
 
 <!-- for bootstrap working -->
 <script type="text/javascript" src="{{asset('front/js/bootstrap.js')}}"></script>
+<script type="text/javascript" src="{{asset('front/js/custom.js')}}"></script>
 @yield('customPageJs')
 </body>
 </html>
