@@ -1,10 +1,8 @@
 <div class="footer">
     <div class="footer_agile_inner_info_w3l">
         <div class="col-md-3 footer-left">
-            <h2><a href="index.html"><span>E</span>lite Shoppy </a></h2>
-            <p>Lorem ipsum quia dolor
-                sit amet, consectetur, adipisci velit, sed quia non
-                numquam eius modi tempora.</p>
+        <a href="{{route('front.mainpage')}}"><img style="width: 220px; height: 70px; object-fit: cover;" src="{{asset('front/images/template-images')}}/egooyun_logo.png" alt=""></a>
+            <p>Resmi bir çevrimiçi dijital dağıtım platformudur.</p>
             <ul class="social-nav model-3d-0 footer-social w3_agile_social two">
                 <li><a href="#" class="facebook">
                         <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
@@ -23,7 +21,7 @@
         <div class="col-md-9 footer-right">
             <div class="sign-grds">
                 <div class="col-md-4 sign-gd">
-                    <h4>Our <span>Information</span> </h4>
+                    <h4>Bağlantılar <span></span> </h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="mens.html">Men's Wear</a></li>
@@ -35,15 +33,15 @@
                 </div>
 
                 <div class="col-md-5 sign-gd-two">
-                    <h4>Store <span>Information</span></h4>
+                    <h4>Mağaza <span>Bilgileri</span></h4>
                     <div class="w3-address">
                         <div class="w3-address-grid">
                             <div class="w3-address-left">
                                 <i class="fa fa-phone" aria-hidden="true"></i>
                             </div>
                             <div class="w3-address-right">
-                                <h6>Phone Number</h6>
-                                <p>+1 234 567 8901</p>
+                                <h6>Telefon Numarası</h6>
+                                <p>+90 262 303 1000</p>
                             </div>
                             <div class="clearfix"> </div>
                         </div>
@@ -52,8 +50,8 @@
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                             </div>
                             <div class="w3-address-right">
-                                <h6>Email Address</h6>
-                                <p>Email :<a href="mailto:example@email.com"> mail@example.com</a></p>
+                                <h6>Mail Adresi</h6>
+                                <p>Email :<a href="mailto:example@email.com"> info@egooyun.com</a></p>
                             </div>
                             <div class="clearfix"> </div>
                         </div>
@@ -62,8 +60,9 @@
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                             </div>
                             <div class="w3-address-right">
-                                <h6>Location</h6>
-                                <p>Broome St, NY 10002,California, USA.
+                                <h6>Adres</h6>
+                                <p>Baki Komsuoğlu Bulvarı No:515, Umuttepe
+İzmit/Kocaeli, Türkiye
 
                                 </p>
                             </div>
@@ -72,17 +71,17 @@
                     </div>
                 </div>
                 <div class="col-md-3 sign-gd flickr-post">
-                    <h4>Flickr <span>Posts</span></h4>
+                    <h4>Popüler <span style="font-size:18px;">Markalar</span></h4>
                     <ul>
-                        <li><a href="single.html"><img src="{{asset('front/images/template-images')}}/t1.jpg" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images/template-images')}}/t2.jpg" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images/template-images')}}/t3.jpg" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images/template-images')}}/t4.jpg" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images/template-images')}}/t1.jpg" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images/template-images')}}/t2.jpg" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images/template-images')}}/t3.jpg" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images/template-images')}}/t2.jpg" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images/template-images')}}/t4.jpg" alt=" " class="img-responsive" /></a></li>
+                        <li><a href="single.html"><img src="{{asset('front/images')}}/ea.png" alt=" " class="img-responsive" /></a></li>
+                        <li><a href="single.html"><img src="{{asset('front/images')}}/intel2.png" alt=" " class="img-responsive" /></a></li>
+                        <li><a href="single.html"><img src="{{asset('front/images')}}/ps.png" alt=" " class="img-responsive" /></a></li>
+                        <li><a href="single.html"><img src="{{asset('front/images')}}/riot.png" alt=" " class="img-responsive" /></a></li>
+                        <li><a href="single.html"><img src="{{asset('front/images')}}/rockstar.png" alt=" " class="img-responsive" /></a></li>
+                        <li><a href="single.html"><img src="{{asset('front/images')}}/ubisoft2.png" alt=" " class="img-responsive" /></a></li>
+                        <li><a href="single.html"><img src="{{asset('front/images')}}/wb.png" alt=" " class="img-responsive" /></a></li>
+                        <li><a href="single.html"><img src="{{asset('front/images')}}/windows.png" alt=" " class="img-responsive" /></a></li>
+                        <li><a href="single.html"><img src="{{asset('front/images')}}/xbox.png" alt=" " class="img-responsive" /></a></li>
                     </ul>
                 </div>
                 <div class="clearfix"></div>
@@ -91,18 +90,19 @@
         <div class="clearfix"></div>
         <div class="agile_newsletter_footer">
             <div class="col-sm-6 newsleft">
-                <h3>SIGN UP FOR NEWSLETTER !</h3>
+                <h3>EĞLENCEYE VAR MISIN ?
+</h3>
             </div>
             <div class="col-sm-6 newsright">
                 <form action="#" method="post">
-                    <input type="email" placeholder="Enter your email..." name="email" required="">
-                    <input type="submit" value="Submit">
+                    <input type="email" placeholder="Mail adresi gir..." name="email" required="">
+                    <input type="submit" value="Gönder">
                 </form>
             </div>
 
             <div class="clearfix"></div>
         </div>
-        <p class="copy-right">&copy 2017 Elite shoppy. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+        <p class="copy-right">&copy 2021 EGOOYUN - Tüm Hakları Saklıdır | Design by <a href="https://github.com/SoFY111/e-ticaret">BSM</a></p>
     </div>
 </div>
 <!-- //footer -->

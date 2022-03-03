@@ -4,14 +4,14 @@
     <!-- /banner_bottom_agile_info -->
     <div class="page-head_agile_info_w3l">
         <div class="container">
-            <h3>About <span>Us </span></h3>
+            <h3>HAKKIMIZDA <span></span></h3>
             <!--/w3_short-->
             <div class="services-breadcrumb">
                 <div class="agile_inner_breadcrumb">
 
                     <ul class="w3_short">
-                        <li><a href="index.html">Home</a><i>|</i></li>
-                        <li>About</li>
+                        <li><a href="{{route('front.mainpage')}}">Ana Sayfa</a><i>|</i></li>
+                        <li>Hakkımızda</li>
                     </ul>
                 </div>
             </div>
@@ -26,9 +26,9 @@
                     <img src="{{asset('front/images/template-images')}}/ab_pic.jpg" alt=" " class="img-responsive" />
                 </div>
                 <div class="col-md-6 ab_pic_w3ls_text_info">
-                    <h5>About Our Elite <span> Shoppy</span> </h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie blandit ipsum auctor. Mauris volutpat augue dolor..</p>
-                    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore magna aliqua.</p>
+                    <h5>EGO OYUN <span> HAKKINDA</span> </h5>
+                    <p>EGO OYUN, resmi bir çevrimiçi dijital dağıtım platformudur ve milyonlarca oyuncuya geniş dijital oyun kataloğunu en iyi fiyatlarla, anında teslimat ve harika hizmet amacıyla sunar.</p>
+                    <p>Tam operasyonel stratejileri doğrultusunda, her geçen yıl global bir marka olma yolunda ilerlemektedir. 85’in üzerinde oyun firmasının Türkiye'deki yetkili satıcısı olarak, en geniş oyun kataloğuna sahip firmalarından biridir.</p>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -173,22 +173,22 @@
         </div>
         <div class="col-md-6 agileits_schedule_bottom_right">
             <div class="w3ls_schedule_bottom_right_grid">
-                <h3>Save up to <span>50%</span> in this week</h3>
-                <p>Suspendisse varius turpis efficitur erat laoreet dapibus.
-                    Mauris sollicitudin scelerisque commodo.Nunc dapibus mauris sed metus finibus posuere.</p>
+                <h3>Misyon <span>&</span> Vizyon</h3>
+                <p>Her yıl bir öncekinden daha büyük başarılara imza atmak isteyen EGOOYUN, bu doğrultuda daima ileriyi hedelemektedir. 
+                10 yıl içerisinde ulusal ve uluslararası düzeyde öncü rol oynayıp dünyanın oyun satan en büyük 3 dijital içerik satıcısından biri olma hedefinde kararldır.</p>
                 <div class="col-md-4 w3l_schedule_bottom_right_grid1">
                     <i class="fa fa-user-o" aria-hidden="true"></i>
-                    <h4>Customers</h4>
-                    <h5 class="counter">653</h5>
+                    <h4>Üyeler</h4>
+                    <h5 class="counter">250</h5>
                 </div>
                 <div class="col-md-4 w3l_schedule_bottom_right_grid1">
                     <i class="fa fa-calendar-o" aria-hidden="true"></i>
-                    <h4>Events</h4>
-                    <h5 class="counter">823</h5>
+                    <h4>Oyunlar</h4>
+                    <h5 class="counter">85</h5>
                 </div>
                 <div class="col-md-4 w3l_schedule_bottom_right_grid1">
                     <i class="fa fa-shield" aria-hidden="true"></i>
-                    <h4>Awards</h4>
+                    <h4>Ödüller</h4>
                     <h5 class="counter">45</h5>
                 </div>
                 <div class="clearfix"> </div>
@@ -206,8 +206,8 @@
                         <i class="fa fa-truck" aria-hidden="true"></i>
                     </div>
                     <div class="w3layouts_mail_grid_left2">
-                        <h3>FREE SHIPPING</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                        <h3>ÜCRETSİZ KARGO</h3>
+                        <p>Fiziksel olarak almak isterseniz ücretsiz kargo ile gönderebiliriz!</p>
                     </div>
                 </div>
                 <div class="col-md-3 w3layouts_mail_grid_left">
@@ -215,8 +215,8 @@
                         <i class="fa fa-headphones" aria-hidden="true"></i>
                     </div>
                     <div class="w3layouts_mail_grid_left2">
-                        <h3>24/7 SUPPORT</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                        <h3>7/24 CANLI DESTEK</h3>
+                        <p>7/24 Canlı Destek hattımız mevcuttur.</p>
                     </div>
                 </div>
                 <div class="col-md-3 w3layouts_mail_grid_left">
@@ -224,8 +224,8 @@
                         <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                     </div>
                     <div class="w3layouts_mail_grid_left2">
-                        <h3>MONEY BACK GUARANTEE</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                        <h3>İADE GARANTİSİ</h3>
+                        <p>Herhangi bir sorunda iade garantisi vardır.</p>
                     </div>
                 </div>
                 <div class="col-md-3 w3layouts_mail_grid_left">
@@ -233,8 +233,8 @@
                         <i class="fa fa-gift" aria-hidden="true"></i>
                     </div>
                     <div class="w3layouts_mail_grid_left2">
-                        <h3>FREE GIFT COUPONS</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                        <h3>HEDİYE KUPONLAR</h3>
+                        <p>Alışveriş yaptıkça indirim kuponları kazanın.</p>
                     </div>
                 </div>
                 <div class="clearfix"> </div>

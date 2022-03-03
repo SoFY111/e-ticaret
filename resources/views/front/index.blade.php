@@ -69,66 +69,11 @@
         <!-- The Modal -->
     </div>
     <!-- //banner -->
-    <div class="banner_bottom_agile_info">
-        <div class="container">
-            <div class="banner_bottom_agile_info_inner_w3ls">
-                <div class="col-md-6 wthree_banner_bottom_grid_three_left1 grid">
-                    <figure class="effect-roxy">
-                        <img src="{{asset('front/images/template-images')}}/bottom1.jpg" alt=" " class="img-responsive" />
-                        <figcaption>
-                            <h3><span>F</span>all Ahead</h3>
-                            <p>New Arrivals</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-md-6 wthree_banner_bottom_grid_three_left1 grid">
-                    <figure class="effect-roxy">
-                        <img src="{{asset('front/images/template-images')}}/bottom2.jpg" alt=" " class="img-responsive" />
-                        <figcaption>
-                            <h3><span>F</span>all Ahead</h3>
-                            <p>New Arrivals</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
-    <!-- schedule-bottom -->
-    <div class="schedule-bottom">
-        <div class="col-md-6 agileinfo_schedule_bottom_left">
-            <img src="{{asset('front/images/template-images')}}/mid.jpg" alt=" " class="img-responsive" />
-        </div>
-        <div class="col-md-6 agileits_schedule_bottom_right">
-            <div class="w3ls_schedule_bottom_right_grid">
-                <h3>Save up to <span>50%</span> in this week</h3>
-                <p>Suspendisse varius turpis efficitur erat laoreet dapibus.
-                    Mauris sollicitudin scelerisque commodo.Nunc dapibus mauris sed metus finibus posuere.</p>
-                <div class="col-md-4 w3l_schedule_bottom_right_grid1">
-                    <i class="fa fa-user-o" aria-hidden="true"></i>
-                    <h4>Customers</h4>
-                    <h5 class="counter">653</h5>
-                </div>
-                <div class="col-md-4 w3l_schedule_bottom_right_grid1">
-                    <i class="fa fa-calendar-o" aria-hidden="true"></i>
-                    <h4>Events</h4>
-                    <h5 class="counter">823</h5>
-                </div>
-                <div class="col-md-4 w3l_schedule_bottom_right_grid1">
-                    <i class="fa fa-shield" aria-hidden="true"></i>
-                    <h4>Awards</h4>
-                    <h5 class="counter">45</h5>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-        </div>
-        <div class="clearfix"> </div>
-    </div>
-    <!-- //schedule-bottom -->
+
     <!-- banner-bootom-w3-agileits -->
     <div class="banner-bootom-w3-agileits">
         <div class="container">
-            <h3 class="wthree_text_info">What's <span>Trending</span></h3>
+            <h3 class="wthree_text_info">Çok <span>Satanlar</span></h3>
 
             <div class="col-md-5 bb-grids bb-left-agileits-w3layouts">
                 <a href="womens.html">
@@ -170,22 +115,11 @@
             </div>
         </div>
     </div>
-    <!--/grids-->
-    <div class="agile_last_double_sectionw3ls">
-        <div class="col-md-6 multi-gd-img multi-gd-text ">
-            <a href="womens.html"><img src="{{asset('front/images/template-images')}}/bot_1.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
 
-        </div>
-        <div class="col-md-6 multi-gd-img multi-gd-text ">
-            <a href="womens.html"><img src="{{asset('front/images/template-images')}}/bot_2.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-    <!--/grids-->
     <!-- /new_arrivals -->
     <div class="new_arrivals_agile_w3ls_info">
         <div class="container">
-            <h3 class="wthree_text_info">New <span>Arrivals</span></h3>
+            <h3 class="wthree_text_info">En <span>Yeniler</span></h3>
             <div id="horizontalTab">
                 <ul class="resp-tabs-list">
                     <li> Men's</li>
@@ -1468,9 +1402,9 @@
     <!-- /we-offer -->
     <div class="sale-w3ls">
         <div class="container">
-            <h6>We Offer Flat <span>40%</span> Discount</h6>
+            <h6><span style="color:green;">%40</span>'a Varan İndirimler !</h6>
 
-            <a class="hvr-outline-out button2" href="single.html">Shop Now </a>
+            <a class="hvr-outline-out button2" href="single.html">Alışverişe Başla !</a>
         </div>
     </div>
     <!-- //we-offer -->
@@ -1483,8 +1417,8 @@
                         <i class="fa fa-truck" aria-hidden="true"></i>
                     </div>
                     <div class="w3layouts_mail_grid_left2">
-                        <h3>FREE SHIPPING</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                        <h3>ÜCRETSİZ KARGO</h3>
+                        <p>Fiziksel olarak almak isterseniz ücretsiz kargo ile gönderebiliriz!</p>
                     </div>
                 </div>
                 <div class="col-md-3 w3layouts_mail_grid_left">
@@ -1492,8 +1426,8 @@
                         <i class="fa fa-headphones" aria-hidden="true"></i>
                     </div>
                     <div class="w3layouts_mail_grid_left2">
-                        <h3>24/7 SUPPORT</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                        <h3>7/24 CANLI DESTEK</h3>
+                        <p>7/24 Canlı Destek hattımız mevcuttur.</p>
                     </div>
                 </div>
                 <div class="col-md-3 w3layouts_mail_grid_left">
@@ -1501,8 +1435,8 @@
                         <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                     </div>
                     <div class="w3layouts_mail_grid_left2">
-                        <h3>MONEY BACK GUARANTEE</h3>
-                        <p>Lorem ipsum dolor sit amet, conjecture</p>
+                        <h3>İADE GARANTİSİ</h3>
+                        <p>Herhangi bir sorunda iade garantisi vardır.</p>
                     </div>
                 </div>
                 <div class="col-md-3 w3layouts_mail_grid_left">
@@ -1510,8 +1444,8 @@
                         <i class="fa fa-gift" aria-hidden="true"></i>
                     </div>
                     <div class="w3layouts_mail_grid_left2">
-                        <h3>FREE GIFT COUPONS</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                        <h3>HEDİYE KUPONLAR</h3>
+                        <p>Alışveriş yaptıkça indirim kuponları kazanın.</p>
                     </div>
                 </div>
                 <div class="clearfix"> </div>

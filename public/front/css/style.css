@@ -252,16 +252,18 @@ i.fa.fa-shopping-bag.top_logo_agile_bag {
     outline: none;
     border: none;
     width: 87%;
-    padding: 12px 10px;
+	height: 40px;
+	margin-top: 35px;
+	padding: 12px 10px;
     color: #848484;
     font-size: 16px;
     border: 1px solid #ddd;
 	letter-spacing:1px;
 }
 .header-middle form input[type="submit"]{
-    background: url(../images/template-images/search.png) no-repeat 4px 0px #2fdab8;
+    background: url(../images/template-images/search.png) no-repeat 2px -4px #2fdab8;
     width: 11%;
-    height: 50px;
+    height: 40px;
     border: none;
     padding: 0;
     border: none;
@@ -1608,7 +1610,7 @@ a.single-item{
 }
 /*-- /sale --*/
    .sale-w3ls {
-    background: url(../images/template-images/banner3.jpg)no-repeat 0px 0px;
+    background: url(../images/template-images/banner0.jpg)no-repeat 0px 0px;
     background-attachment: fixed;
     background-size: cover;
 	-webkit-background-size: cover;
