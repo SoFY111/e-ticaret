@@ -235,7 +235,7 @@
                             <label for="password">Şifre</label>
                             <span></span>
                         </div>
-                        <div class="form-check">
+                        <div class="form-check" style="margin-bottom: 6px">
                             <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                             <label class="form-check-label" for="remember">
@@ -283,28 +283,40 @@
             <div class="modal-body modal-body-sub_agile">
                 <div class="col-md-8 modal_body_left modal_body_left1">
                     <h3 class="agileinfo_sign"><span>Hemen</span> Kayıt Ol</h3>
-                    <form action="#" method="post">
-                        <div class="styled-input agile-styled-input-top">
-                            <input type="text" name="Name" required="">
-                            <label>Name</label>
-                            <span></span>
+                    <form id="registerForm" method="POST" action="{{route('register')}}">
+                        <div class="alert alert-danger" id="registerFormErrorDiv" style="margin-bottom: 0px !important; display: none; padding: 15px 15px 15px 25px !important;">
+                            <ul id="registerFormErrorUL">
+                            </ul>
+                        </div>
+                        @csrf
+                        <div style="margin-top:36px; display: flex; justify-content: space-between; align-items: center;">
+                            <div class="styled-input agile-styled-input-top" style="width: 48%">
+                                <input type="text" name="name" required="">
+                                <label for="name">İsim</label>
+                                <span></span>
+                            </div>
+                            <div class="styled-input agile-styled-input-top" style="width: 48%">
+                                <input type="text" name="surname" required="">
+                                <label for="surname">Soyisim</label>
+                                <span></span>
+                            </div>
                         </div>
                         <div class="styled-input">
-                            <input type="email" name="Email" required="">
-                            <label>Email</label>
+                            <input type="email" name="email" required="">
+                            <label for="email">Email</label>
                             <span></span>
                         </div>
                         <div class="styled-input">
                             <input type="password" name="password" required="">
-                            <label>Password</label>
+                            <label>Şifre</label>
                             <span></span>
                         </div>
                         <div class="styled-input">
-                            <input type="password" name="Confirm Password" required="">
-                            <label>Confirm Password</label>
+                            <input type="password" name="password_confirmation" required="">
+                            <label for="password_confirmation">Tekrar Şifre</label>
                             <span></span>
                         </div>
-                        <input type="submit" value="Kayıt Ol">
+                        <input type="submit" style="width: 100%" value="Kayıt Ol">
                     </form>
                     <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
                         <li><a href="#" class="facebook">
