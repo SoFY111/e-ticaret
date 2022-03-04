@@ -8,7 +8,7 @@
                     <li><i class="fa fa-phone" aria-hidden="true"></i> +90 262 303 1000</li>
                     <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">info@egooyun.com</a></li>
                 @else
-                    <li style="width: 49%;"><a><i class="fa fa-desktop" aria-hidden="true"></i> Admin Sayfası</a></li>
+                    <li style="width: 49%;"><a href="{{route('back.dashboard')}}"><i class="fa fa-desktop" aria-hidden="true"></i> Admin Sayfası</a></li>
                 @endif
                 <li><form action="{{route('logout')}}" method="POST" style="margin: 0">@csrf<button type="submit" style="background: transparent; border:none;"><i class="glyphicon glyphicon-log-out" aria-hidden="true"></i> Çıkış Yap </button></form></li>
             @else
