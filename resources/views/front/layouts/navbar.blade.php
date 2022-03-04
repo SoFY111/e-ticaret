@@ -55,11 +55,11 @@
                             <li class="active menu__item menu__item--current"><a class="menu__link" href="{{route('front.mainpage')}}">Ana Sayfa <span class="sr-only">(current)</span></a></li>
                             <li class=" menu__item"><a class="menu__link" href="{{route('front.about')}}">Hakkımızda</a></li>
                             <li class="dropdown menu__item">
-                                <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bilgisayar <span class="caret"></span></a>
+                                <a href="{{route('front.bilgisayar')}}" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bilgisayar <span class="caret"></span></a>
                                 <ul class="dropdown-menu multi-column columns-3">
                                     <div class="agile_inner_drop_nav_info">
                                         <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                            <a href="mens.html"><img src="{{asset('front/images/template-images')}}/top2.jpg" alt=" "/></a>
+                                            <a href="{{route('front.bilgisayar')}}"><img src="{{asset('front/images/template-images')}}/windows.jpg" alt=" "/></a>
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
@@ -92,7 +92,7 @@
                                 <ul class="dropdown-menu multi-column columns-3">
                                     <div class="agile_inner_drop_nav_info">
                                         <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                            <a href="mens.html"><img src="{{asset('front/images/template-images')}}/top2.jpg" alt=" "/></a>
+                                            <a href="{{route('front.ps')}}"><img src="{{asset('front/images/template-images')}}/ps.jpg" alt=" "/></a>
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
@@ -125,7 +125,7 @@
                                 <ul class="dropdown-menu multi-column columns-3">
                                     <div class="agile_inner_drop_nav_info">
                                         <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                            <a href="mens.html"><img src="{{asset('front/images/template-images')}}/top2.jpg" alt=" "/></a>
+                                            <a href="{{route('front.xbox')}}"><img src="{{asset('front/images/template-images')}}/xbox.jpg" alt=" "/></a>
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
@@ -148,39 +148,6 @@
                                                 <li><a href="mens.html">Sunglasses</a></li>
                                                 <li><a href="mens.html">Swimwear</a></li>
                                             </ul>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </ul>
-                            </li>
-                            <li class="dropdown menu__item">
-                                <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Women's wear <span class="caret"></span></a>
-                                <ul class="dropdown-menu multi-column columns-3">
-                                    <div class="agile_inner_drop_nav_info">
-                                        <div class="col-sm-3 multi-gd-img">
-                                            <ul class="multi-column-dropdown">
-                                                <li><a href="womens.html">Clothing</a></li>
-                                                <li><a href="womens.html">Wallets</a></li>
-                                                <li><a href="womens.html">Footwear</a></li>
-                                                <li><a href="womens.html">Watches</a></li>
-                                                <li><a href="womens.html">Accessories</a></li>
-                                                <li><a href="womens.html">Bags</a></li>
-                                                <li><a href="womens.html">Caps & Hats</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3 multi-gd-img">
-                                            <ul class="multi-column-dropdown">
-                                                <li><a href="womens.html">Jewellery</a></li>
-                                                <li><a href="womens.html">Sunglasses</a></li>
-                                                <li><a href="womens.html">Perfumes</a></li>
-                                                <li><a href="womens.html">Beauty</a></li>
-                                                <li><a href="womens.html">Shirts</a></li>
-                                                <li><a href="womens.html">Sunglasses</a></li>
-                                                <li><a href="womens.html">Swimwear</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-6 multi-gd-img multi-gd-text ">
-                                            <a href="womens.html"><img src="{{asset('front/images/template-images')}}/top1.jpg" alt=" "/></a>
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>

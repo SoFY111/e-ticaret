@@ -3,14 +3,14 @@
 @section('content')
     <div class="page-head_agile_info_w3l">
         <div class="container">
-            <h3>İ<span>letişim </span></h3>
+            <h3>İletİşİm<span></span></h3>
             <!--/w3_short-->
             <div class="services-breadcrumb">
                 <div class="agile_inner_breadcrumb">
 
                     <ul class="w3_short">
                         <li><a href="{{route('front.mainpage')}}">Ana Sayfa</a><i>|</i></li>
-                        <li>İletişim</li>
+                        <li>İletİşİm</li>
                     </ul>
                 </div>
             </div>
@@ -72,7 +72,7 @@
                         <div class="mail-agileits-w3layouts">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                             <div class="contact-right">
-                                <p>Konum</p><span>Baki Komsuoğlu bulvarı No:515, Umuttepe</span>
+                                <p>Adres</p><span>Baki Komsuoğlu bulvarı No:515, Umuttepe</span>
                             </div>
                             <div class="clearfix"> </div>
                         </div>
@@ -93,11 +93,11 @@
                         </ul>
                     </div>
                     <div class="col-md-6 contact-form">
-                        <h4 class="white-w3ls">İletişim <span>Formu</span></h4>
+                        <h4 class="white-w3ls">İletİşİm <span>Formu</span></h4>
                         <form action="#" method="post">
                             <div class="styled-input agile-styled-input-top">
                                 <input type="text" name="Name" required="">
-                                <label>Name</label>
+                                <label>Ad Soyad</label>
                                 <span></span>
                             </div>
                             <div class="styled-input">
@@ -107,15 +107,15 @@
                             </div>
                             <div class="styled-input">
                                 <input type="text" name="Subject" required="">
-                                <label>Subject</label>
+                                <label>Konu</label>
                                 <span></span>
                             </div>
                             <div class="styled-input">
                                 <textarea name="Message" required=""></textarea>
-                                <label>Message</label>
+                                <label>Mesaj</label>
                                 <span></span>
                             </div>
-                            <input type="submit" value="SEND">
+                            <input type="submit" value="GÖNDER">
                         </form>
                     </div>
                 </div>
