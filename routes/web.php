@@ -47,5 +47,9 @@ Route::get('/ver', function () {
     return view('ver');
 });
 
+Route::get('/admin/', function (){
+   return view('back.dashboard');
+})->name('back.dashboard');
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
