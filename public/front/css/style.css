@@ -660,7 +660,7 @@ a.simpleCart_empty {
 
 .grid figure p {
     letter-spacing: 12px;
-    color: #fff;
+    color: rgb(255, 255, 255);
     line-height: 2em;
     font-size: 1.1em;
 }
@@ -674,20 +674,20 @@ figure.effect-roxy img {
 	width: -ms-calc(100% + 60px);
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(-50px,0,0);
-	transform: translate3d(-50px,0,0);
-	-moz-transform: translate3d(-50px,0,0);
-	-o-transform: translate3d(-50px,0,0);
-	-ms-transform: translate3d(-50px,0,0);
+	-webkit-transform: translate3d(0px,0,0);
+	transform: translate3d(-30px,0,0);
+	-moz-transform: translate3d(-30px,0,0);
+	-o-transform: translate3d(-30px,0,0);
+	-ms-transform: translate3d(-30px,0,0);
 }
 
 figure.effect-roxy figcaption::before {
 	position: absolute;
-	top: 30px;
-	right: 30px;
-	bottom: 30px;
-	left: 30px;
-    border: 4px solid #fff;
+	top: 10px;
+	right: 10px;
+	bottom: 10px;
+	left: 10px;
+    border: 4px solid rgba(255, 255, 255, 0.822);
 	content: '';
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -700,8 +700,8 @@ figure.effect-roxy figcaption::before {
 }
 
 figure.effect-roxy figcaption {
-    padding: 3em;
-    text-align: right;
+    padding: 4em;
+    text-align: center;
     border: 13px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -1097,7 +1097,7 @@ button.close.top_wthree_agile {
 
 /*-- schedule-bottom --*/
 .schedule-bottom {
-    background: #2fdab8;
+    background: #000000;
 }
 .agileits_schedule_bottom_right,.agileinfo_schedule_bottom_left {
     padding: 0;
@@ -1108,9 +1108,9 @@ button.close.top_wthree_agile {
 .w3ls_schedule_bottom_right_grid{
     padding: 3em 2em;
     background: #fff;
-    margin: 6.5em 0 0;
+    margin: 1.2em 2.5em 0;
     width: 90%;
-    box-shadow: 5px 0px 10px #19a98c;
+    box-shadow: 5px 0px 10px #000000;
 
 }
 .w3ls_schedule_bottom_right_grid h3{
@@ -1862,7 +1862,7 @@ color: #545454;
 /*-- //coupons --*/
 /*-- /about --*/
 .page-head_agile_info_w3l {
-    background: url(../images/template-images/inner1.jpg) no-repeat center;
+    background: url(../images/template-images/banner10.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -3317,6 +3317,7 @@ color: #000;
 }
 .single_page_agile_its_w3ls p {
     line-height: 2em;
+	text-align: justify;
 }
 p.w3ls_para {
     margin-top: 1em;

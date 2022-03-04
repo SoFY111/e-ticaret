@@ -27,6 +27,22 @@ Route::get('/iletisim', function () {
     return view('front.contact');
 })->name('front.contact');
 
+Route::get('/bilgisayar', function () {
+    return view('front.bilgisayar');
+})->name('front.bilgisayar');
+
+Route::get('/ps', function () {
+    return view('front.ps');
+})->name('front.ps');
+
+Route::get('/xbox', function () {
+    return view('front.xbox');
+})->name('front.xbox');
+
+Route::get('/gta', function () {
+    return view('front.gta');
+})->name('front.gta');
+
 Route::get('/ver', function () {
     return view('ver');
 });
