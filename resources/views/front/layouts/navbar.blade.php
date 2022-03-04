@@ -2,10 +2,22 @@
 <div class="header" id="home">
     <div class="container">
         <ul>
-            <li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Giriş Yap </a></li>
-            <li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Kayıt Ol </a></li>
-            <li><i class="fa fa-phone" aria-hidden="true"></i> +90 262 303 1000</li>
-            <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">info@egooyun.com</a></li>
+            @if (Auth::check())
+                <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> {{Auth::user()->name}} {{ Auth::user()->surname}}</a></li>
+                @if(Auth::user()->type == 'user')
+                    <li><i class="fa fa-phone" aria-hidden="true"></i> +90 262 303 1000</li>
+                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">info@egooyun.com</a></li>
+                @else
+                    <li style="width: 49%;"><a><i class="fa fa-desktop" aria-hidden="true"></i> Admin Sayfası</a></li>
+                @endif
+                <li><form action="{{route('logout')}}" method="POST" style="margin: 0">@csrf<button type="submit" style="background: transparent; border:none;"><i class="glyphicon glyphicon-log-out" aria-hidden="true"></i> Çıkış Yap </button></form></li>
+            @else
+                <li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Giriş Yap </a></li>
+                <li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Kayıt Ol </a></li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i> +90 262 303 1000</li>
+                <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">info@egooyun.com</a></li>
+            @endif
+
         </ul>
     </div>
 </div>
