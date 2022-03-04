@@ -217,7 +217,7 @@
           if (slider.pagingCount > 1) {
             for (var i = 0; i < slider.pagingCount; i++) {
               slide = slider.slides.eq(i);
-              item = (slider.vars.controlNav === "thumbnails") ? '<img src="' + slide.attr( 'data-thumb' ) + '"/>' : '<a>' + j + '</a>';
+              item = (slider.vars.controlNav === "thumbnails") ? '<images src="' + slide.attr( 'data-thumb' ) + '"/>' : '<a>' + j + '</a>';
               if ( 'thumbnails' === slider.vars.controlNav && true === slider.vars.thumbCaptions ) {
                 var captn = slide.attr( 'data-thumbcaption' );
                 if ( '' !== captn && undefined !== captn ) { item += '<span class="' + namespace + 'caption">' + captn + '</span>'; }
@@ -233,7 +233,7 @@
 
           methods.controlNav.active();
 
-          slider.controlNavScaffold.delegate('a, img', eventType, function(event) {
+          slider.controlNavScaffold.delegate('a, images', eventType, function(event) {
             event.preventDefault();
 
             if (watchedEvent === "" || watchedEvent === event.type) {
@@ -621,19 +621,19 @@
               if (methods.pauseInvisible.isHidden()) {
                 if(slider.startTimeout) {
                   clearTimeout(slider.startTimeout); //If clock is ticking, stop timer and prevent from starting while invisible
-                } else { 
+                } else {
                   slider.pause(); //Or just pause
                 }
               }
               else {
                 if(slider.started) {
                   slider.play(); //Initiated before, just play
-                } else { 
-                  if (slider.vars.initDelay > 0) { 
+                } else {
+                  if (slider.vars.initDelay > 0) {
                     setTimeout(slider.play, slider.vars.initDelay);
                   } else {
                     slider.play(); //Didn't init before: simply init or wait for it
-                  } 
+                  }
                 }
               }
             });
@@ -754,7 +754,7 @@
               slider.animating = false;
               slider.currentSlide = slider.animatingTo;
             }
-            
+
             // Unbind previous transitionEnd events and re-bind new transitionEnd event
             slider.container.unbind("webkitTransitionEnd transitionend");
             slider.container.bind("webkitTransitionEnd transitionend", function() {
@@ -1134,7 +1134,7 @@
 
     // Special properties
     controlsContainer: "",          //{UPDATED} jQuery Object/Selector: Declare which container the navigation elements should be appended too. Default container is the FlexSlider element. Example use would be $(".flexslider-container"). Property is ignored if given element is not found.
-    manualControls: "",             //{UPDATED} jQuery Object/Selector: Declare custom control navigation. Examples would be $(".flex-control-nav li") or "#tabs-nav li img", etc. The number of elements in your controlNav should match the number of slides/tabs.
+    manualControls: "",             //{UPDATED} jQuery Object/Selector: Declare custom control navigation. Examples would be $(".flex-control-nav li") or "#tabs-nav li images", etc. The number of elements in your controlNav should match the number of slides/tabs.
     customDirectionNav: "",         //{NEW} jQuery Object/Selector: Custom prev / next button. Must be two jQuery elements. In order to make the events work they have to have the classes "prev" and "next" (plus namespace)
     sync: "",                       //{NEW} Selector: Mirror the actions performed on this slider with another slider. Use with care.
     asNavFor: "",                   //{NEW} Selector: Internal property exposed for turning the slider into a thumbnail navigation for another slider

@@ -38,7 +38,7 @@
         }
 
         var posX = e.pageX,posY = e.pageY,zoomViewPositionX;
-        $('body').prepend('<div class="imagezoom-cursor">&nbsp;</div><div class="imagezoom-view"><img src="'+imageSrc+'"></div>');
+        $('body').prepend('<div class="imagezoom-cursor">&nbsp;</div><div class="imagezoom-view"><images src="'+imageSrc+'"></div>');
 
         if(settings.zoomviewposition == 'right'){
           zoomViewPositionX = (offset.left+imageWidth+settings.zoomviewmargin);
@@ -58,7 +58,7 @@
           'border': settings.zoomviewborder
         });
 
-        $(imagezoomView.selector).children('img').css({
+        $(imagezoomView.selector).children('images').css({
           'position':'absolute',
           'width': imageWidth*settings.magnification,
           'height': imageHeight*settings.magnification,
@@ -98,7 +98,7 @@
       }
 
       $(imagezoomCursor.selector).css({'top':posY-(cursorSize[1]/2),'left':posX-(cursorSize[0]/2)});
-      $(imagezoomView.selector).children('img').css({'top':((offset.top-posY)+(cursorSize[1]/2))*settings.magnification,'left':((offset.left-posX)+(cursorSize[0]/2))*settings.magnification});
+      $(imagezoomView.selector).children('images').css({'top':((offset.top-posY)+(cursorSize[1]/2))*settings.magnification,'left':((offset.left-posX)+(cursorSize[0]/2))*settings.magnification});
 
       $(imagezoomCursor.selector).mouseleave(function(){
         $(this).remove();
