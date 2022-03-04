@@ -27,7 +27,7 @@
     <div class="header-bot_inner_wthreeinfo_header_mid">
                 <!-- header-bot -->
         <div class="col-md-4 logo_agile">
-            <a href="{{route('front.mainpage')}}"><img style="width: 470px; height: 120px; margin-left: -25px;object-fit: cover;" src="{{asset('front/images/template-images')}}/egooyun.png" alt=""></a>
+            <a href="{{route('front.mainpage')}}"><img style="width: 470px; height: 120px; margin-left: -25px;object-fit: cover;" src="{{asset('front/images')}}/egooyun.png" alt=""></a>
         </div>
         <!-- header-bot -->
         <div class="col-md-4 header-middle">

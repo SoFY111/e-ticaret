@@ -1,7 +1,7 @@
 <div class="footer">
     <div class="footer_agile_inner_info_w3l">
         <div class="col-md-3 footer-left">
-        <a href="{{route('front.mainpage')}}"><img style="width: 220px; height: 70px; object-fit: cover;" src="{{asset('front/images/template-images')}}/egooyun_logo.png" alt=""></a>
+        <a href="{{route('front.mainpage')}}"><img style="width: 220px; height: 70px; object-fit: cover;" src="{{asset('front/images')}}/egooyun_logo.png" alt=""></a>
             <p>Resmi bir çevrimiçi dijital dağıtım platformudur.</p>
             <ul class="social-nav model-3d-0 footer-social w3_agile_social two">
                 <li><a href="#" class="facebook">
