@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class isAdmin
+class isSuperAdmin
 {
     /**
      * Handle an incoming request.
@@ -16,9 +16,9 @@ class isAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        if (auth()->user()->type === 'admin' || auth()->user()->type === 'superadmin') {
-            return $next($request);
+        if (auth()->user()->type !== 'superadmin') {
+            return redirect()->route('back.dashboard');
         }
-        return redirect()->route('front.mainpage');
+        return $next($request);
     }
 }

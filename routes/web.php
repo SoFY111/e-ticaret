@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\Back\SuperAdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,6 +54,12 @@ Route::prefix('/admin')->name('back.')->middleware(['isLogin', 'isAdmin'])->grou
     Route::get('/', function (){
         return view('back.dashboard');
     })->name('dashboard');
+
+    //superAdminAuthority
+    Route::prefix('/')->name('superAdmin.')->middleware('isSuperAdmin')->group(function(){
+        Route::get('/kullanici-yetki-degistir', [SuperAdminController::class, 'changeUserAuthorityIndex'])->name('changeUserAuthority');
+        Route::post('/kullanici-yetki-degistir', [SuperAdminController::class, 'changeUserAuthority'])->name('changeUserAuthority');
+    });
 });
 
 

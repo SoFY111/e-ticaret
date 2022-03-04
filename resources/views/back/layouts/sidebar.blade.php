@@ -4,21 +4,27 @@
 <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background: black;">
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-            <div class="sidebar-brand-text mx-3">Blog Sitesi <sub>V1</sub> Panel</div>
+            <div class="sidebar-brand-text mx-3">EGOOYUN Panel<sub>V1</sub></div>
         </a>
 
         <!-- Divider -->
         <hr class="sidebar-divider my-0">
 
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item @if(Request::segment(2) == 'panel') active @endif ">
-            <a class="nav-link" href="#">
+        <li class="nav-item @if(Request::segment(1) == 'admin') active @endif ">
+            <a class="nav-link" href="{{route('back.dashboard')}}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Panel</span></a>
+                <span>Ana sayfa</span></a>
+        </li>
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('front.mainpage')}}">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Alışveriş Ana sayfa</span></a>
         </li>
 
         <!-- Divider -->
@@ -78,6 +84,15 @@
         </div>
 
         <!-- Nav Item - Tables -->
+        @if(Auth::user()->type === 'superadmin')
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('back.superAdmin.changeUserAuthority')}}">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Admin Tanımla</span></a>
+            </li>
+        @endif
+
+        <!-- Nav Item - Tables -->
         <li class="nav-item">
             <a class="nav-link" href="#">
                 <i class="fas fa-fw fa-cog"></i>
@@ -90,13 +105,6 @@
         <!-- Sidebar Toggler (Sidebar) -->
         <div class="text-center d-none d-md-inline">
             <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </div>
-
-        <!-- Sidebar Message -->
-        <div class="sidebar-card">
-            <img class="sidebar-card-illustration mb-2" href="{{asset('back/img')}}/undraw_rocket.svg" alt="">
-            <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-            <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
         </div>
 
     </ul>
@@ -191,7 +199,7 @@
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Hakan</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{Auth::user()->name}}</span>
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

@@ -21,8 +21,9 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->enum('type', ['user', 'admin'])->default('user');
+            $table->enum('type', ['user', 'admin', 'superadmin'])->default('user');
             $table->string('profilePhotoPath')->nullable();
+            $table->integer('isDeleted')->default(0)->comment('0:active, 1:pasive');
             $table->timestamps();
         });
     }
