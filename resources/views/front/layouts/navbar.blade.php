@@ -2,10 +2,22 @@
 <div class="header" id="home">
     <div class="container">
         <ul>
-            <li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Giriş Yap </a></li>
-            <li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Kayıt Ol </a></li>
-            <li><i class="fa fa-phone" aria-hidden="true"></i> +90 262 303 1000</li>
-            <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">info@egooyun.com</a></li>
+            @if (Auth::check())
+                <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> {{Auth::user()->name}} {{ Auth::user()->surname}}</a></li>
+                @if(Auth::user()->type == 'user')
+                    <li><i class="fa fa-phone" aria-hidden="true"></i> +90 262 303 1000</li>
+                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">info@egooyun.com</a></li>
+                @else
+                    <li style="width: 49%;"><a><i class="fa fa-desktop" aria-hidden="true"></i> Admin Sayfası</a></li>
+                @endif
+                <li><form action="{{route('logout')}}" method="POST" style="margin: 0">@csrf<button type="submit" style="background: transparent; border:none;"><i class="glyphicon glyphicon-log-out" aria-hidden="true"></i> Çıkış Yap </button></form></li>
+            @else
+                <li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Giriş Yap </a></li>
+                <li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Kayıt Ol </a></li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i> +90 262 303 1000</li>
+                <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">info@egooyun.com</a></li>
+            @endif
+
         </ul>
     </div>
 </div>
@@ -15,7 +27,7 @@
     <div class="header-bot_inner_wthreeinfo_header_mid">
                 <!-- header-bot -->
         <div class="col-md-4 logo_agile">
-            <a href="{{route('front.mainpage')}}"><img style="width: 470px; height: 120px; margin-left: -25px;object-fit: cover;" src="{{asset('front/images/template-images')}}/egooyun.png" alt=""></a>
+            <a href="{{route('front.mainpage')}}"><img style="width: 470px; height: 120px; margin-left: -25px;object-fit: cover;" src="{{asset('front/images')}}/egooyun.png" alt=""></a>
         </div>
         <!-- header-bot -->
         <div class="col-md-4 header-middle">
@@ -202,7 +214,7 @@
                             <label for="password">Şifre</label>
                             <span></span>
                         </div>
-                        <div class="form-check">
+                        <div class="form-check" style="margin-bottom: 6px">
                             <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                             <label class="form-check-label" for="remember">
@@ -250,28 +262,40 @@
             <div class="modal-body modal-body-sub_agile">
                 <div class="col-md-8 modal_body_left modal_body_left1">
                     <h3 class="agileinfo_sign"><span>Hemen</span> Kayıt Ol</h3>
-                    <form action="#" method="post">
-                        <div class="styled-input agile-styled-input-top">
-                            <input type="text" name="Name" required="">
-                            <label>Name</label>
-                            <span></span>
+                    <form id="registerForm" method="POST" action="{{route('register')}}">
+                        <div class="alert alert-danger" id="registerFormErrorDiv" style="margin-bottom: 0px !important; display: none; padding: 15px 15px 15px 25px !important;">
+                            <ul id="registerFormErrorUL">
+                            </ul>
+                        </div>
+                        @csrf
+                        <div style="margin-top:36px; display: flex; justify-content: space-between; align-items: center;">
+                            <div class="styled-input agile-styled-input-top" style="width: 48%">
+                                <input type="text" name="name" required="">
+                                <label for="name">İsim</label>
+                                <span></span>
+                            </div>
+                            <div class="styled-input agile-styled-input-top" style="width: 48%">
+                                <input type="text" name="surname" required="">
+                                <label for="surname">Soyisim</label>
+                                <span></span>
+                            </div>
                         </div>
                         <div class="styled-input">
-                            <input type="email" name="Email" required="">
-                            <label>Email</label>
+                            <input type="email" name="email" required="">
+                            <label for="email">Email</label>
                             <span></span>
                         </div>
                         <div class="styled-input">
                             <input type="password" name="password" required="">
-                            <label>Password</label>
+                            <label>Şifre</label>
                             <span></span>
                         </div>
                         <div class="styled-input">
-                            <input type="password" name="Confirm Password" required="">
-                            <label>Confirm Password</label>
+                            <input type="password" name="password_confirmation" required="">
+                            <label for="password_confirmation">Tekrar Şifre</label>
                             <span></span>
                         </div>
-                        <input type="submit" value="Kayıt Ol">
+                        <input type="submit" style="width: 100%" value="Kayıt Ol">
                     </form>
                     <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
                         <li><a href="#" class="facebook">
