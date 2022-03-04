@@ -15,41 +15,45 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', function () {
-    return view('front.index');
-})->name('front.mainpage');
+Route::prefix('/')->name('front.')->group(function(){
+    Route::get('/', function () {
+        return view('front.index');
+    })->name('mainpage');
 
-Route::get('/hakkimizda', function () {
-    return view('front.about');
-})->name('front.about');
+    Route::get('/hakkimizda', function () {
+        return view('front.about');
+    })->name('about');
 
-Route::get('/iletisim', function () {
-    return view('front.contact');
-})->name('front.contact');
+    Route::get('/iletisim', function () {
+        return view('front.contact');
+    })->name('contact');
 
-Route::get('/bilgisayar', function () {
-    return view('front.bilgisayar');
-})->name('front.bilgisayar');
+    Route::get('/bilgisayar', function () {
+        return view('front.bilgisayar');
+    })->name('bilgisayar');
 
-Route::get('/ps', function () {
-    return view('front.ps');
-})->name('front.ps');
+    Route::get('/ps', function () {
+        return view('front.ps');
+    })->name('ps');
 
-Route::get('/xbox', function () {
-    return view('front.xbox');
-})->name('front.xbox');
+    Route::get('/xbox', function () {
+        return view('front.xbox');
+    })->name('xbox');
 
-Route::get('/gta', function () {
-    return view('front.gta');
-})->name('front.gta');
+    Route::get('/gta', function () {
+        return view('front.gta');
+    })->name('gta');
 
-Route::get('/ver', function () {
-    return view('ver');
+    Route::get('/ver', function () {
+        return view('ver');
+    });
 });
 
-Route::get('/admin/', function (){
-   return view('back.dashboard');
-})->name('back.dashboard');
+Route::prefix('/admin')->name('back.')->middleware(['isLogin', 'isAdmin'])->group(function() {
+    Route::get('/', function (){
+        return view('back.dashboard');
+    })->name('dashboard');
+});
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -56,10 +56,10 @@
                 </div>
                 <div class="col-md-3 team-grids">
                     <div class="thumbnail team-w3agile">
-                        <img src="{{asset('front/images/template-images')}}/t4.jpg" class="img-responsive" alt="">
+                        <img src="{{asset('front/images')}}/hakan2.jpg" class="img-responsive" alt="" style="height: 339px">
                         <div class="social-icons team-icons right-w3l fotw33">
                             <div class="caption">
-                                <h4>Hakan Dinçtürk</h4>
+                                <h4>Hakan DİNÇTÜRK</h4>
                                 <p>Web Programcısı</p>
                             </div>
                             <ul class="social-nav model-3d-0 footer-social w3_agile_social two">
@@ -81,10 +81,10 @@
                 </div>
                 <div class="col-md-3 team-grids">
                     <div class="thumbnail team-w3agile">
-                        <img src="{{asset('front/images/template-images')}}/t1.jpg" class="img-responsive" alt="">
+                        <img src="{{asset('front/images')}}/cengiz.jpg" class="img-responsive" alt="" style="height: 339px">
                         <div class="social-icons team-icons right-w3l fotw33">
                             <div class="caption">
-                                <h4>Cengizhan Durmuş</h4>
+                                <h4>Cengizhan DURMUŞ</h4>
                                 <p>Web Programcısı</p>
                             </div>
                             <ul class="social-nav model-3d-0 footer-social w3_agile_social two">

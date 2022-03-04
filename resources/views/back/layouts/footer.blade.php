@@ -39,7 +39,11 @@
             <div class="modal-body">Çıkış yapmak istediğinize eminseniz 'Çıkış Yap' butonuna basınız.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">İptal</button>
-                <a class="btn btn-primary" href="#">Çıkış Yap</a>
+                <form method="POST" action="{{route('logout')}}">
+                    @csrf
+                    <button type="submit" class="btn btn-primary" href="#">Çıkış Yap</button>
+                </form>
+
             </div>
         </div>
     </div>
