@@ -23,7 +23,7 @@
         <div class="container">
             <div class="agile_ab_w3ls_info">
                 <div class="col-md-6 ab_pic_w3ls">
-                    <img src="{{asset('front/images/template-images')}}/about.jpg" alt=" " class="img-responsive" />
+                    <img src="{{asset('front/images')}}/about.jpg" alt=" " class="img-responsive" />
                 </div>
                 <div class="col-md-6 ab_pic_w3ls_text_info">
                     <h5>EGO OYUN <span> HAKKINDA</span> </h5>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="col-md-3 team-grids">
                     <div class="thumbnail team-w3agile">
-                        <img src="{{asset('front/images')}}/hakan2.jpg" class="img-responsive" alt="" style="height: 339px">
+                        <img src="{{asset('front/images')}}/hakan2.jpg" class="img-responsive" alt="" style="height: 339px; object-fit: cover;">
                         <div class="social-icons team-icons right-w3l fotw33">
                             <div class="caption">
                                 <h4>Hakan DİNÇTÜRK</h4>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="col-md-3 team-grids">
                     <div class="thumbnail team-w3agile">
-                        <img src="{{asset('front/images')}}/cengiz.jpg" class="img-responsive" alt="" style="height: 339px">
+                        <img src="{{asset('front/images')}}/cengiz.jpg" class="img-responsive" alt="" style="height: 339px; object-fit: cover;">
                         <div class="social-icons team-icons right-w3l fotw33">
                             <div class="caption">
                                 <h4>Cengizhan DURMUŞ</h4>
@@ -116,7 +116,7 @@
     <!-- schedule-bottom -->
     <div class="schedule-bottom">
         <div class="col-md-6 agileinfo_schedule_bottom_left">
-            <img src="{{asset('front/images/template-images')}}/mid.jpg" alt=" " class="img-responsive" />
+            <img src="{{asset('front/images')}}/mid.jpg" alt=" " class="img-responsive" />
         </div>
         <div class="col-md-6 agileits_schedule_bottom_right">
             <div class="w3ls_schedule_bottom_right_grid">

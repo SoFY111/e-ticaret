@@ -71,7 +71,7 @@
                                 <ul class="dropdown-menu multi-column columns-3">
                                     <div class="agile_inner_drop_nav_info">
                                         <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                            <a href="{{route('front.bilgisayar')}}"><img src="{{asset('front/images/template-images')}}/windows.jpg" alt=" "/></a>
+                                            <a href="{{route('front.bilgisayar')}}"><img src="{{asset('front/images')}}/windows.jpg" alt=" "/></a>
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
@@ -104,7 +104,7 @@
                                 <ul class="dropdown-menu multi-column columns-3">
                                     <div class="agile_inner_drop_nav_info">
                                         <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                            <a href="{{route('front.ps')}}"><img src="{{asset('front/images/template-images')}}/ps.jpg" alt=" "/></a>
+                                            <a href="{{route('front.ps')}}"><img src="{{asset('front/images')}}/ps.jpg" alt=" "/></a>
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
@@ -137,7 +137,7 @@
                                 <ul class="dropdown-menu multi-column columns-3">
                                     <div class="agile_inner_drop_nav_info">
                                         <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                            <a href="{{route('front.xbox')}}"><img src="{{asset('front/images/template-images')}}/xbox.jpg" alt=" "/></a>
+                                            <a href="{{route('front.xbox')}}"><img src="{{asset('front/images')}}/xbox.jpg" alt=" "/></a>
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">

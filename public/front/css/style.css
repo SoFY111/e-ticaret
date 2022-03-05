@@ -1610,7 +1610,7 @@ a.single-item{
 }
 /*-- /sale --*/
    .sale-w3ls {
-    background: url(../images/template-images/banner0.jpg)no-repeat 0px 0px;
+    background: url(../images/banner0.jpg)no-repeat 0px 0px;
     background-attachment: fixed;
     background-size: cover;
 	-webkit-background-size: cover;
@@ -1862,7 +1862,7 @@ color: #545454;
 /*-- //coupons --*/
 /*-- /about --*/
 .page-head_agile_info_w3l {
-    background: url(../images/template-images/banner10.jpg) no-repeat center;
+    background: url(../images/banner10.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;

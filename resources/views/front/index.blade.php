@@ -79,7 +79,7 @@
                 <a href="womens.html">
                     <div class="bb-left-agileits-w3layouts-inner grid">
                         <figure class="effect-roxy">
-                            <img src="{{asset('front/images/template-images')}}/gow.jpg" alt=" " class="img-responsive" />
+                            <img src="{{asset('front/images')}}/gow.jpg" alt=" " class="img-responsive" />
                             <figcaption>
                                 <h3><span></span></h3>
                                 <p></p>
@@ -92,7 +92,7 @@
                 <a href="mens.html">
                     <div class="bb-middle-agileits-w3layouts grid">
                         <figure class="effect-roxy">
-                            <img src="{{asset('front/images/template-images')}}/fifa_slider.jpg" alt=" " class="img-responsive" />
+                            <img src="{{asset('front/images')}}/fifa_slider.jpg" alt=" " class="img-responsive" />
                             <figcaption>
                                 <h3><span></span> </h3>
                                 <p style="font-weight: 900"></p>
@@ -103,7 +103,7 @@
                 <a href="mens.html">
                     <div class="bb-middle-agileits-w3layouts forth grid">
                         <figure class="effect-roxy">
-                            <img src="{{asset('front/images/template-images')}}/rdr_slider.jpg" alt=" " class="img-responsive">
+                            <img src="{{asset('front/images')}}/rdr_slider.jpg" alt=" " class="img-responsive">
                             <figcaption>
                                 <h3 style="font-weight: 900"><span ></span></h3>
                                 <p style="font-weight: 900"></p>
@@ -133,8 +133,8 @@
                         <div class="col-md-3 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
-                                    <img src="{{asset('front/images/template-images')}}/gta.jpg" alt="" class="pro-image-front">
-                                    <img src="{{asset('front/images/template-images')}}/gta.jpg" alt="" class="pro-image-back">
+                                    <img src="{{asset('front/images')}}/gta.jpg" alt="" class="pro-image-front">
+                                    <img src="{{asset('front/images')}}/gta.jpg" alt="" class="pro-image-back">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
                                             <a href="{{route('front.gta')}}" class="link-product-add-cart">İncele</a>

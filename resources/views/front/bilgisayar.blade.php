@@ -113,7 +113,7 @@
                 </div>
                 <div class="men-wear-bottom">
                     <div class="col-sm-4 men-wear-left">
-                        <img class="img-responsive" src="{{asset('front/images/template-images')}}/windows.jpg" alt=" " />
+                        <img class="img-responsive" src="{{asset('front/images')}}/windows.jpg" alt=" " />
                     </div>
                     <div class="col-sm-8 men-wear-right">
                         <h4>Bİlgİsayar <span>Oyunları</span></h4>

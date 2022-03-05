@@ -113,7 +113,7 @@
                 </div>
                 <div class="men-wear-bottom">
                     <div class="col-sm-4 men-wear-left">
-                        <img class="img-responsive" src="{{asset('front/images/template-images')}}/xbox.jpg" alt=" " />
+                        <img class="img-responsive" src="{{asset('front/images')}}/xbox.jpg" alt=" " />
                     </div>
                     <div class="col-sm-8 men-wear-right">
                         <h4>Xbox <span>Oyunları</span></h4>
