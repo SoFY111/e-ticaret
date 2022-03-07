@@ -1,14 +1,13 @@
 @extends('back.layouts.master')
 @section('title') Admin Değiştir @endsection
 @section('content')
-    @include('flash::message')
     <div class="d-flex flex-lg-row flex-column justify-content-around align-items-center px-3">
-        <div class="col-12 col-lg-5 border rounded pt-2 mb-3 mb-lg-0">
+        <div class="col-12 col-lg-5 border rounded pt-3 mb-3 mb-lg-0">
             <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-end">
                 <h4 class="">Yeni Admin Tanımla</h4>
                 <small style="font-size: 10px;" class="pb-1 font-small">{{count($normalUsers)}} adet kayıt bulundu</small>
             </div>
-            <form class="d-flex flex-sm-row flex-column align-items-center justify-content-center pb-2" method="POST" action="{{route('back.superAdmin.changeUserAuthority')}}">
+            <form class="d-flex flex-sm-row flex-column align-items-center justify-content-center pb-2" method="POST" action="{{route('back.superAdmin.changeUserAuthorityPost')}}">
                 @csrf
                 <input type="hidden" name="type" value="user">
                 <div class="d-flex flex-sm-row flex-column align-items-center flex-grow-1 m-2 sm-0">
@@ -22,12 +21,12 @@
                 <button type="submit" class="btn btn-dark ml-2">Güncelle</button>
             </form>
         </div>
-        <div class="col-12 col-lg-5 border rounded pt-2 mb-3 mb-lg-0">
+        <div class="col-12 col-lg-5 border rounded pt-3 mb-3 mb-lg-0">
             <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-end">
                 <h4 class="">Admin Yetkisi Al</h4>
                 <small style="font-size: 10px;" class="pb-1 font-small">{{count($admins)}} adet kayıt bulundu</small>
             </div>
-            <form class="d-flex flex-sm-row flex-column align-items-center justify-content-center pb-2"  method="POST" action="{{route('back.superAdmin.changeUserAuthority')}}">
+            <form class="d-flex flex-sm-row flex-column align-items-center justify-content-center pb-2"  method="POST" action="{{route('back.superAdmin.changeUserAuthorityPost')}}">
                 @csrf
                 <input type="hidden" name="type" value="admin">
                 <div class="d-flex flex-sm-row flex-column align-items-center flex-grow-1 m-2 sm-0">

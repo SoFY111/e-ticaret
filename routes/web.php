@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use \App\Http\Controllers\Back\SuperAdminController;
+use App\Http\Controllers\Back\PublisherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,10 +57,13 @@ Route::prefix('/admin')->name('back.')->middleware(['isLogin', 'isAdmin'])->grou
         return view('back.dashboard');
     })->name('dashboard');
 
+    Route::get('/yayinci', [PublisherController::class, 'index'])->name('publisher');
+    Route::post('/yayinci', [PublisherController::class, 'storePublisher'])->name('storePublisher');
+
     //superAdminAuthority
     Route::prefix('/')->name('superAdmin.')->middleware('isSuperAdmin')->group(function(){
         Route::get('/kullanici-yetki-degistir', [SuperAdminController::class, 'changeUserAuthorityIndex'])->name('changeUserAuthority');
-        Route::post('/kullanici-yetki-degistir', [SuperAdminController::class, 'changeUserAuthority'])->name('changeUserAuthority');
+        Route::post('/kullanici-yetki-degistir', [SuperAdminController::class, 'changeUserAuthority'])->name('changeUserAuthorityPost');
     });
 });
 

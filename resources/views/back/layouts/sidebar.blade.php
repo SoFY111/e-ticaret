@@ -51,6 +51,13 @@
             </div>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link" @if(Request::segment(1) == 'yayinci') style="color:white !important;" @endif href="{{route('back.publisher')}}" >
+                <i class="fas fa-cloud" @if(Request::segment(1) == 'yayinci') style="color:white !important;" @endif></i>
+                <span>Yayıncı</span>
+            </a>
+        </li>
+
         <!-- Nav Item - Utilities Collapse Menu -->
         <li class="nav-item">
             <a class="nav-link" @if(Request::segment(2) == 'kategoriler') style="color:white !important;" @endif href="#" >
@@ -232,10 +239,4 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">@yield('title')</h1>
-                    <a href="#" target="_blank" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                            class="fas fa-globe fa-sm text-white-50"></i> Siteyi Görüntüle</a>
-                </div>
+            @include('flash::message')
