@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use \App\Http\Controllers\Back\SuperAdminController;
 use App\Http\Controllers\Back\PublisherController;
+use App\Http\Controllers\Back\SliderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,7 +59,13 @@ Route::prefix('/admin')->name('back.')->middleware(['isLogin', 'isAdmin'])->grou
     })->name('dashboard');
 
     Route::get('/yayinci', [PublisherController::class, 'index'])->name('publisher');
-    Route::post('/yayinci', [PublisherController::class, 'storePublisher'])->name('storePublisher');
+    Route::post('/yayinci', [PublisherController::class, 'storePublisher'])->name('publisher.store');
+    Route::delete('/yayinci', [PublisherController::class, 'deletePublisher'])->name('publisher.delete');
+
+    Route::get('/slider', [SliderController::class, 'index'])->name('slider');
+    Route::post('/slider', [SliderController::class, 'storeSlider'])->name('slider.store');
+    Route::put('/slider/{id}', [SliderController::class, 'updateSlider'])->name('slider.update');
+    Route::delete('/slider', [SliderController::class, 'deleteSlider'])->name('slider.delete');
 
     //superAdminAuthority
     Route::prefix('/')->name('superAdmin.')->middleware('isSuperAdmin')->group(function(){

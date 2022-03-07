@@ -13,13 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('publishers', function (Blueprint $table) {
+        Schema::create('slider', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('slug');
-            $table->unsignedInteger('pcProductCount')->default(0);
-            $table->unsignedInteger('psProductCount')->default(0);
-            $table->unsignedInteger('xboxProductCount')->default(0);
+            $table->string('sliderMainText');
+            $table->string('sliderSubText');
+            $table->string('sliderButtonLink');
             $table->boolean('isDeleted')->default(false)->comment('true(1):deleted, false(0): not deleted');
             $table->timestamps();
         });
@@ -32,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('publisher');
+        Schema::dropIfExists('slider');
     }
 };

@@ -38,8 +38,10 @@ class Publisher extends Model
      */
     protected $fillable = [
         'name',
+        'slug',
         'pcProductCount',
         'psProductCount',
         'xboxProductCount',
+        'isDeleted'
     ];
 }
