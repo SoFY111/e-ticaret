@@ -26,10 +26,10 @@
                 <div class="filter-price">
                     <h3>Fİyata Göre <span>Fİltreleme</span></h3>
                         <ul class="dropdown-menu6">
-                            <li>                
-                                <div id="slider-range"></div>							
+                            <li>
+                                <div id="slider-range"></div>
                                 <input type="text" id="amount" style="border: 0; color: #ffffff; font-weight: normal;" />
-                            </li>			
+                            </li>
                         </ul>
                 </div>
                 <div class="css-treeview">
@@ -50,15 +50,15 @@
                 </div>
                 <div class="community-poll">
                     <h4>YAYINCI</h4>
-                    <div class="swit form">	
+                    <div class="swit form">
                         <form>
                         <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Ubisoft</label> </div></div>
                         <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>2K Games</label> </div></div>
                         <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Sony Interactive Ent.</label> </div></div>
                         <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>RockStar Games</label> </div></div>
-                        <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Electronic Arts</label> </div></div>	
+                        <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Electronic Arts</label> </div></div>
                         <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>WarnerBros Games</label> </div></div>
-                        <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>CD Projekt Red</label> </div></div>	
+                        <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>CD Projekt Red</label> </div></div>
                         <input type="submit" value="FİLTRELE">
                         </form>
                     </div>
@@ -72,12 +72,12 @@
                         <h6>Sırala</h6>
                         <select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
                             <option value="null">Varsayılan</option>
-                            <option value="null">İsim (A - Z)</option> 
+                            <option value="null">İsim (A - Z)</option>
                             <option value="null">İsim (Z - A)</option>
                             <option value="null">Fiyat (Çok - Az)</option>
-                            <option value="null">Fiyat (Az - Çok)</option>	
+                            <option value="null">Fiyat (Az - Çok)</option>
                             <option value="null">En Yeni</option>
-                            <option value="null">Çok Satan</option>					
+                            <option value="null">Çok Satan</option>
                         </select>
                         <div class="clearfix"></div>
                     </div>
@@ -85,16 +85,16 @@
                         <h6>Göster</h6>
                         <select id="country2" onchange="change_country(this.value)" class="frm-field required sect">
                             <option value="null">7</option>
-                            <option value="null">14</option> 
-                            <option value="null">28</option>					
-                            <option value="null">35</option>								
+                            <option value="null">14</option>
+                            <option value="null">28</option>
+                            <option value="null">35</option>
                         </select>
                         <div class="clearfix"></div>
                     </div>
                     <div class="clearfix"></div>
                 </div>
                 <div class="men-wear-top">
-                    
+
                     <div  id="top" class="callbacks_container">
                         <ul class="rslides" id="slider3">
                             <li>
@@ -106,7 +106,7 @@
                             <li>
                                 <img class="img-responsive" src="{{asset('front/images/template-images')}}/banner2.jpg" alt=" "/>
                             </li>
-    
+
                         </ul>
                     </div>
                     <div class="clearfix"></div>
@@ -132,7 +132,7 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-new-top">New</span>
-                                                
+
                                         </div>
                                         <div class="item-info-product ">
                                             <h4><a href="single.html">Party Men's Blazer</a></h4>
@@ -156,7 +156,7 @@
                                                                     </fieldset>
                                                                 </form>
                                                             </div>
-                                                                                
+
                                         </div>
                                     </div>
                                 </div>
@@ -171,7 +171,7 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-new-top">New</span>
-                                                
+
                                         </div>
                                         <div class="item-info-product ">
                                             <h4><a href="single.html">Analog Watch</a></h4>
@@ -195,7 +195,7 @@
                                                                     </fieldset>
                                                                 </form>
                                                             </div>
-                                                                                
+
                                         </div>
                                     </div>
                                 </div>
@@ -210,7 +210,7 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-new-top">New</span>
-                                                
+
                                         </div>
                                         <div class="item-info-product ">
                                             <h4><a href="single.html">Running Shoes</a></h4>
@@ -234,15 +234,15 @@
                                                                     </fieldset>
                                                                 </form>
                                                             </div>
-                                                                                
+
                                         </div>
                                     </div>
                                 </div>
-                    
+
                     <div class="clearfix"></div>
             </div>
             <div class="clearfix"></div>
-            
+
             <div class="single-pro">
                 <div class="col-md-3 product-men">
                                     <div class="men-pro-item simpleCart_shelfItem">
@@ -255,7 +255,7 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-new-top">New</span>
-                                                
+
                                         </div>
                                         <div class="item-info-product ">
                                             <h4><a href="single.html">Formal Blue Shirt</a></h4>
@@ -279,7 +279,7 @@
                                                                     </fieldset>
                                                                 </form>
                                                             </div>
-                                                                                
+
                                         </div>
                                     </div>
                                 </div>
@@ -294,7 +294,7 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-new-top">New</span>
-                                                
+
                                         </div>
                                         <div class="item-info-product ">
                                             <h4><a href="single.html">Gabi Full Sleeve Sweatshirt</a></h4>
@@ -318,7 +318,7 @@
                                                                     </fieldset>
                                                                 </form>
                                                             </div>
-                                                                                
+
                                         </div>
                                     </div>
                                 </div>
@@ -333,7 +333,7 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-new-top">New</span>
-                                                
+
                                         </div>
                                         <div class="item-info-product ">
                                             <h4><a href="single.html">Dark Blue Track Pants</a></h4>
@@ -357,7 +357,7 @@
                                                                     </fieldset>
                                                                 </form>
                                                             </div>
-                                                                                
+
                                         </div>
                                     </div>
                                 </div>
@@ -372,7 +372,7 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-new-top">New</span>
-                                                
+
                                         </div>
                                         <div class="item-info-product ">
                                             <h4><a href="single.html">Round Neck Black T-Shirt</a></h4>
@@ -396,7 +396,7 @@
                                                                     </fieldset>
                                                                 </form>
                                                             </div>
-                                                                                
+
                                         </div>
                                     </div>
                                 </div>
@@ -411,7 +411,7 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-new-top">New</span>
-                                                
+
                                         </div>
                                         <div class="item-info-product ">
                                             <h4><a href="single.html">Men's Black Jeans</a></h4>
@@ -435,7 +435,7 @@
                                                                     </fieldset>
                                                                 </form>
                                                             </div>
-                                                                                
+
                                         </div>
                                     </div>
                                 </div>
@@ -450,7 +450,7 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-new-top">New</span>
-                                                
+
                                         </div>
                                         <div class="item-info-product ">
                                             <h4><a href="single.html">Analog Watch</a></h4>
@@ -474,7 +474,7 @@
                                                                     </fieldset>
                                                                 </form>
                                                             </div>
-                                                                                
+
                                         </div>
                                     </div>
                                 </div>
@@ -489,7 +489,7 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-new-top">New</span>
-                                                
+
                                         </div>
                                         <div class="item-info-product ">
                                             <h4><a href="single.html">Reversible Belt</a></h4>
@@ -513,7 +513,7 @@
                                                                     </fieldset>
                                                                 </form>
                                                             </div>
-                                                                                
+
                                         </div>
                                     </div>
                                 </div>
@@ -528,7 +528,7 @@
                                                     </div>
                                                 </div>
                                                 <span class="product-new-top">New</span>
-                                                
+
                                         </div>
                                         <div class="item-info-product ">
                                             <h4><a href="single.html">Party Men's Blazer</a></h4>
@@ -552,14 +552,14 @@
                                                                     </fieldset>
                                                                 </form>
                                                             </div>
-                                                                                
+
                                         </div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
             </div>
         </div>
-    </div>	
+    </div>
     <!-- //mens -->
 <!--/grids-->
 <div class="coupons">
