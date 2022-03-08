@@ -23,6 +23,11 @@ class SliderController extends Controller
     }
 
     public function updateSlider(Request $request){
+
+        $request->validate([
+            'sliderNewImage' => 'image|mimes:jpeg,jpg,png|max:10000'
+        ]);
+
         $sliderImage = Slider::findOrFail($request->sliderImageId);
 
         try {
@@ -36,6 +41,7 @@ class SliderController extends Controller
             $sliderImage->sliderMainText = $request->sliderMainText;
             $sliderImage->sliderSubText = $request->sliderSubText;
             $sliderImage->sliderButtonLink = $request->sliderButtonLink;
+            $sliderImage->sliderButtonText = $request->sliderButtonText;
             $sliderImage->save();
 
             flash('İşlem başarılı bir şekilde gerçekleşti')->success();

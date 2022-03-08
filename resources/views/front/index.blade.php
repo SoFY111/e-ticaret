@@ -15,45 +15,44 @@
             <div class="item active">
                 <div class="container">
                     <div class="carousel-caption">
-                        <h3>The Biggest <span>Sale</span></h3>
-                        <p>Special for today</p>
-                        <a class="hvr-outline-out button2" href="mens.html">Shop Now </a>
+                        <h3>{!! $sliderData[0]->sliderMainText !!}</h3>
+                        <p>{!! $sliderData[0]->sliderSubText !!}</p>
+                        <a class="hvr-outline-out button2" href="{{$sliderData[0]->sliderButtonLink}}">{{$sliderData[0]->sliderButtonText}}</a>
                     </div>
                 </div>
             </div>
             <div class="item item2">
                 <div class="container">
                     <div class="carousel-caption">
-                        <h3>Summer <span>Collection</span></h3>
-                        <p>New Arrivals On Sale</p>
-                        <a class="hvr-outline-out button2" href="mens.html">Shop Now </a>
+                        <h3>{!! $sliderData[1]->sliderMainText !!}</h3>
+                        <p>{!! $sliderData[1]->sliderSubText !!}</p>
+                        <a class="hvr-outline-out button2" href="{{$sliderData[1]->sliderButtonLink}}">{{$sliderData[1]->sliderButtonText}}</a>
                     </div>
                 </div>
             </div>
             <div class="item item3">
                 <div class="container">
                     <div class="carousel-caption">
-                        <h3>The Biggest <span>Sale</span></h3>
-                        <p>Special for today</p>
-                        <a class="hvr-outline-out button2" href="mens.html">Shop Now </a>
-                    </div>
-                </div>
+                        <h3>{!! $sliderData[2]->sliderMainText !!}</h3>
+                        <p>{!! $sliderData[2]->sliderSubText !!}</p>
+                        <a class="hvr-outline-out button2" href="{{$sliderData[2]->sliderButtonLink}}">{{$sliderData[2]->sliderButtonText}}</a>
+                    </div>                </div>
             </div>
             <div class="item item4">
                 <div class="container">
                     <div class="carousel-caption">
-                        <h3>Summer <span>Collection</span></h3>
-                        <p>New Arrivals On Sale</p>
-                        <a class="hvr-outline-out button2" href="mens.html">Shop Now </a>
+                        <h3>{!! $sliderData[3]->sliderMainText !!}</h3>
+                        <p>{!! $sliderData[3]->sliderSubText !!}</p>
+                        <a class="hvr-outline-out button2" href="{{$sliderData[3]->sliderButtonLink}}">{{$sliderData[3]->sliderButtonText}}</a>
                     </div>
                 </div>
             </div>
             <div class="item item5">
                 <div class="container">
                     <div class="carousel-caption">
-                        <h3>The Biggest <span>Sale</span></h3>
-                        <p>Special for today</p>
-                        <a class="hvr-outline-out button2" href="mens.html">Shop Now </a>
+                        <h3>{!! $sliderData[4]->sliderMainText !!}</h3>
+                        <p>{!! $sliderData[4]->sliderSubText !!}</p>
+                        <a class="hvr-outline-out button2" href="{{$sliderData[4]->sliderButtonLink}}">{{$sliderData[4]->sliderButtonText}}</a>
                     </div>
                 </div>
             </div>
@@ -1460,38 +1459,38 @@
     <style rel="stylesheet">
         /*-- banner --*/
         .carousel .item{
-            background:-webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner1.jpg) no-repeat;
-            background:-moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner1.jpg) no-repeat;
-            background:-ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner1.jpg) no-repeat;
-            background:linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner1.jpg) no-repeat;
+            background:-webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset($sliderData[0]->photoPath)}}) no-repeat;
+            background:-moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset($sliderData[0]->photoPath)}}) no-repeat;
+            background:-ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset($sliderData[0]->photoPath)}}) no-repeat;
+            background:linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset($sliderData[0]->photoPath)}}) no-repeat;
             background-size:cover;
         }
         .carousel .item.item2{
-            background:-webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner2.jpg) no-repeat;
-            background:-moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner2.jpg) no-repeat;
-            background:-ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner2.jpg) no-repeat;
-            background:linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner2.jpg) no-repeat;
+            background:-webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset($sliderData[1]->photoPath)}}) no-repeat;
+            background:-moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset($sliderData[1]->photoPath)}}) no-repeat;
+            background:-ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset($sliderData[1]->photoPath)}}) no-repeat;
+            background:linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset($sliderData[1]->photoPath)}}) no-repeat;
             background-size:cover;
         }
         .carousel .item.item3{
-            background:-webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner3.jpg) no-repeat;
-            background:-moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner3.jpg) no-repeat;
-            background:-ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner3.jpg) no-repeat;
-            background:linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner3.jpg) no-repeat;
+            background:-webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset($sliderData[2]->photoPath)}}) no-repeat;
+            background:-moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset($sliderData[2]->photoPath)}}) no-repeat;
+            background:-ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset($sliderData[2]->photoPath)}}) no-repeat;
+            background:linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset($sliderData[2]->photoPath)}}) no-repeat;
             background-size:cover;
         }
         .carousel .item.item4{
-            background:-webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner4.jpg) no-repeat;
-            background:-moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}{{asset('front/images/template-images')}}/banner4.jpg) no-repeat;
-            background:-ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner4.jpg) no-repeat;
-            background:linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner4.jpg) no-repeat;
+            background:-webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset($sliderData[3]->photoPath)}}) no-repeat;
+            background:-moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset($sliderData[3]->photoPath)}}) no-repeat;
+            background:-ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset($sliderData[3]->photoPath)}}) no-repeat;
+            background:linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset($sliderData[3]->photoPath)}}) no-repeat;
             background-size:cover;
         }
         .carousel .item.item5{
-            background:-webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner5.jpg) no-repeat;
-            background:-moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner5.jpg) no-repeat;
-            background:-ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner5.jpg) no-repeat;
-            background:linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset('front/images/template-images')}}/banner5.jpg) no-repeat;
+            background:-webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset($sliderData[4]->photoPath)}}) no-repeat;
+            background:-moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset($sliderData[4]->photoPath)}}) no-repeat;
+            background:-ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset($sliderData[4]->photoPath)}}) no-repeat;
+            background:linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{asset($sliderData[4]->photoPath)}}) no-repeat;
             background-size:cover;
         }
     </style>

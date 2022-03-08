@@ -163,7 +163,8 @@ return [
         'email' => 'E-Posta adresi',
         'name' => 'İsim',
         'surname' => 'Soyisim',
-        'password' => 'Şifre'
+        'password' => 'Şifre',
+        'sliderNewImage' => 'Slider Yeni Resim'
     ],
 
 ];

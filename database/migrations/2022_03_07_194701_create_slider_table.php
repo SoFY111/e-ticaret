@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('sliderMainText');
             $table->string('sliderSubText');
             $table->string('sliderButtonLink');
+            $table->string('sliderButtonText');
             $table->string('photoPath');
             $table->boolean('isDeleted')->default(false)->comment('true(1):deleted, false(0): not deleted');
             $table->timestamps();

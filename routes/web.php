@@ -2,27 +2,18 @@
 
 use Illuminate\Support\Facades\Route;
 
+//FRONTEND CONTROLLERs
+use App\Http\Controllers\Front\MainController;
+
+//BACKEND CONTROLLERs
 use \App\Http\Controllers\Back\SuperAdminController;
 use App\Http\Controllers\Back\PublisherController;
 use App\Http\Controllers\Back\SliderController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Auth::routes();
 
 Route::prefix('/')->name('front.')->group(function(){
-    Route::get('/', function () {
-        return view('front.index');
-    })->name('mainpage');
+    Route::get('/', [MainController::class, 'index'])->name('mainpage');
 
     Route::get('/hakkimizda', function () {
         return view('front.about');

@@ -21,6 +21,7 @@ class Slider extends Model
         'sliderMainText',
         'sliderSubText',
         'sliderButtonLink',
+        'sliderButtonText',
         'isDeleted'
     ];
 }
