@@ -23,8 +23,29 @@
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
             <a class="nav-link" href="{{route('front.mainpage')}}">
-                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-store"></i>
                 <span>Alışveriş Ana sayfa</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">Ürün Yönetimi</div>
+
+        <li class="nav-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'urunler' && !Request::segment(3)) active @endif">
+            <a class="nav-link" href="{{route('back.products.index')}}">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Ürün Listesi</span>
+            </a>
+        </li>
+
+
+        <li class="nav-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'urunler' && !Request::segment(3)) active @endif">
+            <a class="nav-link" href="{{route('back.publisher')}}">
+                <i class="fas fa-plus"></i>
+                <span>Ürün Ekle</span>
+            </a>
         </li>
 
         <!-- Divider -->
@@ -34,26 +55,6 @@
         <div class="sidebar-heading">
             İçerik Yönetimi
         </div>
-
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link @if(Request::segment(2) == 'makaleler') in @else collapsed @endif" href="#"
-               data-toggle="collapse" data-target="#collapseTwo"
-               aria-expanded="true" aria-controls="collapseTwo">
-                <i class="fas fa-fw fa-edit"></i>
-                <span>Makaleler</span>
-            </a>
-            <div id="collapseTwo" class="collapse @if(Request::segment(2) == 'makaleler') show @endif"
-                 aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Makale İşlemleri</h6>
-                    <a class="collapse-item @if(Request::segment(2) == 'makaleler' and !Request::segment(3)) active @endif"
-                       href="#">Tüm Makaleler</a>
-                    <a class="collapse-item @if(Request::segment(2) == 'makaleler' and Request::segment(3) == 'create') active @endif"
-                       href="#">Makale Oluştur</a>
-                </div>
-            </div>
-        </li>
 
         <li class="nav-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'yayinci') active @endif">
             <a class="nav-link" href="{{route('back.publisher')}}">
