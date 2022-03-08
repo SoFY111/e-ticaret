@@ -62,9 +62,11 @@ Route::prefix('/admin')->name('back.')->middleware(['isLogin', 'isAdmin'])->grou
     Route::post('/yayinci', [PublisherController::class, 'storePublisher'])->name('publisher.store');
     Route::delete('/yayinci', [PublisherController::class, 'deletePublisher'])->name('publisher.delete');
 
-    Route::get('/slider', [SliderController::class, 'index'])->name('slider');
-    Route::post('/slider', [SliderController::class, 'storeSlider'])->name('slider.store');
-    Route::put('/slider/{id}', [SliderController::class, 'updateSlider'])->name('slider.update');
+    Route::get('/slider', [SliderController::class, 'index'])->name('slider.index');
+    Route::get('/slider/ekle', [SliderController::class, 'storeSliderIndex'])->name('slider.store.index');
+    Route::post('/slider/ekle', [SliderController::class, 'storeSlider'])->name('slider.store');
+    Route::post('/slider/duzenle', [SliderController::class, 'updateSlider'])->name('slider.update');
+    Route::get('/slider/duzenle/{id}', [SliderController::class, 'updateSliderIndex'])->name('slider.update.index');
     Route::delete('/slider', [SliderController::class, 'deleteSlider'])->name('slider.delete');
 
     //superAdminAuthority

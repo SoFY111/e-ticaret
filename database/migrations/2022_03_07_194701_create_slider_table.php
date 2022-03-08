@@ -13,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('slider', function (Blueprint $table) {
+        Schema::create('sliders', function (Blueprint $table) {
             $table->id();
             $table->string('sliderMainText');
             $table->string('sliderSubText');
             $table->string('sliderButtonLink');
+            $table->string('photoPath');
             $table->boolean('isDeleted')->default(false)->comment('true(1):deleted, false(0): not deleted');
             $table->timestamps();
         });
@@ -30,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('slider');
+        Schema::dropIfExists('sliders');
     }
 };

@@ -15,7 +15,7 @@
         <hr class="sidebar-divider my-0">
 
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item @if(Request::segment(1) == 'admin') active @endif ">
+        <li class="nav-item @if(Request::segment(1) == 'admin' && !Request::segment(2)) active @endif ">
             <a class="nav-link" href="{{route('back.dashboard')}}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Ana sayfa</span></a>
@@ -37,47 +37,57 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link @if(Request::segment(2) == 'makaleler') in @else collapsed @endif" href="#" data-toggle="collapse" data-target="#collapseTwo"
+            <a class="nav-link @if(Request::segment(2) == 'makaleler') in @else collapsed @endif" href="#"
+               data-toggle="collapse" data-target="#collapseTwo"
                aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-edit"></i>
                 <span>Makaleler</span>
             </a>
-            <div id="collapseTwo" class="collapse @if(Request::segment(2) == 'makaleler') show @endif" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div id="collapseTwo" class="collapse @if(Request::segment(2) == 'makaleler') show @endif"
+                 aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Makale İşlemleri</h6>
-                    <a class="collapse-item @if(Request::segment(2) == 'makaleler' and !Request::segment(3)) active @endif" href="#">Tüm Makaleler</a>
-                    <a class="collapse-item @if(Request::segment(2) == 'makaleler' and Request::segment(3) == 'create') active @endif" href="#">Makale Oluştur</a>
+                    <a class="collapse-item @if(Request::segment(2) == 'makaleler' and !Request::segment(3)) active @endif"
+                       href="#">Tüm Makaleler</a>
+                    <a class="collapse-item @if(Request::segment(2) == 'makaleler' and Request::segment(3) == 'create') active @endif"
+                       href="#">Makale Oluştur</a>
                 </div>
             </div>
         </li>
 
-        <li class="nav-item">
-            <a class="nav-link" @if(Request::segment(1) == 'yayinci') style="color:white !important;" @endif href="{{route('back.publisher')}}" >
-                <i class="fas fa-cloud" @if(Request::segment(1) == 'yayinci') style="color:white !important;" @endif></i>
+        <li class="nav-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'yayinci') active @endif">
+            <a class="nav-link" href="{{route('back.publisher')}}">
+                <i class="fas fa-cloud"></i>
                 <span>Yayıncı</span>
             </a>
         </li>
 
         <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link" @if(Request::segment(2) == 'kategoriler') style="color:white !important;" @endif href="#" >
-                <i class="fas fa-fw fa-list" @if(Request::segment(2) == 'kategoriler') style="color:white !important;" @endif></i>
-                <span>Kategoriler</span>
+        <li class="nav-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'slider') active @endif">
+            <a class="nav-link" href="{{route('back.slider.index')}}">
+                <i class="fas fa-image"></i>
+                <span>Slider</span>
             </a>
         </li>
 
-
         <li class="nav-item">
-            <a class="nav-link @if(Request::segment(2) == 'sayfalar') in @else collapsed @endif" href="#" data-toggle="collapse" data-target="#collapseThree"
+            <a class="nav-link @if(Request::segment(1) == 'sliderr') in @else collapsed @endif" href="#"
+               data-toggle="collapse" data-target="#collapseThree"
                aria-expanded="true" aria-controls="collapseThree">
-                <i class="fas fa-fw fa-file"></i>
-                <span>Sayfalar</span>
+                <i class="fas fa-image"></i>
+                <span>Slider</span>
             </a>
-            <div id="collapseThree" class="collapse @if(Request::segment(2) == 'sayfalar') show @endif" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div id="collapseThree"
+                 class="collapse @if(Request::segment(1) == 'admin' && Request::segment(2) == 'sliderr') show @endif"
+                 aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Sayfa İşlemleri</h6>
-                    <a class="collapse-item @if(Request::segment(2) == 'sayfalar' and !Request::segment(3)) active @endif" href="#">Tüm Sayfalar</a>
-                    <a class="collapse-item @if(Request::segment(2) == 'sayfalar' and Request::segment(3) == 'olustur') active @endif" href="#">Sayfa Oluştur</a>
+                    <h6 class="collapse-header">Slider İşlemleri</h6>
+                    <a class="collapse-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'sliderr' && !Request::segment(3)) text-dark active @endif"
+                       href="{{route('back.slider.index')}}">Slider Resimleri</a>
+                    <a class="collapse-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'sliderr' && Request::segment(3) == 'ekle') text-dark active @endif"
+                       href="{{route('back.slider.store.index')}}">Slider Ekle</a>
+                    <a class="collapse-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'sliderr' && Request::segment(3) == 'sil') active @endif"
+                       href="{{route('back.slider.index')}}">Slider Sil</a>
                 </div>
             </div>
         </li>
@@ -92,14 +102,14 @@
 
         <!-- Nav Item - Tables -->
         @if(Auth::user()->type === 'superadmin')
-            <li class="nav-item">
+            <li class="nav-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'kullanici-yetki-degistir') active @endif">
                 <a class="nav-link" href="{{route('back.superAdmin.changeUserAuthority')}}">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Admin Tanımla</span></a>
             </li>
-        @endif
+    @endif
 
-        <!-- Nav Item - Tables -->
+    <!-- Nav Item - Tables -->
         <li class="nav-item">
             <a class="nav-link" href="#">
                 <i class="fas fa-fw fa-cog"></i>
@@ -156,7 +166,8 @@
                                 </div>
                                 <div class="font-weight-bold">
                                     <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                                        problem I've been having.</div>
+                                        problem I've been having.
+                                    </div>
                                     <div class="small text-gray-500">Emily Fowler · 58m</div>
                                 </div>
                             </a>
@@ -168,7 +179,8 @@
                                 </div>
                                 <div>
                                     <div class="text-truncate">I have the photos that you ordered last month, how
-                                        would you like them sent to you?</div>
+                                        would you like them sent to you?
+                                    </div>
                                     <div class="small text-gray-500">Jae Chun · 1d</div>
                                 </div>
                             </a>
@@ -180,7 +192,8 @@
                                 </div>
                                 <div>
                                     <div class="text-truncate">Last month's report looks great, I am very happy with
-                                        the progress so far, keep up the good work!</div>
+                                        the progress so far, keep up the good work!
+                                    </div>
                                     <div class="small text-gray-500">Morgan Alvarez · 2d</div>
                                 </div>
                             </a>
@@ -192,7 +205,8 @@
                                 </div>
                                 <div>
                                     <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                        told me that people say this to all dogs, even if they aren't good...</div>
+                                        told me that people say this to all dogs, even if they aren't good...
+                                    </div>
                                     <div class="small text-gray-500">Chicken the Dog · 2w</div>
                                 </div>
                             </a>
@@ -239,4 +253,4 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-            @include('flash::message')
+@include('flash::message')
