@@ -23,15 +23,7 @@
         <div class="container">
              <!-- mens -->
             <div class="col-md-4 products-left">
-                <div class="filter-price">
-                    <h3>Fİyata Göre <span>Fİltreleme</span></h3>
-                        <ul class="dropdown-menu6">
-                            <li>
-                                <div id="slider-range"></div>
-                                <input type="text" id="amount" style="border: 0; color: #ffffff; font-weight: normal;" />
-                            </li>
-                        </ul>
-                </div>
+
                 <div class="css-treeview">
                     <h4>TÜR</h4>
                     <ul class="tree-list-pad">

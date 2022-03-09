@@ -27,7 +27,7 @@
     <div class="header-bot_inner_wthreeinfo_header_mid">
                 <!-- header-bot -->
         <div class="col-md-4 logo_agile">
-            <a href="{{route('front.mainpage')}}"><img style="width: 470px; height: 120px; margin-left: -25px;object-fit: cover;" src="{{asset('front/images')}}/egooyun.png" alt=""></a>
+            <a href="{{route('front.mainpage')}}"><img style="width: 470px; height: 120px; margin-left: -25px;object-fit: cover;" src="{{asset('front/images')}}/egooyun kopya.png" alt=""></a>
         </div>
         <!-- header-bot -->
         <div class="col-md-4 header-middle">
@@ -172,14 +172,13 @@
             </nav>
         </div>
         <div class="top_nav_right">
+            <a href="{{route('front.cart')}}">
             <div class="wthreecartaits wthreecartaits2 cart cart box_1">
-                <form action="#" method="post" class="last" style="margin-bottom: 0px;">
                     <input type="hidden" name="cmd" value="_cart">
                     <input type="hidden" name="display" value="1">
                     <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
-                </form>
 
-            </div>
+            </div></a>
         </div>
         <div class="clearfix"></div>
     </div>
