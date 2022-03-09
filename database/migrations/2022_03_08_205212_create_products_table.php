@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('publisherId');
+            $table->unsignedBigInteger('kindId');
             $table->string('name');
             $table->string('price');
             $table->unsignedInteger('stock');
@@ -28,6 +29,8 @@ return new class extends Migration
             $table->longText('systemRequirementsText');
             $table->longText('photoUrls');
             $table->foreign('publisherId')->references('id')->on('publishers')->onDelete('cascade');
+            $table->foreign('kindId')->references('id')->on('kinds')->onDelete('cascade');
+            $table->boolean('isDeleted')->default(false)->comment('true(1):deleted, false(0): not deleted');
             $table->timestamps();
         });
     }

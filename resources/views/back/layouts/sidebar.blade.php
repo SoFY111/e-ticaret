@@ -63,7 +63,6 @@
             </a>
         </li>
 
-        <!-- Nav Item - Utilities Collapse Menu -->
         <li class="nav-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'slider') active @endif">
             <a class="nav-link" href="{{route('back.slider.index')}}">
                 <i class="fas fa-image"></i>
@@ -71,27 +70,34 @@
             </a>
         </li>
 
-        <li class="nav-item">
-            <a class="nav-link @if(Request::segment(1) == 'sliderr') in @else collapsed @endif" href="#"
-               data-toggle="collapse" data-target="#collapseThree"
-               aria-expanded="true" aria-controls="collapseThree">
-                <i class="fas fa-image"></i>
-                <span>Slider</span>
+        <li class="nav-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'tur') active @endif">
+            <a class="nav-link" href="{{route('back.kind.index')}}">
+                <i class="fas fa-indent"></i>
+                <span>Tür</span>
             </a>
-            <div id="collapseThree"
-                 class="collapse @if(Request::segment(1) == 'admin' && Request::segment(2) == 'sliderr') show @endif"
-                 aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Slider İşlemleri</h6>
-                    <a class="collapse-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'sliderr' && !Request::segment(3)) text-dark active @endif"
-                       href="{{route('back.slider.index')}}">Slider Resimleri</a>
-                    <a class="collapse-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'sliderr' && Request::segment(3) == 'ekle') text-dark active @endif"
-                       href="{{route('back.slider.store.index')}}">Slider Ekle</a>
-                    <a class="collapse-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'sliderr' && Request::segment(3) == 'sil') active @endif"
-                       href="{{route('back.slider.index')}}">Slider Sil</a>
-                </div>
-            </div>
         </li>
+
+{{--        <li class="nav-item">--}}
+{{--            <a class="nav-link @if(Request::segment(1) == 'sliderr') in @else collapsed @endif" href="#"--}}
+{{--               data-toggle="collapse" data-target="#collapseThree"--}}
+{{--               aria-expanded="true" aria-controls="collapseThree">--}}
+{{--                <i class="fas fa-image"></i>--}}
+{{--                <span>Slider</span>--}}
+{{--            </a>--}}
+{{--            <div id="collapseThree"--}}
+{{--                 class="collapse @if(Request::segment(1) == 'admin' && Request::segment(2) == 'sliderr') show @endif"--}}
+{{--                 aria-labelledby="headingTwo" data-parent="#accordionSidebar">--}}
+{{--                <div class="bg-white py-2 collapse-inner rounded">--}}
+{{--                    <h6 class="collapse-header">Slider İşlemleri</h6>--}}
+{{--                    <a class="collapse-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'sliderr' && !Request::segment(3)) text-dark active @endif"--}}
+{{--                       href="{{route('back.slider.index')}}">Slider Resimleri</a>--}}
+{{--                    <a class="collapse-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'sliderr' && Request::segment(3) == 'ekle') text-dark active @endif"--}}
+{{--                       href="{{route('back.slider.store.index')}}">Slider Ekle</a>--}}
+{{--                    <a class="collapse-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'sliderr' && Request::segment(3) == 'sil') active @endif"--}}
+{{--                       href="{{route('back.slider.index')}}">Slider Sil</a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </li>--}}
 
         <!-- Divider -->
         <hr class="sidebar-divider">
