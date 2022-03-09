@@ -27,21 +27,19 @@ class PublisherController extends Controller
 
     public function storePublisher(Request $request)
     {
-
         try {
-            $activePublishersCount = Publisher::where('isDeleted', '=', 0)->where('slug', '=', Str::slug($request->publisherName))->count();
+            $activePublishersCount = Publisher::where('isDeleted', 0)->where('slug', 'LIKE', Str::slug($request->publisherName) . '%')->count();
             if ($activePublishersCount > 0) {
                 flash("İşlem gerçekleştirilemedi. Aynı isme sahip başka bir <b>yayıncı</b> var. ")->error();
                 return redirect()->back();
             } else {
-                $activePublishersCount = Publisher::where('isDeleted', '=', 1)->where('slug', '=', Str::slug($request->publisherName))->count();
-                if ($activePublishersCount > 1 ) {
+                $activePublishersCount = Publisher::where('isDeleted', 1)->where('slug', Str::slug($request->publisherName))->count();
+                if ($activePublishersCount > 1) {
                     Publisher::create([
                         'name' => $request->publisherName,
-                        'slug' => Str::slug($request->publisherName) . rand(0, 99),
+                        'slug' => Str::slug($request->publisherName) . rand(0, 999),
                     ]);
-                }
-                else{
+                } else {
                     Publisher::create([
                         'name' => $request->publisherName,
                         'slug' => Str::slug($request->publisherName),
@@ -49,7 +47,7 @@ class PublisherController extends Controller
                 }
             }
 
-            flash('İşlem başarılıyla gerçekleşti.');
+            flash('İşlem başarılıyla gerçekleşti.')->success();
             return redirect()->back();
         } catch (\Exception $exception) {
             try {
@@ -69,7 +67,7 @@ class PublisherController extends Controller
     {
         try {
             Publisher::where('id', $request->publisher)->update(['isDeleted' => true]);
-            flash('İşlem başarılıyla gerçekleşti.');
+            flash('İşlem başarılıyla gerçekleşti.')->success();
             return redirect()->back();
         } catch (\Exception $exception) {
             try {
@@ -85,5 +83,4 @@ class PublisherController extends Controller
 
         }
     }
-
 }

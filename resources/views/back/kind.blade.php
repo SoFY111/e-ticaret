@@ -6,7 +6,7 @@
             <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-end">
                 <h4 class="">Tür Ekle</h4>
             </div>
-            <form class="d-flex flex-sm-row flex-column align-items-center justify-content-center pb-2" method="POST" action="{{route('back.publisher.store')}}">
+            <form class="d-flex flex-sm-row flex-column align-items-center justify-content-center pb-2" method="POST" action="{{route('back.kind.store')}}">
                 @csrf
                 <div class="w-100 d-flex flex-row align-items-center">
                     <label for="kindName" class="m-0"></label>
@@ -22,7 +22,7 @@
                 <h4 class="">Tür Sil</h4>
             </div>
             @if(count($activeKinds) > 0)
-                <form class="d-flex flex-sm-row flex-column align-items-center justify-content-center pb-2"  method="POST" action="{{route('back.publisher.delete')}}">
+                <form class="d-flex flex-sm-row flex-column align-items-center justify-content-center pb-2"  method="POST" action="{{route('back.kind.delete')}}">
                     @method('DELETE')
                     @csrf
                     <div class="d-flex flex-sm-row flex-column align-items-center flex-grow-1 m-2 sm-0">

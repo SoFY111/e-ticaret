@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
             SuperAdminSeeder::class,
             UserSeeder::class,
             SliderSeeder::class,
+            KindSeeder::class,
+            PublisherSeeder::class,
         ]);
     }
 }

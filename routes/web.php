@@ -63,10 +63,13 @@ Route::prefix('/admin')->name('back.')->middleware(['isLogin', 'isAdmin'])->grou
     Route::delete('/slider', [SliderController::class, 'deleteSlider'])->name('slider.delete');
 
     Route::get('/tur', [KindController::class, 'index'])->name('kind.index');
-    Route::post('/urunler', [KindController::class, 'storeKind'])->name('kind.store');
-    Route::delete('/urunler', [KindController::class, 'deleteKind'])->name('kind.delete');
+    Route::post('/tur', [KindController::class, 'storeKind'])->name('kind.store');
+    Route::delete('/tur', [KindController::class, 'deleteKind'])->name('kind.delete');
 
     Route::get('/urunler', [ProductController::class, 'index'])->name('products.index');
+    Route::get('/urun/ekle', [ProductController::class, 'storeProductIndex'])->name('products.store.index');
+    Route::post('/urun/ekle', [ProductController::class, 'storeProduct'])->name('products.store');
+
     //superAdminAuthority
     Route::prefix('/')->name('superAdmin.')->middleware('isSuperAdmin')->group(function(){
         Route::get('/kullanici-yetki-degistir', [SuperAdminController::class, 'changeUserAuthorityIndex'])->name('changeUserAuthority');

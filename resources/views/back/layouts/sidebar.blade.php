@@ -41,8 +41,8 @@
         </li>
 
 
-        <li class="nav-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'urunler' && !Request::segment(3)) active @endif">
-            <a class="nav-link" href="{{route('back.publisher')}}">
+        <li class="nav-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'urun' && Request::segment(3) == 'ekle') active @endif">
+            <a class="nav-link" href="{{route('back.products.store.index')}}">
                 <i class="fas fa-plus"></i>
                 <span>Ürün Ekle</span>
             </a>
@@ -63,17 +63,17 @@
             </a>
         </li>
 
-        <li class="nav-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'slider') active @endif">
-            <a class="nav-link" href="{{route('back.slider.index')}}">
-                <i class="fas fa-image"></i>
-                <span>Slider</span>
-            </a>
-        </li>
-
         <li class="nav-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'tur') active @endif">
             <a class="nav-link" href="{{route('back.kind.index')}}">
                 <i class="fas fa-indent"></i>
                 <span>Tür</span>
+            </a>
+        </li>
+
+        <li class="nav-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'slider') active @endif">
+            <a class="nav-link" href="{{route('back.slider.index')}}">
+                <i class="fas fa-image"></i>
+                <span>Slider</span>
             </a>
         </li>
 
