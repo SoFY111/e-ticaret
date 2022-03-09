@@ -10,6 +10,7 @@ use \App\Http\Controllers\Back\SuperAdminController;
 use App\Http\Controllers\Back\PublisherController;
 use App\Http\Controllers\Back\SliderController;
 use App\Http\Controllers\Back\ProductController;
+use App\Http\Controllers\Back\KindController;
 
 Auth::routes();
 
@@ -64,6 +65,10 @@ Route::prefix('/admin')->name('back.')->middleware(['isLogin', 'isAdmin'])->grou
     Route::post('/slider/duzenle', [SliderController::class, 'updateSlider'])->name('slider.update');
     Route::get('/slider/duzenle/{id}', [SliderController::class, 'updateSliderIndex'])->name('slider.update.index');
     Route::delete('/slider', [SliderController::class, 'deleteSlider'])->name('slider.delete');
+
+    Route::get('/tur', [KindController::class, 'index'])->name('kind.index');
+    Route::post('/urunler', [KindController::class, 'storeKind'])->name('kind.store');
+    Route::delete('/urunler', [KindController::class, 'deleteKind'])->name('kind.delete');
 
     Route::get('/urunler', [ProductController::class, 'index'])->name('products.index');
     //superAdminAuthority
