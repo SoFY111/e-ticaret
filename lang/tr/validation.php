@@ -164,7 +164,17 @@ return [
         'name' => 'İsim',
         'surname' => 'Soyisim',
         'password' => 'Şifre',
-        'sliderNewImage' => 'Slider Yeni Resim'
+        'sliderNewImage' => 'Slider Yeni Resim',
+        'gameName' => 'Oyun İsmi',
+        'publisher' => 'Yayıncı',
+        'kind' => 'Tür',
+        'price' => 'Fiyat',
+        'discount' => 'İndirim',
+        'descriptionHead' => 'Açıklama Başlığı',
+        'description' => 'Açıklama',
+        'systemRequirementsText' => 'Sistem Gereksinimleri',
+        'images' => 'Resim',
+
     ],
 
 ];

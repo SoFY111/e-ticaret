@@ -41,7 +41,7 @@ Route::prefix('/')->name('front.')->group(function(){
         return view('front.gta');
     })->name('gta');
 
-    Route::get('/cart', function () {
+    Route::get('/sepetim', function () {
         return view('front.cart');
     })->name('cart');
 
