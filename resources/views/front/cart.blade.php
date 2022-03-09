@@ -689,7 +689,6 @@ color: var(--onyx);
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script>
          'use strict';
-
 // all initial elements
 const payAmountBtn = document.querySelector('#payAmount');
 const decrementBtn = document.querySelectorAll('#decrement');
