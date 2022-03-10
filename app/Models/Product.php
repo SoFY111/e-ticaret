@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  * App\Models\Product
  *
  * @property int $id
+ * @property int kindId
  * @property int $publisherId
  * @property string $name
  * @property string $price
@@ -20,7 +21,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $descriptionHead
  * @property string $description
  * @property string $systemRequirementsText
- * @property string $photoUrls
+ * @property string $imagesPaths
+ * @property string $coverImage
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|Product newModelQuery()
@@ -48,6 +50,7 @@ class Product extends Model
     use HasFactory;
 
     protected $fillable = [
+        'kindId',
         'publisherId',
         'name',
         'price',
@@ -59,6 +62,7 @@ class Product extends Model
         'descriptionHead',
         'descriptionText',
         'systemRequirementsText',
-        'photoUrls',
+        'coverImage',
+        'imagesPaths',
     ];
 }

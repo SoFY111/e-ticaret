@@ -174,6 +174,8 @@ return [
         'description' => 'Açıklama',
         'systemRequirementsText' => 'Sistem Gereksinimleri',
         'images' => 'Resim',
+        'coverImage' => 'Kapak Resmi',
+        'stock' => 'Stok',
 
     ],
 

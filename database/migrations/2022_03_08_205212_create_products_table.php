@@ -27,7 +27,8 @@ return new class extends Migration
             $table->string('descriptionHead');
             $table->longText('description');
             $table->longText('systemRequirementsText');
-            $table->longText('photoUrls');
+            $table->longText('coverImage');
+            $table->longText('imagesPaths');
             $table->foreign('publisherId')->references('id')->on('publishers')->onDelete('cascade');
             $table->foreign('kindId')->references('id')->on('kinds')->onDelete('cascade');
             $table->boolean('isDeleted')->default(false)->comment('true(1):deleted, false(0): not deleted');

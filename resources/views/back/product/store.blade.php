@@ -15,7 +15,7 @@
             </div>
         @endif
 
-        <form class="w-50" enctype="multipart/form-data" method="POST" action="{{route('back.products.store')}}">
+        <form class="w-50" method="POST" action="{{route('back.products.store')}}" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="gameName">Ürün İsmi</label>
@@ -40,13 +40,17 @@
                 </div>
             </div>
             <div class="d-flex flex-row justify-content-between align-items-center">
-                <div class="form-group w-50 pr-3">
+                <div class="form-group pr-3">
                     <label for="price">Fiyat:</label>
                     <input type="number" name="price" id="price" value="{{old('price')}}" class="form-control"/>
                 </div>
-                <div class="form-group w-50 pl-3">
+                <div class="form-group">
                     <label for="discount">İndirim (%):</label>
                     <input type="number" name="discount" id="discount" value="{{old('discount')}}" class="form-control"/>
+                </div>
+                <div class="form-group pl-3">
+                    <label for="stock">Stok</label>
+                    <input type="number" name="stock" id="stock" value="{{old('stock')}}" class="form-control"/>
                 </div>
             </div>
             <div class="form-group d-flex flex-column ">
@@ -85,8 +89,13 @@
             </div>
 
             <div class="form-group">
+                <label for="coverImage">Kapak Resmi</label>
+                <input type="file" name="coverImage" class="form-control">
+            </div>
+
+            <div class="form-group">
                 <label for="images">Resimler</label>
-                <input type="file" class="form-control form-control-file" name="images" id="images" multiple/>
+                <input type="file" name="images[]" class="form-control" multiple>
             </div>
 
             <button type="submit" class="btn btn-dark btn-block mb-3">EKLE</button>
@@ -135,6 +144,7 @@
                     ['color', ['color']],
                 ]
             });
+
         });
     </script>
 @endsection
