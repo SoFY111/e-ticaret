@@ -72,12 +72,12 @@ ion-icon, span {
 label, img {
     display: block;
 }
-
+/*
 input {
     font: inherit;
     width: 100%;
     border: none;
-}
+}*/
 
 input:focus {
     outline: 2px solid var(--azure);
@@ -169,6 +169,8 @@ input::-webkit-outer-spin-button {
 
 .payment-form {
     margin-bottom: 40px;
+    margin: 0 auto;
+    display: table;
 }
 
 .payment-method {
@@ -219,6 +221,11 @@ input::-webkit-outer-spin-button {
     border: solid 2px rgb(212, 212, 212);
     border-radius: var(--radius);
     color: black;
+    margin-top: 3px;
+    padding: 15px;
+    font-size: 16px;
+    width: 100%;
+
 }
 
 .payment-form input {
@@ -260,6 +267,8 @@ input::-webkit-outer-spin-button {
 
 .btn1 {
     border-radius: var(--radius);
+    margin: 0 auto;
+    display: table;
 }
 
 .btn1:active {
@@ -290,7 +299,7 @@ input::-webkit-outer-spin-button {
 */
 
 .cart1 {
-    width: 40%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
