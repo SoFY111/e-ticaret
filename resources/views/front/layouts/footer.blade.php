@@ -73,15 +73,15 @@
                 <div class="col-md-3 sign-gd flickr-post">
                     <h4>Popüler <span style="font-size:18px;">Markalar</span></h4>
                     <ul>
-                        <li><a href="single.html"><img src="{{asset('front/images')}}/ea.png" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images')}}/intel2.png" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images')}}/ps.png" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images')}}/riot.png" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images')}}/rockstar.png" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images')}}/ubisoft2.png" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images')}}/wb.png" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images')}}/windows.png" alt=" " class="img-responsive" /></a></li>
-                        <li><a href="single.html"><img src="{{asset('front/images')}}/xbox.png" alt=" " class="img-responsive" /></a></li>
+                        <li><a href=""><img src="{{asset('front/images')}}/ea.png" alt=" " class="img-responsive" /></a></li>
+                        <li><a href=""><img src="{{asset('front/images')}}/intel2.png" alt=" " class="img-responsive" /></a></li>
+                        <li><a href=""><img src="{{asset('front/images')}}/ps.png" alt=" " class="img-responsive" /></a></li>
+                        <li><a href=""><img src="{{asset('front/images')}}/riot.png" alt=" " class="img-responsive" /></a></li>
+                        <li><a href=""><img src="{{asset('front/images')}}/rockstar.png" alt=" " class="img-responsive" /></a></li>
+                        <li><a href=""><img src="{{asset('front/images')}}/ubisoft2.png" alt=" " class="img-responsive" /></a></li>
+                        <li><a href=""><img src="{{asset('front/images')}}/wb.png" alt=" " class="img-responsive" /></a></li>
+                        <li><a href=""><img src="{{asset('front/images')}}/windows.png" alt=" " class="img-responsive" /></a></li>
+                        <li><a href=""><img src="{{asset('front/images')}}/xbox.png" alt=" " class="img-responsive" /></a></li>
                     </ul>
                 </div>
                 <div class="clearfix"></div>

@@ -170,11 +170,14 @@ a.pinterest .front {
 }
 .w3_agile_social .front i{
 	color: #fff;
-    font-size: 12px;
+    font-size: 17px;
+	margin-top: 6px;
 }
 .w3_agile_social .back i{
 	color: #000;
-    font-size: 12px;
+    font-size: 17px;
+	margin-top: 6px;
+
 }
 .w3ls_team_grid img {
     background: #e4e3e3;
