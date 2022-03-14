@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 //FRONTEND CONTROLLERs
 use App\Http\Controllers\Front\MainController;
+use App\Http\Controllers\Front\ProductPageController;
 
 //BACKEND CONTROLLERs
 use \App\Http\Controllers\Back\SuperAdminController;
@@ -25,17 +26,11 @@ Route::prefix('/')->name('front.')->group(function(){
         return view('front.contact');
     })->name('contact');
 
-    Route::get('/bilgisayar', function () {
-        return view('front.bilgisayar');
-    })->name('bilgisayar');
+    Route::get('/bilgisayar', [ProductPageController::class, 'pcPageIndex'])->name('bilgisayar');
 
-    Route::get('/ps', function () {
-        return view('front.ps');
-    })->name('ps');
+    Route::get('/ps', [ProductPageController::class, 'psPageIndex'])->name('ps');
 
-    Route::get('/xbox', function () {
-        return view('front.xbox');
-    })->name('xbox');
+    Route::get('/xbox', [ProductPageController::class, 'xboxPageIndex'])->name('xbox');
 
     Route::get('/gta', function () {
         return view('front.gta');

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('publisherId');
             $table->unsignedBigInteger('kindId');
             $table->string('name');
-            $table->string('price');
+            $table->float('price');
             $table->unsignedInteger('stock');
             $table->integer('discountRate')->default(0);
             $table->boolean('isPc');

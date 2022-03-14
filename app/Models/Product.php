@@ -65,4 +65,14 @@ class Product extends Model
         'coverImage',
         'imagesPaths',
     ];
+
+    public function publisherDetail()
+    {
+        return $this->hasOne('App\Models\Publisher', 'id', 'publisherId');
+    }
+
+    public function kindDetail()
+    {
+        return $this->hasOne('App\Models\Kind', 'id', 'kindId');
+    }
 }
