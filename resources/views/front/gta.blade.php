@@ -6,23 +6,16 @@
   <div class="banner-bootom-w3-agileits">
 	<div class="container">
 	     <div class="col-md-4 single-right-left ">
-			<div class="grid images_3_of_2">
-				<div class="flexslider">
-					
-					<ul class="slides">
-						<li data-thumb="images/d2.jpg">
-							<div class="thumb-image"> <img src="{{asset('front/images/template-images')}}/d2.jpg" data-imagezoom="true" class="img-responsive"> </div>
-						</li>
-						<li data-thumb="images/d1.jpg">
-							<div class="thumb-image"> <img src="{{asset('front/images/template-images')}}/d1.jpg" data-imagezoom="true" class="img-responsive"> </div>
-						</li>	
-						<li data-thumb="images/d3.jpg">
-							<div class="thumb-image"> <img src="{{asset('front/images/template-images')}}/d3.jpg" data-imagezoom="true" class="img-responsive"> </div>
-						</li>
-					</ul>
-					<div class="clearfix"></div>
-				</div>	
-			</div>
+					<div class="carousel">
+					  <div class="img">
+						<img src="{{asset('front/images/uploads/productsImages')}}/watch-dogs_cover_1647291930.jpg">
+						<img src="{{asset('front/images/uploads/productsImages')}}/watch-dogs_358_1647291930.jpg">
+						<img src="{{asset('front/images/uploads/productsImages')}}/watch-dogs_375_1647291930.png">
+						<img src="{{asset('front/images/uploads/productsImages')}}/watch-dogs_500_1647291930.jpg">
+						<img src="{{asset('front/images/uploads/productsImages')}}/watch-dogs_358_1647291930.jpg">
+					  </div>
+					  <div class="span-cont"></div>
+					</div>
 		</div>
 		<div class="col-md-8 single-right-left simpleCart_shelfItem">
 					<h3>GTA SAN ANDREAS</h3>
@@ -363,4 +356,68 @@
 
     </div>
 </div>
+@endsection
+
+@section('customPageCss')
+<style>
+	.dot {
+  height: 12px;
+  width: 12px;
+  background-color: rgb(34 34 34);
+  border-radius: 50px;
+  display: inline-block;
+  margin: 15px;
+  margin-left: 25px;
+  cursor: pointer;
+  transition: 0.5s;
+  padding-right: 25px;
+}
+
+.carousel,
+.achats {
+  width: clamp(400px, 100%, 800px);
+  padding-right: 50px;
+}
+
+.carousel > .img {
+  aspect-ratio: 1/1;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  display: flex;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel > .img > img {
+  transition: 0.3s;
+}
+
+</style>
+
+@endsection
+
+@section('customPageJs')
+    <script>
+        let img_list = document.querySelectorAll(".carousel > .img > img");
+
+for (i = 0; i < img_list.length; i++) {
+  let a = document.createElement("a");
+  a.setAttribute("class", "dot");
+  a.setAttribute("href", "#img" + i);
+  img_list[i].id = "img" + i;
+  document.querySelector(".carousel > .span-cont").appendChild(a);
+}
+
+let spans = document.querySelectorAll(".span-cont > a");
+spans[0].style.backgroundColor = "#5397b4";
+for (i = 0; i < spans.length; i++) {
+  spans[i].onclick = function () {
+    for (y = 0; y < spans.length; y++) {
+      spans[y].style.backgroundColor = "rgb(34 34 34)";
+    }
+    this.style.backgroundColor = "#5397b4";
+  };
+}
+
+    </script>
 @endsection
