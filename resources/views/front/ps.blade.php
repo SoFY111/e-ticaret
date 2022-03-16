@@ -130,14 +130,14 @@
                                 <img src="{{$product->coverImage}}" alt="" width="255px" height="248px" class="pro-image-back">
                                 <div class="men-cart-pro">
                                     <div class="inner-men-cart-pro">
-                                        <a href="single.html" class="link-product-add-cart">Hemen İncele</a>
+                                        <a href="{{route('front.product.detail.index', $product->id)}}" class="link-product-add-cart">Hemen İncele</a>
                                     </div>
                                 </div>
                                 <span class="product-new-top">YENİ!</span>
 
                             </div>
                             <div class="item-info-product ">
-                                <h4><a href="single.html">{{$product->name}}</a></h4>
+                                <h4><a href="{{route('front.product.detail.index', $product->id)}}">{{$product->name}}</a></h4>
                                 <div class="info-product-price">
                                     @if($product->discountRate !== 0)
                                         <span class="item_price">{{number_format($product->price-($product->price*($product->discountRate / 100)), 2)}}₺</span>

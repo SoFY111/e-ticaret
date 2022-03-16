@@ -152,7 +152,7 @@
 
                             </div>
                             <div class="item-info-product ">
-                                <h4><a href="single.html">{{$product->name}}</a></h4>
+                                <h4><a href="{{route('front.product.detail.index', $product->id)}}">{{$product->name}}</a></h4>
                                 <div class="info-product-price">
                                     @if($product->discountRate !== 0)
                                         <span class="item_price">{{number_format($product->price-($product->price*($product->discountRate / 100)), 2)}}₺</span>
