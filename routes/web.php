@@ -32,9 +32,9 @@ Route::prefix('/')->name('front.')->group(function(){
 
     Route::get('/xbox', [ProductPageController::class, 'xboxPageIndex'])->name('xbox');
 
-    Route::get('/gta', function () {
-        return view('front.gta');
-    })->name('gta');
+    Route::get('/gta', [ProductPageController::class, 'details'])->name('gta');
+
+    Route::get('/gta/{id}', [ProductPageController::class, 'xboxDetails']);
 
     Route::get('/sepetim', function () {
         return view('front.cart');

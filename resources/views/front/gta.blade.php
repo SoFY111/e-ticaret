@@ -1,25 +1,28 @@
 @extends('front.layouts.master')
-@section('title') GTA SAN ANDREAS @endsection
+@section('title') {{$product['name']}} @endsection
 @section('content')
 
   <!-- banner-bootom-w3-agileits -->
+
   <div class="banner-bootom-w3-agileits">
 	<div class="container">
 	     <div class="col-md-4 single-right-left ">
 					<div class="carousel">
 					  <div class="img">
-						<img src="{{asset('front/images/uploads/productsImages')}}/watch-dogs_cover_1647291930.jpg">
-						<img src="{{asset('front/images/uploads/productsImages')}}/watch-dogs_358_1647291930.jpg">
-						<img src="{{asset('front/images/uploads/productsImages')}}/watch-dogs_375_1647291930.png">
-						<img src="{{asset('front/images/uploads/productsImages')}}/watch-dogs_500_1647291930.jpg">
-						<img src="{{asset('front/images/uploads/productsImages')}}/watch-dogs_358_1647291930.jpg">
+						<img src="{{$product['coverImage']}}">
+						<img src="{{$product['coverImage']}}">
+						<img src="{{$product['coverImage']}}">
+						<img src="{{$product['coverImage']}}">
+						<img src="{{$product['coverImage']}}">
+
 					  </div>
 					  <div class="span-cont"></div>
 					</div>
 		</div>
+		
 		<div class="col-md-8 single-right-left simpleCart_shelfItem">
-					<h3>GTA SAN ANDREAS</h3>
-					<p><span class="item_price">116,29₺</span> <del>175.5₺</del></p>
+					<h3>{{$product['name']}}</h3>
+					<p><span class="item_price">{{$product['price']}}</span> <del>175.5₺</del></p>
 					<div class="rating1">
 						<span class="starRating">
 							<input id="rating5" type="radio" name="rating" value="5">
@@ -91,10 +94,8 @@
 					   <div class="tab1">
 
 							<div class="single_page_agile_its_w3ls">
-							  <h6>GTA SAN ANDREAS</h6>
-							   <p>Beş yıl önce Carl Johnson, çete sorunları, uyuşturucu ve yolsuzlukla kendini parçalayan Los Santos, San Andreas'ta hayatın baskılarından kaçtı. Çete sorunu, uyuşturucu ve yolsuzlukla kendini parçalayan bir şehir. Film yıldızlarının ve milyonerlerin tacirlerden ve çetecilerden kaçınmak için ellerinden gelenin en iyisini yaptıkları yer.</p>
-							   <p class="w3ls_para">Annesi öldürüldü, ailesi dağıldı ve çocukluk arkadaşları felakete doğru gidiyor. Mahalleye döndüğünde, birkaç yolsuz polis onu cinayetle suçlar.</p>
-							   <p class="w3ls_para">CJ, ailesini kurtarmak ve sokakların kontrolünü ele geçirmek için onu tüm San Andreas eyaletine götüren bir yolculuğa çıkmak zorunda kalır.</p>
+							  <h6>{{$product['descriptionHead']}}</h6>
+							   <p>{!! $product['description'] !!}</p>
 							</div>
 						</div>
 						<!--//tab_one-->
@@ -102,7 +103,7 @@
 						   <div class="tab3">
 
 							<div class="single_page_agile_its_w3ls">
-							  <h6>GTA SAN ANDREAS</h6><br>
+							  <h6>{{$product['descriptionHead']}}</h6><br>
 							   <p><span style="font-weight:   700">İşletim Sistemi </span>: Windows® 2000/XP ve üzeri </p>
 							   <p class="w3ls_para"><span style="font-weight:   700">İşlemci </span>: 1Ghz Pentium III veya AMD Athlon İşlemci</p>
 							   <p class="w3ls_para"><span style="font-weight:   700">GPU </span>: 64MB Ekran Kartı (Geforce 3 veya üstü)</p>
@@ -145,6 +146,7 @@
 					</div>
 				</div>	
 			</div>
+
 	<!-- //new_arrivals --> 
 	  	<!--/slider_owl-->
 	
