@@ -50,10 +50,10 @@ class ProductPageController extends Controller
         $products = Product::where('isDeleted', 0)->where('stock', '>', 0)->orderByDesc('id')->get();
         return view('front.gta', compact('products'));
     }
-    
+
     public function xboxDetails($id)
     {
-        $products = Product::find($id);
-        return view('front.gta', ['product'=>$products]);
+        $product = Product::find($id);
+        return view('front.productDetail', compact('product'));
     }
 }

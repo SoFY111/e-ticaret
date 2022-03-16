@@ -34,7 +34,7 @@ Route::prefix('/')->name('front.')->group(function(){
 
     Route::get('/gta', [ProductPageController::class, 'details'])->name('gta');
 
-    Route::get('/gta/{id}', [ProductPageController::class, 'xboxDetails']);
+    Route::get('/urun/{id}', [ProductPageController::class, 'xboxDetails'])->name('product.detail.index');
 
     Route::get('/sepetim', function () {
         return view('front.cart');

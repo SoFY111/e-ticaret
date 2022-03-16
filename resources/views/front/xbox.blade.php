@@ -145,7 +145,7 @@
                                 <img src="{{$product->coverImage}}" alt="" width="255px" height="248px" class="pro-image-back">
                                 <div class="men-cart-pro">
                                     <div class="inner-men-cart-pro">
-                                        <a href="gta/{{$product['id']}}" class="link-product-add-cart">Hemen İncele</a>
+                                        <a href="{{route('front.product.detail.index', $product->id)}}" class="link-product-add-cart">Hemen İncele</a>
                                     </div>
                                 </div>
                                 <span class="product-new-top">YENİ!</span>
