@@ -3,7 +3,7 @@
     <div class="container">
         <ul>
             @if (Auth::check())
-                <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> {{Auth::user()->name}} {{ Auth::user()->surname}}</a></li>
+                <li><a href="{{route('front.profile')}}"><i class="fa fa-user" aria-hidden="true"></i> {{Auth::user()->name}} {{ Auth::user()->surname}}</a></li>
                 @if(Auth::user()->type == 'user')
                     <li><i class="fa fa-phone" aria-hidden="true"></i> +90 262 303 1000</li>
                     <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">info@egooyun.com</a></li>

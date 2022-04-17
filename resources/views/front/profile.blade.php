@@ -3,17 +3,7 @@
 @section('content')
 <div class="container">
     <div class="main-body">
-    
-          <!-- Breadcrumb -->
-          <nav aria-label="breadcrumb" class="main-breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">Anasayfa</a></li>
-              <li class="breadcrumb-item"><a href="javascript:void(0)">Kullanıcı</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Profilim</li>
-            </ol>
-          </nav>
-          <!-- /Breadcrumb -->
-    
+       
           <div class="row gutters-sm">
             <div class="col-md-12 mb-3">
               <div class="card">
@@ -21,11 +11,11 @@
                   <div class="d-flex flex-column align-items-center text-center">
                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
-                      <h4>Kenneth Valdez</h4>
-                      <p class="text-secondary mb-1">Full Stack Developer</p>
-                      <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
-                      <button class="btn btn-primary">Follow</button>
-                      <button class="btn btn-outline-primary">Message</button>
+                      <h4>{{auth()->user()->name}} {{auth()->user()->surname}}</h4>
+                      <p class="text-secondary mb-1">{{auth()->user()->type}}</p>
+                      <p class="text-muted font-size-sm">{{auth()->user()->email}}</p>
+                    <!--  <button class="btn btn-primary">Follow</button>
+                      <button class="btn btn-outline-primary">Message</button>-->
                     </div>
                   </div>
                 </div>
@@ -40,7 +30,7 @@
                       <h6 class="mb-0">İsim</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Kenneth 
+                      {{auth()->user()->name}}
                     </div>
                   </div>
                   <hr>
@@ -49,7 +39,7 @@
                       <h6 class="mb-0">Soyisim</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        Valdez
+                      {{auth()->user()->surname}}
                     </div>
                   </div>
                   <hr>
@@ -58,7 +48,7 @@
                       <h6 class="mb-0">E-mail</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      example@hotmail.com
+                     {{auth()->user()->email}}
                     </div>
                   </div>
                   <hr>
@@ -86,13 +76,16 @@
                     </div>
                   </div>
                 </div>
+                
+                <form style="" method="POST" action="{{route('front.user.update',auth()->user()->id)}}" enctype="multipart/form-data">
+                  @csrf
                 <div class="card-body" id="show_2" style="display: none">
                     <div class="row mb-3" style="margin: 0 auto; display: block;">
                         <div class="col-sm-3">
                             <h6 class="mb-0">İsim</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            <input type="text" class="form-control" value="Kenneth">
+                            <input type="text" class="form-control" name="name" id="name" value="{{auth()->user()->name}}">
                         </div>
                     </div>
                     <div class="row mb-3" style="margin: 0 auto; display: block;">
@@ -100,7 +93,7 @@
                             <h6 class="mb-0">Soyisim</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            <input type="text" class="form-control" value="Valdez">
+                            <input type="text" class="form-control" name="surname" id="surname" value="{{auth()->user()->surname}}">
                         </div>
                     </div>
                     <div class="row mb-3" style="margin: 0 auto; display: block;">
@@ -108,7 +101,7 @@
                             <h6 class="mb-0">E-mail</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            <input type="text" class="form-control" value="example@hotmail.com">
+                            <input type="text" class="form-control" name="email" id="email" value="{{auth()->user()->email}}">
                         </div>
                     </div>
                     <div class="row mb-3" style="margin: 0 auto; display: block;">
@@ -116,7 +109,7 @@
                             <h6 class="mb-0">Şifre</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            <input type="text" class="form-control" value="">
+                            <input type="text" class="form-control" name="newpass1" required id="newpass1" placeholder="Şifre">
                         </div>
                     </div>
                     <div class="row mb-3" style="margin: 0 auto; display: block;">
@@ -124,17 +117,18 @@
                             <h6 class="mb-0">Şifre Tekrar</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            <input type="text" class="form-control" value="">
+                            <input type="text" class="form-control" name="newpass2" required id="newpass2" placeholder="Şifre tekrar">
                         </div>
                     </div>
                     <div class="row" style="margin: 0 auto; display: block;">
                         <div class="col-sm-3"></div>
                         <div class="col-sm-9 text-secondary">
-                            <input type="button" class="btn btn-success px-4" value="Kaydet">
+                            <input type="submit" class="btn btn-success px-4" value="Kaydet">
                             <input type="button" class="btn btn-primary px-4" onclick="switch_div(1)" value="Geri">
                         </div>
                     </div>
                 </div>
+              </form>
               </div>
 
             </div>
