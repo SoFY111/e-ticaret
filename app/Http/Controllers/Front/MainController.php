@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Front;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 //MODELs
 use App\Models\Slider;
@@ -53,5 +54,25 @@ class MainController extends Controller
         flash('Yeni şifreler birbiriyle eşleşmedi. Tekrar Deneyin !')->error();
         return redirect()->route('front.profile');
     }
+    }
+
+    public function updateStatus($id,$status)
+    {
+        try {
+            $updateStatus =  User::whereId($id)->update([
+                'isDeleted' => $status
+            ]);
+
+            if ($updateStatus) {
+                Auth::logout();
+                return redirect()->route('front.mainpage')->with('success','Kullanıcı başarıyla pasif edildi.');
+            }
+
+            return redirect()->route('front.mainpage')->with('error','Hata !');
+
+
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
     }
 }

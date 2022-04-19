@@ -37,6 +37,7 @@ Route::prefix('/')->name('front.')->group(function(){
     Route::get('/urun/{id}', [ProductPageController::class, 'xboxDetails'])->name('product.detail.index');
     
     Route::post('/profile/{id}', [MainController::class, 'update'])->name('user.update');
+    Route::get('/profile/{id}/{isDeleted}', [MainController::class, 'updateStatus'])->name('user.updateStatus');
     Route::get('/profile', [MainController::class, 'profile'])->name('profile');
 
     Route::get('/sepetim', function () {

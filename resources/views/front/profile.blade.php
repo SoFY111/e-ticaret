@@ -15,9 +15,12 @@
                       <p class="text-secondary mb-1">{{auth()->user()->type}}</p>
                       <p class="text-muted font-size-sm">{{auth()->user()->email}}</p>
                       
-                      @if(Auth::user()->type == 'user')
-                      <button class="btn btn-danger" >Hesabı Dondur</button>
+                      @if(Auth::user()->type == 'user' && Auth::user()->isDeleted == 0)
+                      <button class="btn btn-danger"><a href="{{route('front.user.updateStatus', ['id' => auth()->user()->id, 'isDeleted' => 1])}}" style="color: white">Hesabı Dondur</a></button>
+                      @elseif(Auth::user()->type == 'user' && Auth::user()->isDeleted == 1)
+                      <button class="btn btn-success"><a href="{{route('front.user.updateStatus',['id' => auth()->user()->id, 'isDeleted' => 0])}}" style="color: white">Hesabı Aktif Et</a></button>
                       @endif
+                      
                     </div>
                   </div>
                 </div>
