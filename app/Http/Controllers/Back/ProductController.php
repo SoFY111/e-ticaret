@@ -223,4 +223,25 @@ class ProductController extends Controller
         return redirect()->route('back.products.index');
 
     }
+
+    public function productStatus($id,$status)
+    {
+        try {
+            $updateStatus =  Product::whereId($id)->update([
+                'isDeleted' => $status
+            ]);
+
+            if ($updateStatus) {
+                flash('Ürün durumu başarıyla güncellendi.')->success();
+                return redirect()->back();
+            }
+
+            flash('Hata !')->success();
+            return redirect()->back();
+
+
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+    }
 }

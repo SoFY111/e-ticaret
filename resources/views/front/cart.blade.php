@@ -4,8 +4,9 @@
     <main class="container2">
         <h1 class="heading"></h1>
         <div class="item-flex">
-            <!--
-             - checkout section
+
+            <!-- Kredi Kartı Kodları Kaynak
+            https://codepen.io/quinlo/pen/YONMEa
             -->
             <section class="checkout">
                 <h2 class="section-heading">Ödeme Detayları</h2>

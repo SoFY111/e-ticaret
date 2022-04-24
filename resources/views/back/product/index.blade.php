@@ -74,7 +74,8 @@
                                 @if($product->isXbox) <i class="fab fa-xbox text-success" style="font-size: 1.1rem;"></i> @else <i class="fab fa-xbox text-danger" style="font-size: 1.1rem;"></i> @endif
                             </div>
                             <div class="cell" data-title="Durum">
-                                @if(!$product->isDeleted) <label class="btn btn-success">Aktif</label> @else <label class="btn btn-danger">Pasif</label> @endif
+                                @if(!$product->isDeleted) <label class="btn btn-success"><a href="{{route('back.products.updateStatus', ['id' => $product->id, 'isDeleted' => 1])}}" style="color: white">Aktif</a></label> 
+                                @else <label class="btn btn-danger"><a href="{{route('back.products.updateStatus',['id' => $product->id, 'isDeleted' => 0])}}" style="color: white">Pasif</a></label> @endif
                             </div>
                             <div class="cell" data-title="Düzenle" style="padding-left: 20px">
                                 <button class="btn btn-primary"><a href="{{route('back.product.update.index', $product->id)}}" style="color: white">Düzenle</a></button>

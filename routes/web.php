@@ -77,6 +77,7 @@ Route::prefix('/admin')->name('back.')->middleware(['isLogin', 'isAdmin'])->grou
     Route::post('/urun/ekle', [ProductController::class, 'storeProduct'])->name('products.store');
     Route::get('/urun/duzenle/{id}', [ProductController::class, 'storeProductEdit'])->name('product.update.index');
     Route::post('/urun/duzenle', [ProductController::class, 'storeProductUpdate'])->name('products.update');
+    Route::get('/urun/{id}/{isDeleted}', [ProductController::class, 'productStatus'])->name('products.updateStatus');
 
     //superAdminAuthority
     Route::prefix('/')->name('superAdmin.')->middleware('isSuperAdmin')->group(function(){
