@@ -131,8 +131,8 @@ class ProductController extends Controller
         return view('back.product.storeProductUpdate', compact('productUpdate','publishers', 'kinds'));
     }
 
-    public function storeProductUpdate(Request $request){
-
+    public function storeProductUpdate(Request $request)
+    {
         $request->validate([
             'gameName' => 'required',
             'publisher' => 'required',
@@ -236,12 +236,21 @@ class ProductController extends Controller
                 return redirect()->back();
             }
 
-            flash('Hata !')->success();
+            flash('Hata !')->error();
             return redirect()->back();
 
 
         } catch (\Throwable $th) {
             //throw $th;
         }
+    }
+
+    public function productDelete($id){
+
+        $product = Product::findOrFail($id);
+        $product->delete();
+        flash('Ürün başarıyla silindi.')->success();
+        return redirect()->route('back.products.index');
+        
     }
 }

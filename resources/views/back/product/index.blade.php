@@ -32,6 +32,9 @@
                         <div class="cell" style="padding-left: 25px">
                             Düzenle
                         </div>
+                        <div class="cell" style="padding-left: 25px">
+                            Sil
+                        </div>
                     </div>
 
                     @foreach($products as $product)
@@ -80,6 +83,12 @@
                             <div class="cell" data-title="Düzenle" style="padding-left: 20px">
                                 <button class="btn btn-primary"><a href="{{route('back.product.update.index', $product->id)}}" style="color: white">Düzenle</a></button>
                             </div>
+                            <form method="POST" action="{{ route('back.products.delete', $product) }}"> 
+                                {{ csrf_field() }}
+                            <div class="cell" data-title="Sil" style="padding-left: 20px">
+                                <button type="submit" class="btn btn-danger">Sil</button>
+                            </div>
+                        </form>
                         </div>
                     @endforeach
                 <!--

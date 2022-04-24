@@ -78,14 +78,22 @@ Route::prefix('/admin')->name('back.')->middleware(['isLogin', 'isAdmin'])->grou
     Route::get('/urun/duzenle/{id}', [ProductController::class, 'storeProductEdit'])->name('product.update.index');
     Route::post('/urun/duzenle', [ProductController::class, 'storeProductUpdate'])->name('products.update');
     Route::get('/urun/{id}/{isDeleted}', [ProductController::class, 'productStatus'])->name('products.updateStatus');
+    Route::post('/urun/sil/{id}', [ProductController::class, 'productDelete'])->name('products.delete');
+
+
+    Route::get('/kullanicilar/duzenle/{id}', [SuperAdminController::class, 'userEdit'])->name('user.updateIndex');
+    Route::get('/kullanicilar/sil/{id}', [SuperAdminController::class, 'userDelete'])->name('user.delete');
+    Route::post('/kullanicilar/duzenle', [SuperAdminController::class, 'userUpdate'])->name('user.update');
+    Route::get('/kullanici/', [SuperAdminController::class, 'userSearch'])->name('user.search');
+
 
     //superAdminAuthority
     Route::prefix('/')->name('superAdmin.')->middleware('isSuperAdmin')->group(function(){
         Route::get('/kullanici-yetki-degistir', [SuperAdminController::class, 'changeUserAuthorityIndex'])->name('changeUserAuthority');
         Route::post('/kullanici-yetki-degistir', [SuperAdminController::class, 'changeUserAuthority'])->name('changeUserAuthorityPost');
 
-        Route::get('/kullanici-rol-degistir', [SuperAdminController::class, 'changeUserActivePassiveIndex'])->name('changeUserActivePassive');
-        Route::post('/kullanici-rol-degistir', [SuperAdminController::class, 'changeUserActivePassive'])->name('changeUserActivePassivePost');
+        Route::get('/kullanicilar', [SuperAdminController::class, 'changeUserActivePassiveIndex'])->name('changeUserActivePassive');
+        Route::get('/kullanicilar/{id}/{isDeleted}', [SuperAdminController::class, 'changeUserActivePassive'])->name('changeUserActivePassivePost');
     });
 });
 

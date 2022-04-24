@@ -117,7 +117,7 @@
             <li class="nav-item @if(Request::segment(1) == 'admin' && Request::segment(2) == 'kullanici-rol-degistir') active @endif">
                 <a class="nav-link" href="{{route('back.superAdmin.changeUserActivePassive')}}">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Aktif - Pasif Değiştirme</span></a>
+                    <span>Kullanıcı Düzenle</span></a>
             </li>
     @endif
 

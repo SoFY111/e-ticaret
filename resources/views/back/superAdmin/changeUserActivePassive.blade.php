@@ -1,50 +1,89 @@
 @extends('back.layouts.master')
-@section('title') Aktif - Pasif Değiştir @endsection
+@section('title') Kullanıcılar @endsection
 @section('content')
-    <div class="d-flex flex-lg-row flex-column justify-content-around align-items-center px-3">
-        <div class="col-12 col-lg-5 border rounded pt-3 mb-3 mb-lg-0">
-            <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-end">
-                <h4 class="">Pasif Kullanıcılar</h4>
-                <small style="font-size: 10px;" class="pb-1 font-small">{{count($passiveUsers)}} adet kayıt bulundu</small>
-            </div>
-            <form class="d-flex flex-sm-row flex-column align-items-center justify-content-center pb-2" method="POST" action="{{route('back.superAdmin.changeUserActivePassivePost')}}">
-                @csrf
-                <input type="hidden" name="type" value="passive">
-                <div class="d-flex flex-sm-row flex-column align-items-center flex-grow-1 m-2 sm-0">
-                    <label for="selectedPassiveUser" class="m-2 mr-2 m-sm-0 mr-sm-2">Kullanıcı: </label>
-                    <select class="selectedPassiveUser " name="selectedPassiveUser" id="selectedPassiveUser">
-                        @foreach($passiveUsers as $passive)
-                            <option value="{{$passive->id}}">{{$passive->email}}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-dark ml-2">Aktif Yap</button>
-            </form>
-        </div>
-        <div class="col-12 col-lg-5 border rounded pt-3 mb-3 mb-lg-0">
-            <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-end">
-                <h4 class="">Aktif Kullanıcılar</h4>
-                <small style="font-size: 10px;" class="pb-1 font-small">{{count($activeUsers)}} adet kayıt bulundu</small>
-            </div>
-            <form class="d-flex flex-sm-row flex-column align-items-center justify-content-center pb-2"  method="POST" action="{{route('back.superAdmin.changeUserActivePassivePost')}}">
-                @csrf
-                <input type="hidden" name="type" value="active">
-                <div class="d-flex flex-sm-row flex-column align-items-center flex-grow-1 m-2 sm-0">
-                    <label for="selectedActiveUser" class="m-2 mr-2 m-sm-0 mr-sm-2">Kullanıcı: </label>
-                    <select class="selectedActiveUser " name="selectedActiveUser" id="selectedActiveUser">
-                        @foreach($activeUsers as $active)
-                            <option value="{{$active->id}}">{{$active->email}}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-dark ml-2">Pasif Yap</button>
-            </form>
+
+<form method="GET" action="{{route('back.user.search')}}">
+    <div class="input-group">
+        <input type="text" style="color: black;" class="form-control" placeholder="Aranacak ismi giriniz."
+               aria-label="User Name" name="name" id="name">
+        <div class="input-group-append">
+            <button class="btn btn-sm btn-primary" style="margin-left: 14px" type="submit">Ara</button>
         </div>
     </div>
+</form><br>
+
+<div class="limiter">
+    <div class="d-flex justify-content-center shadow">
+        <div class="wrap-table100">
+            <div class="table">
+
+                <div class="row header">
+                    <div class="cell">
+                        Ad
+                    </div>
+                    <div class="cell">
+                        Soyad
+                    </div>
+                    <div class="cell">
+                        E-mail
+                    </div>
+                    <div class="cell">
+                        Rol
+                    </div>
+                    <div class="cell">
+                        Durum
+                    </div>
+                    <div class="cell" style="padding-left: 25px">
+                        Düzenle
+                    </div>
+                    <div class="cell" style="padding-left: 25px">
+                        Sil
+                    </div>
+                </div>
+
+                @foreach($users as $user)
+                    <div class="row">
+                        <div class="cell" data-title="Adı">
+                            {{$user->name}}
+                        </div>
+                        <div class="cell" data-title="Soyadı">
+                            {{$user->surname}}
+                        </div>
+                        <div class="cell" data-title="Email">
+                            {{$user->email}}
+                        </div>
+                        <div class="cell" data-title="Email">
+                            {{$user->type}}
+                        </div>
+                        <div class="cell" data-title="Durum">
+                            @if(!$user->isDeleted) <label class="btn btn-success"><a href="{{route('back.superAdmin.changeUserActivePassivePost', ['id' => $user->id, 'isDeleted' => 1])}}" style="color: white">Aktif</a></label> 
+                            @else <label class="btn btn-danger"><a href="{{route('back.superAdmin.changeUserActivePassivePost',['id' => $user->id, 'isDeleted' => 0])}}" style="color: white">Pasif</a></label> @endif
+                        </div>
+                        <div class="cell" data-title="Düzenle" style="padding-left: 20px">
+                            <button class="btn btn-primary"><a href="{{route('back.user.updateIndex', $user->id)}}" style="color: white">Düzenle</a></button>
+                        </div>
+                        <div class="cell" data-title="Sil" style="padding-left: 20px">
+                            <button class="btn btn-danger"><a href="{{route('back.user.delete', $user->id)}}" style="color: white">Sil</a></button>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</div>
+<br>
 @endsection
 
 @section('customPageCss')
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="{{asset('backTemplate/datatableUtils/vendor/animate')}}/animate.css">
+    <link rel="stylesheet" type="text/css"
+          href="{{asset('backTemplate/datatableUtils/vendor/select2')}}/select2.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="{{asset('backTemplate/datatableUtils/vendor/perfect-scrollbar')}}/perfect-scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('backTemplate/datatableUtils/css')}}/util.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('backTemplate/datatableUtils/css')}}/main.css">
     <style>
         .select2{
             width: 100% !important;
@@ -55,6 +94,9 @@
 @section('customPageJs')
 
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="{{asset('backTemplate/datatableUtils/vendor/bootstrap/js')}}/popper.js"></script>
+    <script src="{{asset('backTemplate/datatableUtils/vendor/select2')}}/select2.min.js"></script>
+    <script src="{{asset('backTemplate/datatableUtils/js')}}/main.js"></script>
 
     <script>
         $(document).ready(function() {
