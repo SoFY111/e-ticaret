@@ -23,12 +23,12 @@
                 <div class="col-md-4 sign-gd">
                     <h4>Bağlantılar <span></span> </h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="mens.html">Men's Wear</a></li>
-                        <li><a href="womens.html">Women's wear</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="typography.html">Short Codes</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/">Ana Sayfa</a></li>
+                        <li><a href="{{route('front.about')}}">Hakkımızda</a></li>
+                        <li><a href="{{route('front.bilgisayar')}}">Bilgisayar</a></li>
+                        <li><a href="{{route('front.ps')}}">Playstation</a></li>
+                        <li><a href="{{route('front.xbox')}}">Xbox</a></li>
+                        <li><a href="{{route('front.contact')}}">İletişim</a></li>
                     </ul>
                 </div>
 
@@ -51,7 +51,7 @@
                             </div>
                             <div class="w3-address-right">
                                 <h6>Mail Adresi</h6>
-                                <p>Email :<a href="mailto:example@email.com"> info@egooyun.com</a></p>
+                                <p>Email :<a href="mailto:example@email.com"> infoegooyun@gmail.com</a></p>
                             </div>
                             <div class="clearfix"> </div>
                         </div>

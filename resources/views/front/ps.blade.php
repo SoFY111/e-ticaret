@@ -61,7 +61,7 @@
                 <div class="clearfix"></div>
             </div>
             <div class="col-md-8 products-right">
-                <h5>Ürün <span>Karşılaştırma(0)</span></h5>
+               <!--   <h5>Ürün <span>Karşılaştırma(0)</span></h5>
                 <div class="sort-grid">
                     <div class="sorting">
                         <h6>Sırala</h6>
@@ -87,7 +87,7 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="clearfix"></div>
-                </div>
+                </div> -->
                 <div class="men-wear-top">
 
                     <div  id="top" class="callbacks_container">
@@ -159,7 +159,7 @@
                                             <input type="hidden" name="currency_code" value="USD"/>
                                             <input type="hidden" name="return" value=" "/>
                                             <input type="hidden" name="cancel_return" value=" "/>
-                                            <input type="submit" name="submit" value="Add to cart" class="button"/>
+                                            <input type="submit" name="submit" value="Sepete Ekle" class="button"/>
                                         </fieldset>
                                     </form>
                                 </div>

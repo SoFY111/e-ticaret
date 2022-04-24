@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 //FRONTEND CONTROLLERs
 use App\Http\Controllers\Front\MainController;
+use App\Http\Controllers\Front\MailController;
 use App\Http\Controllers\Front\ProductPageController;
 
 //BACKEND CONTROLLERs
@@ -39,6 +40,8 @@ Route::prefix('/')->name('front.')->group(function(){
     Route::post('/profile/{id}', [MainController::class, 'update'])->name('user.update');
     Route::get('/profile/{id}/{isDeleted}', [MainController::class, 'updateStatus'])->name('user.updateStatus');
     Route::get('/profile', [MainController::class, 'profile'])->name('profile');
+
+    Route::post('/contact-form', [MailController::class, 'storeContactForm'])->name('contact-form.store');
 
     Route::get('/sepetim', function () {
         return view('front.cart');
@@ -77,6 +80,9 @@ Route::prefix('/admin')->name('back.')->middleware(['isLogin', 'isAdmin'])->grou
     Route::prefix('/')->name('superAdmin.')->middleware('isSuperAdmin')->group(function(){
         Route::get('/kullanici-yetki-degistir', [SuperAdminController::class, 'changeUserAuthorityIndex'])->name('changeUserAuthority');
         Route::post('/kullanici-yetki-degistir', [SuperAdminController::class, 'changeUserAuthority'])->name('changeUserAuthorityPost');
+
+        Route::get('/kullanici-rol-degistir', [SuperAdminController::class, 'changeUserActivePassiveIndex'])->name('changeUserActivePassive');
+        Route::post('/kullanici-rol-degistir', [SuperAdminController::class, 'changeUserActivePassive'])->name('changeUserActivePassivePost');
     });
 });
 

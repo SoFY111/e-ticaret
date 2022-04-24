@@ -39,7 +39,7 @@
                     <div class="contact-grid-agile-w33">
                         <i class="fa fa-envelope-o" aria-hidden="true"></i>
                         <h4>Email</h4>
-                        <p><a href="mailto:info@example.com">hakan.dincturkk@gmail.com</a><span><a href="mailto:info@example.com">cengiz69mg@gmail.com</a></span></p>
+                        <p><a href="mailto:info@example.com">infoegooyun@gmail.com <br><br></a></p>
                     </div>
                 </div>
                 <div class="clearfix"> </div>
@@ -65,7 +65,7 @@
                         <div class="mail-agileits-w3layouts">
                             <i class="fa fa-envelope-o" aria-hidden="true"></i>
                             <div class="contact-right">
-                                <p>Mail </p><a href="mailto:info@example.com">info@egooyun.com</a>
+                                <p>Mail </p><a href="mailto:info@example.com">infoegooyun@gmail.com</a>
                             </div>
                             <div class="clearfix"> </div>
                         </div>
@@ -92,26 +92,35 @@
                                     <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
                         </ul>
                     </div>
+
+
                     <div class="col-md-6 contact-form">
+                        @if(Session::has('success'))
+                        <div class="alert alert-success">
+                            {{ Session::get('success') }}
+                        </div>
+                        @endif
                         <h4 class="white-w3ls">İletİşİm <span>Formu</span></h4>
-                        <form action="#" method="post">
+                        <form method="POST" action="{{ route('front.contact-form.store') }}">
+                  
+                            {{ csrf_field() }}
                             <div class="styled-input agile-styled-input-top">
-                                <input type="text" name="Name" required="">
+                                <input type="text" name="name" value="{{ old('name') }}" required="">
                                 <label>Ad Soyad</label>
                                 <span></span>
                             </div>
                             <div class="styled-input">
-                                <input type="email" name="Email" required="">
+                                <input type="email" name="email" value="{{ old('email') }}" required="">
                                 <label>Email</label>
                                 <span></span>
                             </div>
                             <div class="styled-input">
-                                <input type="text" name="Subject" required="">
+                                <input type="text" name="subject" value="{{ old('subject') }}" required="">
                                 <label>Konu</label>
                                 <span></span>
                             </div>
                             <div class="styled-input">
-                                <textarea name="Message" required=""></textarea>
+                                <textarea name="messages" required="">{{ old('message') }}</textarea>
                                 <label>Mesaj</label>
                                 <span></span>
                             </div>

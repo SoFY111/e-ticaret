@@ -37,4 +37,32 @@ class SuperAdminController extends Controller
         flash('İşlem gerçekleştirilemedi.')->error();
         return redirect()->back();
     }
+
+    public function changeUserActivePassiveIndex()
+    {
+        $passiveUsers = User::where('isDeleted', 1)->get();
+        $activeUsers = User::where('isDeleted', 0)->get();
+
+        return view('back.superAdmin.changeUserActivePassive', compact('passiveUsers', 'activeUsers'));
+    }
+
+    public function changeUserActivePassive(Request $request)
+    {
+        if($request->isDeleted === 1){
+            $passive = User::findOrFail($request->selectedPassiveUser);
+            $passive->isDeleted = 0;
+            $passive->save();
+            flash('Success message')->success();
+            return redirect()->back();
+        }
+        elseif($request->isDeleted === 0){
+            $active = User::findOrFail($request->selectedActiveUser);
+            $active->isDeleted = 1;
+            $active->save();
+            flash('Success message')->success();
+            return redirect()->back();
+        }
+        flash('İşlem gerçekleştirilemedi.')->error();
+        return redirect()->back();
+    }
 }
