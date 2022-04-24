@@ -90,16 +90,19 @@
                 </div> -->
                 <div class="men-wear-top">
 
-                    <div  id="top" class="callbacks_container">
+                    <div id="top" class="callbacks_container">
                         <ul class="rslides" id="slider3">
                             <li>
-                                <img class="img-responsive" src="{{asset('front/images/template-images')}}/banner2.jpg" alt=" "/>
+                                <img class="img-responsive" src="{{asset('front/images')}}/slider3.jpg"
+                                     alt=" "/>
                             </li>
                             <li>
-                                <img class="img-responsive" src="{{asset('front/images/template-images')}}/banner5.jpg" alt=" "/>
+                                <img class="img-responsive" src="{{asset('front/images')}}/slider.jpg"
+                                     alt=" "/>
                             </li>
                             <li>
-                                <img class="img-responsive" src="{{asset('front/images/template-images')}}/banner2.jpg" alt=" "/>
+                                <img class="img-responsive" src="{{asset('front/images')}}/slider4.jpg"
+                                     alt=" "/>
                             </li>
 
                         </ul>
@@ -126,8 +129,8 @@
                     <div class="col-md-3 product-men">
                         <div class="men-pro-item simpleCart_shelfItem">
                             <div class="men-thumb-item">
-                                <img src="{{$product->coverImage}}" alt="" width="255px" height="248px" class="pro-image-front">
-                                <img src="{{$product->coverImage}}" alt="" width="255px" height="248px" class="pro-image-back">
+                                <img src="{{$product->coverImage}}" alt="" width="255px" height="248px" style="object-fit: contain" class="pro-image-front">
+                                <img src="{{$product->coverImage}}" alt="" width="255px" height="248px" style="object-fit: contain" class="pro-image-back">
                                 <div class="men-cart-pro">
                                     <div class="inner-men-cart-pro">
                                         <a href="{{route('front.product.detail.index', $product->id)}}" class="link-product-add-cart">Hemen İncele</a>

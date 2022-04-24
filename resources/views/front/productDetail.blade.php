@@ -6,20 +6,23 @@
 
     <div class="banner-bootom-w3-agileits">
         <div class="container">
-            <div class="col-md-4 single-right-left ">
-                <div class="carousel">
-                    <div class="img">
-                        <img src="{{asset($product->coverImage)}}" alt="res">
+            <div class="col-md-6 single-right-left ">
+                <div id="top" class="callbacks_container2">
+                    <ul class="rslides" id="slider3">
+                        <img src="{{asset($product->coverImage)}}" class="img-responsive img" alt="res">
                         <?php $images = json_decode($product->imagesPaths) ?>
                         @for($i = 0; $i < count($images); $i++)
-                            <img src="{{asset($images[$i])}}" alt="res">
+                        <li>
+                            <img class="img-responsive img" src="{{asset($images[$i])}}" 
+                                 alt=" "/>
+                        </li>
                         @endfor
-                    </div>
-                    <div class="span-cont"></div>
+                    </ul>
                 </div>
+
             </div>
 
-            <div class="col-md-8 single-right-left simpleCart_shelfItem">
+            <div class="col-md-6 single-right-left simpleCart_shelfItem">
                 <h3>{{$product['name']}}</h3>
                 <p><span class="item_price">@if($product->discountRate !== 0)
                             <span class="item_price">{{number_format($product->price-($product->price*($product->discountRate / 100)), 2)}}₺</span>
@@ -89,8 +92,10 @@
                 </ul>
 
             </div>
+
             <div class="clearfix"></div>
             <!-- /new_arrivals -->
+            <br><br><br>
             <div class="responsive_tabs_agileits">
                 <div id="horizontalTab">
                     <ul class="resp-tabs-list">
@@ -356,19 +361,57 @@
             padding-right: 50px;
         }
 
-        .carousel > .img {
+        .img {
             aspect-ratio: 1/1;
             scroll-behavior: smooth;
             overflow: hidden;
             display: flex;
             object-fit: cover;
             border-radius: 10px;
+            width: 100%;
+            height: 100%;
         }
 
-        .carousel > .img > img {
-            transition: 0.3s;
-        }
+        .callbacks_tabs li {
+    display:inline-block;
+    margin: 100px 7px;
+}
+/*----*/
+.callbacks_tabs a{
+ visibility: hidden;
+ margin-left: 35px;
+}
+.callbacks_tabs a:after {
+    content: "\f111";
+    font-size: 0;
+    font-family: FontAwesome;
+    visibility: visible;
+    display: block;
+    height:11px;
+    width:25px;
+    display: inline-block;
+    background: #000000;
+    border-radius: 50%;
+    -webkit-border-radius: 20%;
+    -o-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+}
+.callbacks_here a:after{
+       background:#2fdab8;
+}
 
+@media (max-width: 767px){
+	.callbacks_tabs li {
+		display:inline-block;
+		margin: 100px 7px;
+	}
+	/*----*/
+	.callbacks_tabs a{
+	 visibility: hidden;
+	 margin-left: 10px;
+	}
+}
     </style>
 
 @endsection

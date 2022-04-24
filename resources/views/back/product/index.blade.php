@@ -29,6 +29,9 @@
                         <div class="cell">
                             Durum
                         </div>
+                        <div class="cell" style="padding-left: 25px">
+                            Düzenle
+                        </div>
                     </div>
 
                     @foreach($products as $product)
@@ -73,9 +76,12 @@
                             <div class="cell" data-title="Durum">
                                 @if(!$product->isDeleted) <label class="btn btn-success">Aktif</label> @else <label class="btn btn-danger">Pasif</label> @endif
                             </div>
+                            <div class="cell" data-title="Düzenle" style="padding-left: 20px">
+                                <button class="btn btn-primary"><a href="{{route('back.product.update.index', $product->id)}}" style="color: white">Düzenle</a></button>
+                            </div>
                         </div>
                     @endforeach
-
+                <!--
                     <div class="row">
                         <div class="cell" data-title="Full Name">
                             Vincent Williamson
@@ -100,7 +106,7 @@
                         <div class="cell" data-title="Location">
                             Aktif
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>

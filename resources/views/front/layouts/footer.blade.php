@@ -102,7 +102,7 @@
 
             <div class="clearfix"></div>
         </div>
-        <p class="copy-right">&copy 2021 EGOOYUN - Tüm Hakları Saklıdır | Design by <a href="https://github.com/SoFY111/e-ticaret">BSM</a></p>
+        <p class="copy-right">&copy 2021 EGOOYUN - Tüm Hakları Saklıdır | Design by <a href="https://github.com/SoFY111/e-ticaret" target="_blank">BSM</a></p>
     </div>
 </div>
 <!-- //footer -->
