@@ -253,4 +253,24 @@ class ProductController extends Controller
         return redirect()->route('back.products.index');
         
     }
+
+    public function productSearch(Request $request){
+        
+        try {
+            
+        $pcPublishers = Publisher::where('isDeleted', 0)->get();
+        $kinds = Kind::where('isDeleted', 0)->get();
+        $products = Product::where('name', 'LIKE', '%'.$request->name.'%')->limit(1)->paginate(1);
+
+            if(count($products) === 1){
+                return view('front.search', compact('products','pcPublishers', 'kinds'));
+            }
+            flash('Böyle bir oyun yok !')->error();
+            return redirect()->back();
+        }
+        catch (\Exception $exception){
+            flash('İşlem gerçekleştirilirken bir hata oldu. '. $exception->getMessage())->error();
+            return redirect()->back();
+        }
+    }
 }

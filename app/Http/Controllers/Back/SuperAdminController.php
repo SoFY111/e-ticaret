@@ -110,7 +110,7 @@ class SuperAdminController extends Controller
 
     public function userSearch(Request $request){
         try {
-            $users = User::where('name', $request->name)->limit(1)->paginate(1);
+            $users = User::where('name', 'LIKE', '%'.$request->name.'%')->limit(1)->paginate(1);
             if(count($users) === 1){
                 return view('back.superAdmin.changeUserActivePassive', compact('users'));
 

@@ -29,6 +29,8 @@ Route::prefix('/')->name('front.')->group(function(){
 
     Route::get('/bilgisayar', [ProductPageController::class, 'pcPageIndex'])->name('bilgisayar');
 
+    Route::get('/arama', [ProductPageController::class, 'search'])->name('search');
+
     Route::get('/ps', [ProductPageController::class, 'psPageIndex'])->name('ps');
 
     Route::get('/xbox', [ProductPageController::class, 'xboxPageIndex'])->name('xbox');
@@ -42,6 +44,8 @@ Route::prefix('/')->name('front.')->group(function(){
     Route::get('/profile', [MainController::class, 'profile'])->name('profile');
 
     Route::post('/contact-form', [MailController::class, 'storeContactForm'])->name('contact-form.store');
+
+    Route::get('/urun/', [ProductController::class, 'productSearch'])->name('product.search');
 
     Route::get('/sepetim', function () {
         return view('front.cart');

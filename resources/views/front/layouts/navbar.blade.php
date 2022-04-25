@@ -35,8 +35,8 @@
         </div>
 
         <div class="col-md-4 header-middle">
-            <form action="#" method="post">
-                <input type="search" name="search" placeholder="Ara..." required="">
+            <form action="{{route('front.product.search')}}" method="GET">
+                <input type="search" name="name" id="name" placeholder="Aranacak oyun ismi giriniz..." required="">
                 <input type="submit" value=" ">
                 <div class="clearfix"></div>
             </form>
