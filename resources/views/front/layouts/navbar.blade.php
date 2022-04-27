@@ -241,7 +241,7 @@
 
                 </div>
                 <div class="col-md-4 modal_body_right modal_body_right1">
-                    <img src="{{asset('front/images/template-images')}}/log_pic.jpg" alt=" "/>
+                    <img src="{{asset('front/images/template-images')}}/login.jpg" alt=" "/>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -313,7 +313,7 @@
                     <div class="clearfix"></div>
                 </div>
                 <div class="col-md-4 modal_body_right modal_body_right1">
-                    <img src="{{asset('front/images/template-images')}}/log_pic.jpg" alt=" "/>
+                    <img src="{{asset('front/images/template-images')}}/login.jpg" alt=" "/>
                 </div>
                 <div class="clearfix"></div>
                 <p><a href="#">Üye olarak, Şartları ve KVKK'yı kabul etmiş oluyorsunuz.</a></p>

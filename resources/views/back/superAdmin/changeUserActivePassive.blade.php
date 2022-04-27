@@ -1,5 +1,5 @@
 @extends('back.layouts.master')
-@section('title') Kullanıcılar @endsection
+@section('title') Kullanıcı Düzenle @endsection
 @section('content')
 
 <form method="GET" action="{{route('back.user.search')}}">
