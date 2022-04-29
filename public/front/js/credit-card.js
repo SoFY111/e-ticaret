@@ -2,7 +2,7 @@
 
 window.onload = function () {
 
-    const name = document.getElementById('name');
+    const names = document.getElementById('names');
     const cardnumber = document.getElementById('cardnumber');
     const expirationdate = document.getElementById('expirationdate');
     const securitycode = document.getElementById('securitycode');
@@ -223,8 +223,8 @@ window.onload = function () {
     })
     
     //On Input Change Events
-    name.addEventListener('input', function () {
-        if (name.value.length == 0) {
+    names.addEventListener('input', function () {
+        if (names.value.length == 0) {
             document.getElementById('svgname').innerHTML = 'John Doe';
             document.getElementById('svgnameback').innerHTML = 'John Doe';
         } else {
@@ -258,7 +258,7 @@ window.onload = function () {
     });
     
     //On Focus Events
-    name.addEventListener('focus', function () {
+    names.addEventListener('focus', function () {
         document.querySelector('.creditcard').classList.remove('flipped');
     });
     

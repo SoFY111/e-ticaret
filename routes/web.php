@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\MainController;
 use App\Http\Controllers\Front\MailController;
 use App\Http\Controllers\Front\ProductPageController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\CartController;
 
 //BACKEND CONTROLLERs
 use \App\Http\Controllers\Back\SuperAdminController;
@@ -47,9 +49,13 @@ Route::prefix('/')->name('front.')->group(function(){
 
     Route::get('/urun/', [ProductController::class, 'productSearch'])->name('product.search');
 
-    Route::get('/sepetim', function () {
-        return view('front.cart');
-    })->name('cart');
+    Route::post('/sepet', [OrderController::class, 'newOrder'])->name('order.add');
+    Route::get('/siparis', [OrderController::class, 'orderIndex'])->name('order.index');
+
+    Route::post('/cart', [CartController::class, 'addCart'])->name('cart.add');
+    Route::get('/cart/{id}', [CartController::class, 'removeCart'])->name('cart.remove');
+    Route::get('/sepet', [CartController::class, 'cart'])->name('cart');
+
 
     Route::get('/ver', function () {
         return view('ver');
@@ -57,9 +63,11 @@ Route::prefix('/')->name('front.')->group(function(){
 });
 
 Route::prefix('/admin')->name('back.')->middleware(['isLogin', 'isAdmin'])->group(function() {
-    Route::get('/', function (){
-        return view('back.dashboard');
-    })->name('dashboard');
+
+
+    Route::get('/', [OrderController::class, 'home'])->name('dashboard');
+    Route::get('/siparis/{id}/{isDeleted}', [OrderController::class, 'orderStatus'])->name('orders.updateStatus');
+
 
     Route::get('/yayinci', [PublisherController::class, 'index'])->name('publisher');
     Route::post('/yayinci', [PublisherController::class, 'storePublisher'])->name('publisher.store');

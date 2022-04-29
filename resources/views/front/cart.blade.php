@@ -111,15 +111,16 @@
                         </div>
                     </div>
                     <br>
-                    <form action="#">
+                    <form action="{{route('front.order.add')}}" method="POST">
+                        @csrf
                         <div class="form-container">
                             <div class="field-container">
                                 <label for="name" class="label-default">Ad Soyad</label>
-                                <input id="name" class="input-default" maxlength="20" type="text">
+                                <input id="names" name="name" required class="input-default" maxlength="20" type="text">
                             </div>
                             <div class="field-container">
                                 <label for="cardnumber" class="label-default">Kart Numarası</label>
-                                <input id="cardnumber" class="input-default" type="text" pattern="[0-9]*" inputmode="numeric">
+                                <input id="cardnumber" class="input-default" required name="cardnumber" type="text" >
                                 <svg id="ccicon" class="ccicon" width="750" height="471" viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink">
                     
@@ -127,64 +128,68 @@
                             </div>
                             <div class="field-container">
                                 <label for="expirationdate" class="label-default">Son Kullanma Tarihi</label>
-                                <input id="expirationdate" class="input-default" type="text" pattern="[0-9]*" inputmode="numeric">
+                                <input id="expirationdate" name="carddate" required class="input-default" type="text">
                             </div>
                             <div class="field-container">
                                 <label for="securitycode" class="label-default">CVV</label>
-                                <input id="securitycode" class="input-default" type="text" pattern="[0-9]*" inputmode="numeric">
+                                <input id="securitycode" name="cardcvv" required class="input-default" type="text" pattern="[0-9]*" inputmode="numeric">
                             </div>
                         </div>
-                    </form>
+                        @foreach($products as $product)
+                        <input type="hidden" name="product_id" value="{{$product->id}}">
+                        @endforeach
+
                     
                 </div>
-                <button class="btn1 btn-primary">
-                    <b>Ödeme Yap</b><span id="payAmount">2.15</span> ₺
+
+              <!-- Sipariş toplam tutar hesaplama -->
+                @php $total=0; @endphp
+
+                @foreach($carts as $cart)
+                @foreach($products as $product)
+                @if($product->id === $cart->product_id)
+
+                @php $total += $product->price @endphp  
+            
+                @endif
+                @endforeach
+                @endforeach
+                <input type="hidden" name="total" class="inputs" readonly value="{{$total}}">
+
+                <button class="btn1 btn-primary" type="submit">
+                    <b>Ödeme Yap</b><span id="payAmount">{{$total}} ₺</span> 
                 </button>
+
             </section>
+
+  
+
+        </form>
+
 
             <!--
               - cart section
             -->
+
             <section class="cart1">
                 <div class="cart-item-box">
-                    <h2 class="section-heading">Sipariş</h2>
+                    <h2 class="section-heading"> 🛒 Sepetim</h2>
                     <div class="product-card">
-                        <div class="card">
-                            <div class="img-box">
-                                <img src="{{asset('front/images')}}/gta.jpg" alt="Green tomatoes" width="80px"
-                                     class="product-img">
-                            </div>
-                            <div class="detail">
-                                <h4 class="product-name">GTA San Andreas</h4>
-                                <div class="wrapper">
-                                    <div class="product-qty">
-                                        <button id="decrement">
-                                            <ion-icon name="remove-outline"></ion-icon>
-                                        </button>
-                                        <span id="quantity">1</span>
-                                        <button id="increment">
-                                            <ion-icon name="add-outline"></ion-icon>
-                                        </button>
-                                    </div>
-                                    <div class="price">
-                                        <span id="price">1.25</span> ₺
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="product-close-btn">
-                                <ion-icon name="close-outline"></ion-icon>
-                            </button>
-                        </div>
-                    </div>
+                    @foreach($carts as $cart)
+                    @if(auth()->user()->id === $cart->user_id)
 
-                    <div class="product-card">
                         <div class="card">
+                            @foreach($products as $product)
+                            @if($product->id === $cart->product_id)
+
+                            <input type="hidden" name="product_id" value="{{$product->id}}">
                             <div class="img-box">
-                                <img src="{{asset('front/images')}}/gta.jpg" alt="Cabbage" width="80px"
+                                <img src="{{asset($product->coverImage)}}" alt="Green tomatoes" width="65px"
                                      class="product-img">
                             </div>
+
                             <div class="detail">
-                                <h4 class="product-name">GTA San Andreas</h4>
+                                <h4 class="product-name">{{$product->name}}</h4>
                                 <div class="wrapper">
                                     <div class="product-qty">
                                         <button id="decrement">
@@ -196,45 +201,42 @@
                                         </button>
                                     </div>
                                     <div class="price">
-                                        <span id="price">0.80</span> ₺
+                                        <span id="price">{{$product->price}}</span> ₺
                                     </div>
                                 </div>
                             </div>
-                            <button class="product-close-btn">
-                                <ion-icon name="close-outline"></ion-icon>
+                            @endif
+                            @endforeach
+                            <button class="product-close-btn"><a href="{{route('front.cart.remove', $cart->id)}}">
+                                <ion-icon name="close-outline"></ion-icon></a>
                             </button>
                         </div>
+                        <br>
+                        @endif
+                        @endforeach
                     </div>
                 </div>
 
                 <div class="wrapper">
-                    <div class="discount-token">
-                        <label for="discount-token" class="label-default">Hediye Kartı / İndirim Kodu</label>
-                        <div class="wrapper-flex">
-                            <input type="text" name="discount-token" id="discount-token" class="input-default">
-                            <button class="btn1 btn-outline">Uygula</button>
-                        </div>
-                    </div>
+                <hr>                
                     <div class="amount">
                         <div class="subtotal">
-                            <span>Ara Toplam</span> <span><span id="subtotal">2.05</span> ₺</span>
+                            <span>Ara Toplam</span> <span><span id="subtotal">{{$total}}</span> ₺</span>
                         </div>
 
                         <div class="tax">
-                            <span>Vergi</span> <span><span id="tax">0.10</span> ₺</span>
+                            <span>Vergi</span> <span><span id="tax">0.0</span> ₺</span>
                         </div>
 
                         <div class="shipping">
                             <span>Nakliye</span> <span><span id="shipping">0.00</span> ₺</span>
                         </div>
-
                         <div class="total">
-                            <span>Toplam</span> <span><span id="total">2.15</span> ₺</span>
+                            <span>Toplam</span> <span><span id="total"><input type="text" class="inputs" readonly value="{{$total}}"></span> ₺</span>
                         </div>
                     </div>
                 </div>
             </section>
-
         </div>
         <h1 class="heading"></h1>
         <h1 class="heading"></h1>
@@ -245,6 +247,13 @@
     <link href="{{asset('front/css/cart.css')}}" rel="stylesheet" >
     <link href="{{asset('front/css/credit-cart.css')}}" rel="stylesheet" >
 
+<style>
+     .inputs[type=text]:read-only{
+         background-color: white;
+         border: none;
+         text-align: right;
+     }
+</style>
 @endsection
 
 @section('customPageJs')
@@ -311,7 +320,7 @@
         const totalCalc = function () {
 
             // declare all initial variable
-            const tax = 0.05;
+            const tax = 0;
             let subtotal = 0;
             let totalTax = 0;
             let total = 0;

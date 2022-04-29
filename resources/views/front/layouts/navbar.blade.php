@@ -1,3 +1,10 @@
+<?php
+
+use App\Http\Controllers\CartController;
+$total = CartController::cartItem();
+
+?>
+
 <!-- header -->
 <div class="header" id="home">
     <div class="container">
@@ -5,7 +12,7 @@
             @if (Auth::check())
                 <li><a href="{{route('front.profile')}}"><i class="fa fa-user" aria-hidden="true"></i> {{Auth::user()->name}} {{ Auth::user()->surname}}</a></li>
                 @if(Auth::user()->type == 'user')
-                    <li><i class="fa fa-phone" aria-hidden="true"></i> +90 262 303 1000</li>
+                <li><a href="{{route('front.order.index')}}"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Siparişlerim </a></li>
                     <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">infoegooyun@gmail.com</a></li>
                 @else
                     <li style="width: 49%;"><a href="{{route('back.dashboard')}}"><i class="fa fa-desktop" aria-hidden="true"></i> Admin Sayfası</a></li>
@@ -177,6 +184,7 @@
                     <input type="hidden" name="cmd" value="_cart">
                     <input type="hidden" name="display" value="1">
                     <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                    <button class="w3view-cart" type="submit" name="submit" value=""><span>({{$total}})</span></button>
 
             </div></a>
         </div>

@@ -52,19 +52,20 @@
                         <input type="submit" value="Kontrol Et">
                     </form>
                 </div>
+
+                <div class="description">
+                    <h5>Adet</h5>
+                        <input type="number" id="quantity" name="quantity" value="1" max="{{$product->stock}}" 
+                        style="width: 20%; height: 5%; text-align: center">
+                </div>
+
+
                 <div class="occasion-cart">
                     <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                        <form action="#" method="post">
+                        <form action="{{route('front.cart.add')}}" method="post">
+                            @csrf
                             <fieldset>
-                                <input type="hidden" name="cmd" value="_cart">
-                                <input type="hidden" name="add" value="1">
-                                <input type="hidden" name="business" value=" ">
-                                <input type="hidden" name="item_name" value="Wing Sneakers">
-                                <input type="hidden" name="amount" value="650.00">
-                                <input type="hidden" name="discount_amount" value="1.00">
-                                <input type="hidden" name="currency_code" value="USD">
-                                <input type="hidden" name="return" value=" ">
-                                <input type="hidden" name="cancel_return" value=" ">
+                                <input type="hidden" name="product_id" value="{{$product->id}}" id="">
                                 <input type="submit" name="submit" value="Sepete Ekle" class="button">
                             </fieldset>
                         </form>

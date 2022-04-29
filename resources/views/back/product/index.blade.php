@@ -58,9 +58,9 @@
                             </div>
                             <div class="cell" data-title="Fiyat">
                                 @if($product->discountRate !== 0)
-                                    <label class="text-warning">{{number_format($product->price-($product->price*($product->discountRate / 100)), 2)}}</label>
+                                    <label class="text-warning">{{number_format($product->price-($product->price*($product->discountRate / 100)), 2)}} ₺</label>
                                 @else
-                                    <label class="">{{$product->price}}</label>
+                                    <label class="">{{$product->price}} ₺</label>
 
                                 @endif
                             </div>
