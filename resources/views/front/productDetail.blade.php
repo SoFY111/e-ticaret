@@ -55,7 +55,7 @@
 
                 <div class="description">
                     <h5>Adet</h5>
-                        <input type="number" id="quantity" name="quantity" value="1" max="{{$product->stock}}" 
+                        <input type="number" id="quantity" name="quantity" value="1" min="1" max="{{$product->stock}}" 
                         style="width: 20%; height: 5%; text-align: center">
                 </div>
 

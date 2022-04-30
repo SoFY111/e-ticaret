@@ -34,10 +34,10 @@
                         Durum
                     </div>
                     <div class="cell" style="padding-left: 25px">
-                        Düzenle
+                        
                     </div>
                     <div class="cell" style="padding-left: 25px">
-                        Sil
+                        
                     </div>
                 </div>
 
