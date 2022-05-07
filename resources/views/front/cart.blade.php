@@ -146,7 +146,7 @@
                 @php $total=0; @endphp
 
                 @foreach($carts as $cart)
-                @if(auth()->user()->id === $cart->user_id)
+                @if(auth()->user()->id ?? '?' === $cart->user_id)
                 @foreach($products as $product)
                 @if($product->id === $cart->product_id)
 
@@ -178,7 +178,7 @@
                     <h2 class="section-heading"> 🛒 Sepetim</h2>
                     <div class="product-card">
                     @foreach($carts as $cart)
-                    @if(auth()->user()->id === $cart->user_id)
+                    @if(auth()->user()->id ?? '?' === $cart->user_id)
 
                         <div class="card">
                             @foreach($products as $product)

@@ -172,6 +172,7 @@
                                     @endif
                                 </div>
                                 <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                                    @if($product->stock > 0)
                                     <form action="{{route('front.cart.add')}}" method="post">
                                         @csrf
                                         <fieldset>
@@ -179,6 +180,11 @@
                                             <input type="submit" name="submit" value="Sepete Ekle" class="button">
                                         </fieldset>
                                     </form>
+                                    @else
+                                    <fieldset>
+                                        <input type="submit" name="submit" value="Ürün Stokta Yok !" style="background-color: red;" class="button">
+                                    </fieldset>
+                                    @endif
                                 </div>
 
                             </div>

@@ -1403,7 +1403,7 @@
         <div class="container">
             <h6><span style="color:green;">%40</span>'a Varan İndirimler !</h6>
 
-            <a class="hvr-outline-out button2" href="single.html">Alışverişe Başla !</a>
+            <a class="hvr-outline-out button2" href="{{route('front.bilgisayar')}}">Alışverişe Başla !</a>
         </div>
     </div>
     <!-- //we-offer -->

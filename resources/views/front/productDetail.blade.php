@@ -53,15 +53,17 @@
                     </form>
                 </div>
 
+                <!--
                 <div class="description">
                     <h5>Adet</h5>
                         <input type="number" id="quantity" name="quantity" value="1" min="1" max="{{$product->stock}}" 
                         style="width: 20%; height: 5%; text-align: center">
                 </div>
-
-
+                -->
+                
                 <div class="occasion-cart">
                     <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                        @if($product->stock > 0)
                         <form action="{{route('front.cart.add')}}" method="post">
                             @csrf
                             <fieldset>
@@ -69,6 +71,10 @@
                                 <input type="submit" name="submit" value="Sepete Ekle" class="button">
                             </fieldset>
                         </form>
+                        @else
+                        <a href="" class="btn btn-danger btn-icon-split btn-sm"> <span class="text">Ürün Stokta Yok !</span></a>
+                        @endif
+
                     </div>
 
                 </div>
@@ -401,6 +407,10 @@
 .callbacks_here a:after{
        background:#2fdab8;
 }
+
+.hvr-outline-out:before {
+		border: #ffffff solid 0px;
+	}
 
 @media (max-width: 767px){
 	.callbacks_tabs li {
