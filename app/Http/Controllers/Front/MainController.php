@@ -77,4 +77,22 @@ class MainController extends Controller
             //throw $th;
         }
     }
+
+    public static function Pc()
+    {
+        $isPc = Product::where('isDeleted', 0)->where('stock', '>', 0)->where('isPc', 1)->orderByDesc('id')->paginate(7);
+        return $isPc;
+    }
+
+    public static function Ps()
+    {
+        $isPs = Product::where('isDeleted', 0)->where('stock', '>', 0)->where('isPs', 1)->orderByDesc('id')->paginate(7);
+        return $isPs;
+    }
+
+    public static function Xbox()
+    {
+        $isXbox = Product::where('isDeleted', 0)->where('stock', '>', 0)->where('isXbox', 1)->orderByDesc('id')->paginate(7);
+        return $isXbox;
+    }
 }

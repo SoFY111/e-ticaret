@@ -3,6 +3,11 @@
 use App\Http\Controllers\CartController;
 $total = CartController::cartItem();
 
+use App\Http\Controllers\Front\MainController;
+$isPc = MainController::Pc();
+$isPs = MainController::Ps();
+$isXbox = MainController::Xbox();
+
 ?>
 
 <!-- header -->
@@ -82,24 +87,16 @@ $total = CartController::cartItem();
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
-                                                <li><a href="mens.html">Clothing</a></li>
-                                                <li><a href="mens.html">Wallets</a></li>
-                                                <li><a href="mens.html">Footwear</a></li>
-                                                <li><a href="mens.html">Watches</a></li>
-                                                <li><a href="mens.html">Accessories</a></li>
-                                                <li><a href="mens.html">Bags</a></li>
-                                                <li><a href="mens.html">Caps & Hats</a></li>
+                                                @foreach($isPc as $pc)
+
+                                                <li><a href="{{route('front.product.detail.index', $pc->id)}}">{{$pc->name}}</a></li>
+
+                                                @endforeach
                                             </ul>
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
-                                                <li><a href="mens.html">Jewellery</a></li>
-                                                <li><a href="mens.html">Sunglasses</a></li>
-                                                <li><a href="mens.html">Perfumes</a></li>
-                                                <li><a href="mens.html">Beauty</a></li>
-                                                <li><a href="mens.html">Shirts</a></li>
-                                                <li><a href="mens.html">Sunglasses</a></li>
-                                                <li><a href="mens.html">Swimwear</a></li>
+
                                             </ul>
                                         </div>
                                         <div class="clearfix"></div>
@@ -115,24 +112,16 @@ $total = CartController::cartItem();
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
-                                                <li><a href="mens.html">Clothing</a></li>
-                                                <li><a href="mens.html">Wallets</a></li>
-                                                <li><a href="mens.html">Footwear</a></li>
-                                                <li><a href="mens.html">Watches</a></li>
-                                                <li><a href="mens.html">Accessories</a></li>
-                                                <li><a href="mens.html">Bags</a></li>
-                                                <li><a href="mens.html">Caps & Hats</a></li>
+                                                @foreach($isPs as $ps)
+
+                                                <li><a href="{{route('front.product.detail.index', $ps->id)}}">{{$ps->name}}</a></li>
+                                                
+                                                @endforeach
                                             </ul>
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
-                                                <li><a href="mens.html">Jewellery</a></li>
-                                                <li><a href="mens.html">Sunglasses</a></li>
-                                                <li><a href="mens.html">Perfumes</a></li>
-                                                <li><a href="mens.html">Beauty</a></li>
-                                                <li><a href="mens.html">Shirts</a></li>
-                                                <li><a href="mens.html">Sunglasses</a></li>
-                                                <li><a href="mens.html">Swimwear</a></li>
+           
                                             </ul>
                                         </div>
                                         <div class="clearfix"></div>
@@ -148,24 +137,16 @@ $total = CartController::cartItem();
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
-                                                <li><a href="mens.html">Clothing</a></li>
-                                                <li><a href="mens.html">Wallets</a></li>
-                                                <li><a href="mens.html">Footwear</a></li>
-                                                <li><a href="mens.html">Watches</a></li>
-                                                <li><a href="mens.html">Accessories</a></li>
-                                                <li><a href="mens.html">Bags</a></li>
-                                                <li><a href="mens.html">Caps & Hats</a></li>
+                                                @foreach($isXbox as $xbox)
+
+                                                <li><a href="{{route('front.product.detail.index', $xbox->id)}}">{{$xbox->name}}</a></li>
+                                                
+                                                @endforeach
                                             </ul>
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
-                                                <li><a href="mens.html">Jewellery</a></li>
-                                                <li><a href="mens.html">Sunglasses</a></li>
-                                                <li><a href="mens.html">Perfumes</a></li>
-                                                <li><a href="mens.html">Beauty</a></li>
-                                                <li><a href="mens.html">Shirts</a></li>
-                                                <li><a href="mens.html">Sunglasses</a></li>
-                                                <li><a href="mens.html">Swimwear</a></li>
+
                                             </ul>
                                         </div>
                                         <div class="clearfix"></div>

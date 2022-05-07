@@ -26,13 +26,6 @@ class OrderController extends Controller
 
         $newOrder->save();
 
-        $product = Product::where('id',$request->product_id)->first(); 
-        $stock = $product->stock - $request->stock;
-        $product->update([
-            'stock' => $stock,
-          ]);
-
-
         $carts = Cart::where('user_id', auth()->user()->id)->get();
         Cart::destroy($carts);
         
