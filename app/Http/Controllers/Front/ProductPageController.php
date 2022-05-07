@@ -54,6 +54,9 @@ class ProductPageController extends Controller
     public function xboxDetails($id)
     {
         $product = Product::find($id);
-        return view('front.productDetail', compact('product'));
+
+        $pro = Product::where('isDeleted', 0)->where('stock', '>', 0)->orderBy('id')->paginate(4);
+
+        return view('front.productDetail', compact('product','pro'));
     }
 }

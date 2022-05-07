@@ -10,14 +10,16 @@ use Illuminate\Support\Facades\Auth;
 //MODELs
 use App\Models\Slider;
 use App\Models\User;
+use App\Models\Product;
 
 class MainController extends Controller
 {
     public function index(){
         $sliderData = Slider::select('sliderMainText', 'sliderSubText', 'sliderButtonLink', 'photoPath')->get();
 
+        $products = Product::where('isDeleted', 0)->where('stock', '>', 0)->orderByDesc('id')->paginate(8);
 
-        return view('front.index', compact('sliderData'));
+        return view('front.index', compact('sliderData','products'));
     }
 
     public function profile(){
