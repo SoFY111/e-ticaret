@@ -13,7 +13,7 @@
                         <?php $images = json_decode($product->imagesPaths) ?>
                         @for($i = 0; $i < count($images); $i++)
                         <li>
-                            <img class="img-responsive img" src="{{asset($images[$i])}}" 
+                            <img class="img-responsive img" src="{{asset($images[$i])}}"
                                  alt=" "/>
                         </li>
                         @endfor
@@ -56,11 +56,11 @@
                 <!--
                 <div class="description">
                     <h5>Adet</h5>
-                        <input type="number" id="quantity" name="quantity" value="1" min="1" max="{{$product->stock}}" 
+                        <input type="number" id="quantity" name="quantity" value="1" min="1" max="{{$product->stock}}"
                         style="width: 20%; height: 5%; text-align: center">
                 </div>
                 -->
-                
+
                 <div class="occasion-cart">
                     <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
                         @if($product->stock > 0)
@@ -107,7 +107,7 @@
                 <div id="horizontalTab">
                     <ul class="resp-tabs-list">
                         <li>Açıklama</li>
-                        <li>Sİstem Gereksİnİmlerİ</li>
+                        <li>Sistem Gereksinimleri</li>
                     </ul>
                     <div class="resp-tabs-container">
                         <!--/tab_one-->

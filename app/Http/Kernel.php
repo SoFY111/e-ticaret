@@ -3,6 +3,7 @@
 namespace App\Http;
 
 use App\Http\Middleware\isAdmin;
+use App\Http\Middleware\userActivePasiveCheck;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -67,5 +68,6 @@ class Kernel extends HttpKernel
         'isAdmin' => \App\Http\Middleware\isAdmin::class,
         'isSuperAdmin' => \App\Http\Middleware\isSuperAdmin::class,
         'isLogin' => \App\Http\Middleware\isLogin::class,
+        'userAPcheck' => \App\Http\Middleware\userActivePasiveCheck::class,
     ];
 }

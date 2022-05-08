@@ -23,34 +23,32 @@ class CartController extends Controller
    public function addCart(Request $request)
    {
        if (auth()->user()->id ?? '?') {
-           
+
         $newOrder = Cart::create([
             'user_id' => auth()->user()->id ?? '?',
             'product_id' => $request->product_id,
             'stock' => 1,
         ]);
-    
+
         $newOrder->save();
         return redirect()->back();
        }
 
-       else{
-           return redirect('front.mainpage');
-       }
+       return redirect('front.mainpage');
 
-   } 
+   }
 
    public static function removeCart($id)
    {
         Cart::destroy($id);
         return redirect()->back();
-   } 
+   }
 
    public static function cartItem()
    {
         $userId = auth()->user()->id ?? '?';
         return Cart::where('user_id',$userId)->count();
-   } 
+   }
 
-   
+
 }

@@ -18,7 +18,7 @@ use App\Http\Controllers\Back\KindController;
 
 Auth::routes();
 
-Route::prefix('/')->name('front.')->group(function(){
+Route::prefix('/')->name('front.')->middleware('userAPcheck')->group(function(){
     Route::get('/', [MainController::class, 'index'])->name('mainpage');
 
     Route::get('/hakkimizda', function () {
@@ -40,7 +40,7 @@ Route::prefix('/')->name('front.')->group(function(){
     Route::get('/gta', [ProductPageController::class, 'details'])->name('gta');
 
     Route::get('/urun/{id}', [ProductPageController::class, 'xboxDetails'])->name('product.detail.index');
-    
+
     Route::post('/profile/{id}', [MainController::class, 'update'])->name('user.update');
     Route::get('/profile/{id}/{isDeleted}', [MainController::class, 'updateStatus'])->name('user.updateStatus');
     Route::get('/profile', [MainController::class, 'profile'])->name('profile');
@@ -62,8 +62,7 @@ Route::prefix('/')->name('front.')->group(function(){
     });
 });
 
-Route::prefix('/admin')->name('back.')->middleware(['isLogin', 'isAdmin'])->group(function() {
-
+Route::prefix('/admin')->name('back.')->middleware(['isLogin', 'isAdmin', 'userAPcheck'])->group(function() {
 
     Route::get('/', [OrderController::class, 'home'])->name('dashboard');
     Route::get('/siparis/{id}/{isDeleted}', [OrderController::class, 'orderStatus'])->name('orders.updateStatus');

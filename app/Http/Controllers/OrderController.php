@@ -28,7 +28,7 @@ class OrderController extends Controller
 
         $carts = Cart::where('user_id', auth()->user()->id)->get();
         Cart::destroy($carts);
-        
+
         return redirect()->route('front.order.index');
     }
 
@@ -37,7 +37,7 @@ class OrderController extends Controller
         $orders = Orders::all();
         $users = User::all();
         $products = Product::all();
-        
+
         $approved = Orders::where('isDeleted', 0)->get();
         $denied = Orders::where('isDeleted', 1)->get();
 
@@ -46,11 +46,10 @@ class OrderController extends Controller
 
     public function orderIndex(Request $request)
     {
-        $orders = Orders::all();
-        $users = User::all();
+        $orders = Orders::where('user_id', auth()->user()->id)->get();
         $products = Product::all();
 
-        return view('front.orderIndex', compact('orders', 'users', 'products'));
+        return view('front.orderIndex', compact('orders', 'products'));
     }
 
     public function orderStatus($id,$status)

@@ -52,7 +52,10 @@ $isXbox = MainController::Xbox();
                 <input type="submit" value=" ">
                 <div class="clearfix"></div>
             </form>
+            @include('flash::message')
+
         </div>
+
 
         <div class="clearfix"></div>
     </div>
@@ -115,13 +118,13 @@ $isXbox = MainController::Xbox();
                                                 @foreach($isPs as $ps)
 
                                                 <li><a href="{{route('front.product.detail.index', $ps->id)}}">{{$ps->name}}</a></li>
-                                                
+
                                                 @endforeach
                                             </ul>
                                         </div>
                                         <div class="col-sm-3 multi-gd-img">
                                             <ul class="multi-column-dropdown">
-           
+
                                             </ul>
                                         </div>
                                         <div class="clearfix"></div>
@@ -140,7 +143,7 @@ $isXbox = MainController::Xbox();
                                                 @foreach($isXbox as $xbox)
 
                                                 <li><a href="{{route('front.product.detail.index', $xbox->id)}}">{{$xbox->name}}</a></li>
-                                                
+
                                                 @endforeach
                                             </ul>
                                         </div>

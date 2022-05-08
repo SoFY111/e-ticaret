@@ -19,31 +19,27 @@
         </thead>
         <tbody>
          <p style="visibility: hidden"> {{$max=1}} </p>
-          @for ($i = 1; $i <= $max; $i++)
             @foreach($orders as $order)
-            @if(auth()->user()->id === $order->user_id)
+                <tr>
+                  <td>{{ $loop->index }}</td>
 
-            <tr>
-              <td>{{ $i++ }}</td>
+                  @foreach($products as $product)
+                      @if($product->id === $order->product_id)
+                      <td>{{$product->name}}</td>
+                      <td><img src="{{asset($product->coverImage)}}" width="15%" style="border-radius: 15px" class="img-responsive img" alt="res"></td>
+                      @endif
+                  @endforeach
 
-              @foreach($products as $product)
-              @if($product->id === $order->product_id)
-              <td>{{$product->name}}</td>
-              <td><img src="{{asset($product->coverImage)}}" width="15%" style="border-radius: 15px" class="img-responsive img" alt="res"></td>
-              @endif
-              @endforeach
+                  <td>{{$order->total}} ₺</td>
+                  <td>
+                    @if($order->isDeleted == 2) <a href="" class="btn btn-warning btn-icon-split btn-sm"><span class="text">Beklemede</span></a>
+                    @elseif ($order->isDeleted == 0) <a href="" class="btn btn-success btn-icon-split btn-sm"><span class="text">Onaylandı</span></a>
+                    @else <a href="" class="btn btn-danger btn-icon-split btn-sm"> <span class="text">Reddedildi</span></a>
+                    @endif
+                  </td>
+                </tr>
 
-              <td>{{$order->total}} ₺</td>
-              <td>
-                @if($order->isDeleted == 2) <a href="" class="btn btn-warning btn-icon-split btn-sm"><span class="text">Beklemede</span></a> 
-                @elseif ($order->isDeleted == 0) <a href="" class="btn btn-success btn-icon-split btn-sm"><span class="text">Onaylandı</span></a>
-                @else <a href="" class="btn btn-danger btn-icon-split btn-sm"> <span class="text">Reddedildi</span></a>
-                @endif</td>
-            </tr>
-
-            @endif
             @endforeach
-            @endfor
         </tbody>
     </table>
   </div>
