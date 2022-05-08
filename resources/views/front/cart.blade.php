@@ -135,8 +135,12 @@
                                 <input id="securitycode" name="cardcvv" required class="input-default" type="text" pattern="[0-9]*" inputmode="numeric">
                             </div>
                         </div>
+                        @foreach($carts as $cart)
                         @foreach($products as $product)
+                        @if($product->id === $cart->product_id)
                         <input type="hidden" name="product_id" value="{{$product->id}}">
+                        @endif
+                        @endforeach
                         @endforeach
 
                     
@@ -150,13 +154,15 @@
                 @foreach($products as $product)
                 @if($product->id === $cart->product_id)
 
-                @php $total += $product->price @endphp  
-            
+                @php $total += $product->price @endphp
+                
+                
                 @endif
                 @endforeach
                 @endif
                 @endforeach
-                <input type="hidden" name="total" class="inputs" readonly value="{{$total}}">
+                
+                <input type="hidden" id="ttl" name="total" class="inputs" readonly value="{{$total}}">
 
                 <button class="btn1 btn-primary" type="submit">
                     <b>Ödeme Yap</b><span id="payAmount">{{$total}} ₺</span> 
@@ -225,7 +231,6 @@
                         <div class="subtotal">
                             <span>Ara Toplam</span> <span><span id="subtotal">{{$total}}</span> ₺</span>
                         </div>
-
                         <div class="tax">
                             <span>Vergi</span> <span><span id="tax">0.0</span> ₺</span>
                         </div>
@@ -349,6 +354,8 @@
             // show the `total` variable value on `totalElem` & `payAmountBtn` element
             totalElem.textContent = total.toFixed(2);
             payAmountBtn.textContent = total.toFixed(2);
+
+            $('#ttl').val($('#total').text());
 
         }
     </script>
